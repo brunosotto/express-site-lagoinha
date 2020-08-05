@@ -16,12 +16,12 @@
             <h3>Vídeos recentes</h3>
             <div>
                 <% for (recent of channel.recents){ %>
-                    <article>
+                    <a href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">
                         <img src="<%- recent.snippet.thumbnails.default.url %>">
                         <h4><%= recent.snippet.title %></h2>
                         <h5><%= recent.snippet.description %></h5>
                         <small><%= recent.snippet.publishedAt %></small>
-                    </article>
+                    </a>
                 <% } %>
             </div>
         </section>
