@@ -58,4 +58,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Export logger
-export const logger = wintstonLogger;
+export const wLogger = wintstonLogger;

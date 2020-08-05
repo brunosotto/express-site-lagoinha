@@ -8,6 +8,24 @@
 
 <body>
     <h1>Lagoinha Promissão</h1>
+    
+    <% for (channel of channels){ %>
+        <section>
+            <h2><%= channel.snippet.title %></h2>
+            <img src="<%- channel.snippet.thumbnails.default.url %>">
+            <h3>Vídeos recentes</h3>
+            <div>
+                <% for (recent of channel.recents){ %>
+                    <article>
+                        <img src="<%- recent.snippet.thumbnails.default.url %>">
+                        <h4><%= recent.snippet.title %></h2>
+                        <h5><%= recent.snippet.description %></h5>
+                        <small><%= recent.snippet.publishedAt %></small>
+                    </article>
+                <% } %>
+            </div>
+        </section>
+    <% } %>
 </body>
 
 </html>

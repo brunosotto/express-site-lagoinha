@@ -1,10 +1,20 @@
+import { Express } from 'express';
 import { Router } from 'express';
 import { HomeRouter } from './home.router';
-// Init router and path
-const router = Router();
 
-// Add sub-routes
-router.use('/', HomeRouter);
+export class BaseRouter {
+    public router: Router;
 
-// Export the base-router
-export default router;
+    constructor(
+        private readonly app: Express,
+    ) {
+        this.router = Router();
+        this.configureRoutes();
+    }
+
+    private configureRoutes(): void {
+        // home
+        const homeRoute = new HomeRouter(this.app);
+        this.router.use('/', homeRoute.router);
+    }
+}
