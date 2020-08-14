@@ -1,7 +1,6 @@
 import { get } from 'https';
 import * as qs from 'querystring';
 import { wLogger } from '../shared/logger';
-import { YoutubeMock } from './youtube.mock';
 import jsonfile from 'jsonfile';
 
 export interface IParamsRequestYT {
@@ -126,7 +125,7 @@ export class YouTubeProvider {
     private playlistsMaxResults = 12;
     private playlistsItemsMaxResults = 6;
     private channels: IChannel[] = [];
-    private timeout = 60 * 60 * 1000; // 60 minutos
+    private timeout = 8 * 60 * 60 * 1000; // 8 horas
     private lastReq: Date | null = null;
     private promiseSuccess: resolveFn[] = [];
     private promiseError: rejectFn[] = [];
@@ -237,6 +236,8 @@ export class YouTubeProvider {
     }
 
     private rejectAll(error: Error): void {
+        this.loading = false;
+
         while (this.promiseError.length) {
             const fn = this.promiseSuccess.pop();
             const err = this.promiseError.pop();
@@ -248,6 +249,8 @@ export class YouTubeProvider {
     }
 
     private resolveAll(): void {
+        this.loading = false;
+
         while (this.promiseError.length) {
             const fn = this.promiseSuccess.pop();
             const err = this.promiseError.pop();

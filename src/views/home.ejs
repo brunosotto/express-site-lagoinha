@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lagoinha Promissão</title>
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,13 +16,11 @@
             <h2><%= channel.snippet.title %></h2>
             <img src="<%- channel.snippet.thumbnails.default.url %>">
             <h3>Vídeos recentes</h3>
-            <div>
+            <div class="videos">
                 <% for (recent of channel.recents){ %>
                     <a href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">
-                        <img src="<%- recent.snippet.thumbnails.default.url %>">
+                        <img src="<%- recent.snippet.thumbnails.medium.url %>">
                         <h4><%= recent.snippet.title %></h2>
-                        <h5><%= recent.snippet.description %></h5>
-                        <small><%= recent.snippet.publishedAt %></small>
                     </a>
                 <% } %>
             </div>
