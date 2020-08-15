@@ -1,0 +1,15 @@
+<% for (channel of channels){ %>
+        <section>
+            <h2><%= channel.snippet.title %></h2>
+            <img src="<%- channel.snippet.thumbnails.default.url %>">
+            <h3>Vídeos recentes</h3>
+            <div class="videos">
+                <% for (recent of channel.recents){ %>
+                    <a href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">
+                        <img src="<%- recent.snippet.thumbnails.medium.url %>">
+                        <h4><%= recent.snippet.title %></h2>
+                    </a>
+                <% } %>
+            </div>
+        </section>
+    <% } %>
