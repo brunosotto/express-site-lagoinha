@@ -3,113 +3,12 @@ import * as qs from 'querystring';
 import { wLogger } from '../shared/logger';
 import jsonfile from 'jsonfile';
 
-export interface IParamsRequestYT {
-    part?: string;
-    id?: string;
-    channelId?: string;
-    maxResults?: number;
-    type?: string;
-    order?: string;
-    key?: string;
-}
+//  Models
+import { IParamsRequestYT } from './../models/params-request-yt.model';
+import { IChannel } from './../models/channel.model';
+import { IPlaylist } from './../models/playlist.model';
 
-export interface IChannel {
-    kind: string;
-    etag: string;
-    id: string;
-    snippet: ISnippetChannel;
-    playlists: IPlaylist[];
-    recents: IRecentItem[];
-}
-
-export interface ISnippetChannel {
-    title: string;
-    description: string;
-    publishedAt: string;
-    thumbnails: IThumbnails;
-    localized: ILocalized;
-    country: string;
-}
-
-export interface IThumbnails {
-    default?: IThumb;
-    medium?: IThumb;
-    high?: IThumb;
-    standard?: IThumb;
-    maxres?: IThumb;
-}
-
-export interface IThumb {
-    url: string;
-    width: number;
-    height: number;
-}
-
-export interface ILocalized {
-    title: string;
-    description: string;
-}
-
-export interface IPlaylist {
-    kind: string;
-    etag: string;
-    id: string;
-    snippet: ISnippetPlaylist;
-    items: IPlaylistItem[];
-}
-
-export interface ISnippetPlaylist {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: string;
-    thumbnails: IThumbnails;
-    channelTitle: string;
-    localized: ILocalized;
-}
-
-export interface IRecentItem {
-    kind: string;
-    etag: string;
-    id: IItemId;
-    snippet: IVideoSnippet;
-}
-
-export interface IItemId {
-    kind: string;
-    videoId: string;
-}
-
-export interface IVideoSnippet {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: string;
-    thumbnails: IThumbnails;
-    channelTitle: string;
-    liveBroadcastContent: string;
-    publishTime: string;
-}
-
-export interface IPlaylistItem {
-    kind: string;
-    etag: string;
-    id: string;
-    snippet: ISnippetPlaylistItem;
-}
-
-export interface ISnippetPlaylistItem {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: string;
-    thumbnails: IThumbnails;
-    channelTitle: string;
-    playlistId: string;
-    position: number;
-    resourceId: IItemId;
-}
-
+ 
 export type resolveFn = (value?: IChannel[] | PromiseLike<IChannel[]> | undefined) => void;
 export type rejectFn = (reason?: any) => void;
 
