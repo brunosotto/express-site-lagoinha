@@ -34,7 +34,7 @@
   <%- include('comum/menu') -%>
 
   <!-- Slider -->
-  <%- include('comum/slideHome') -%>
+  <%- include('home/slideHome') -%>
 
   <!-- Sobre -->
   <%- include('home/sobre') -%>
@@ -54,10 +54,16 @@
   <!-- Footer -->
   <%- include('comum/footer') -%>
 
-  <a href="#" class="scrollup" style="display: inline;"><i class="icon-up-open"></i></a>
+  <a href="#" class="scrollup animated bounceInUp"> </a>
+  
   <%- include('comum/includeJS') -%>
-  <script src="js/script.js"></script>
 
+  <!-- Script Principal  -->
+  <script src="js/main.js"></script>
+
+  <!-- Instagram Confi e Plugin jQuery  -->
+  <script src="plugins/instagram/js/jquery.instagramFeed.min.js"></script>
+  <script src="js/instagramConfig.js"></script>
 </body>
 
 </html>

@@ -18,15 +18,18 @@
 					<% for (channel of channels){ %>
 					<!-- begin Item 1 -->
 					<div class="carousel-item active">
-						<% for (recent of channel.recents){ %>
+					<div class="col-sm-12">
+					<% for (recent of channel.recents){ %>
 						<div class="groups">
 							<img src="<%- recent.snippet.thumbnails.medium.url %>" alt="//">
 							<p class="title"><%= recent.snippet.title %></p>
-							<a class="videosRecentes-contact" href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">Confira<i class="icon-right-thin"></i></a>
-							<a class="btn more" href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">VER</a>
+							<div> <a  class="videosRecentes-contact" href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">CONFIRA<i class="icon-video"></i></a> </div>
+						 
 						</div>
 
 						<% } %>
+					 </div>
+						
 					</div>
 
 					<!-- end Item 1 -->
