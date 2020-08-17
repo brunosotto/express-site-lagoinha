@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------------------------- */
+/*	Version 1200px
+/* ---------------------------------------------------------------------- */
+
+@media handheld,
+only screen and (max-width: 1200px) {
+	.gallery .image {
+		width: 290px;
+	}
+
+	.gallery .image a .bg .title {
+		padding: 190px 30px 10px;
+	}
+
+	.jp-gui .jp-progress {
+		width: 75%;
+	}
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/*	Version 992px
+/* ---------------------------------------------------------------------- */
+@media handheld,
+only screen and (max-width: 992px) {
+	header.navbar ul li a {
+		margin: 0 6px;
+	}
+
+	.pastores .item {
+		height: 350px;
+	}
+
+	.pastores .groups {
+		height: 300px;
+	}
+
+	.pastores .groups .title {
+		font-size: 1.7em;
+	}
+
+	.pastores .groups .studies {
+		font-size: 1.3em;
+	}
+
+	.pastores .groups .pastores-contact {
+		font-size: 1.3em;
+	}
+
+	.pastores .groups .more {
+		font-size: 1.4em;
+	}
+
+	.pastores .pagination {
+		top: 350px;
+	}
+
+	.gallery .image {
+		width: 230px;
+		margin: 0 8px 2%;
+	}
+
+	.gallery .image a .bg .title {
+		padding: 150px 30px 10px;
+	}
+
+	.gallery .image a .bg .plus {
+		font-size: 3em;
+		height: 40px;
+		padding: 2px 0 0 0;
+		margin: -20px 0 0 -20px;
+		width: 40px;
+	}
+
+	.gallery .image a .bg .title {
+		font-size: 1.5em;
+	}
+
+	.sermons .playlist {
+		margin-top: 20px;
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 768px
+/* ---------------------------------------------------------------------- */
+
+@media handheld,
+only screen and (max-width: 768px) {
+
+	.navbar-fixed-top {
+		position: static;
+	}
+
+	.fullwidthbanner-container {
+		margin-top: 0;
+	}
+
+	.container>.navbar-header,
+	.container>.navbar-collapse {
+		width: 100%;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
+	.service .cu-controls a.middle {
+		width: 29%;
+	}
+
+	.pulpit .cu-controls a.middle {
+		width: 29%;
+	}
+
+	.pastores .groups {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.pastores .pagination {
+		display: none;
+	}
+
+	.cu-controls .carousel-indicators li.middle {
+		width: 32.3%;
+	}
+
+	.pastores .cu-controls a.sercacontrol {
+		position: static;
+		float: left;
+		margin: -50px 0 0 0;
+	}
+
+	.pastores .cu-controls a.sercacontrol.next {
+		float: right;
+	}
+
+	.infobox {
+		display: none;
+	}
+
+	.contact .form-group {
+		width: 100%;
+	}
+
+	.jp-gui .jp-progress {
+		margin: 0 0 0 30px;
+	}
+
+	.pastores .groups:hover {
+		background: #fff;
+		box-shadow: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+
+	.pastores .groups .more {
+		display: block;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 640px
+/* ---------------------------------------------------------------------- */
+
+@media handheld,
+only screen and (max-width: 640px) {
+	.service .cu-controls a.middle {
+		width: 26%;
+	}
+
+	.pulpit .cu-controls a.middle {
+		width: 26%;
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 480px
+/* ---------------------------------------------------------------------- */
+
+@media handheld,
+only screen and (max-width: 480px) {}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 320px
+/* ---------------------------------------------------------------------- */
+@media handheld,
+only screen and (max-width: 320px) {
+	#menu-jumbotron {
+		display: none;
+	}
+}
