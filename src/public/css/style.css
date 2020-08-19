@@ -1254,7 +1254,16 @@ border: 0;
 .contact .form-control[type="email"] {
 	height: 43px;
 }
+.contact .iconfooteraddress{
+	 width: 25px;
+    padding: 0 2px 0;
+    vertical-align: middle;
 
+ 
+}
+.contact  address > a  {
+	color: var(--white) !important;
+}
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
