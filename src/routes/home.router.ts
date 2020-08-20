@@ -20,8 +20,8 @@ export class HomeRouter {
     }
 
     private setGet(): void {
-        this.router.get(this.path, async (req: Request, res: Response) => {
-            const channels = await this.youTube.getChannels();
+        this.router.get(this.path, (req: Request, res: Response) => {
+            const channels = this.youTube.channels;
             res.render('home', { channels });
         });
     }
