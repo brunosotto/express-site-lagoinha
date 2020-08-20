@@ -143,6 +143,31 @@ export class LagoinhaProvider {
         this.initialize();
     }
 
+    public exemplos(): void {
+        // estou separando um aqui para o exemplo, mas na tela vc vai consumir o array devocionais
+        // estudo de GC é idêntico
+        const devocional = this.devocionais[0];
+
+        // a lista será algo parecido com https://lagoinha.com/lagoinha-news?cat=397
+        // para a lista vai usar
+        console.log(devocional.page.thumbnail);
+        console.log(devocional.page.title);
+        console.log(devocional.page.summary);
+        console.log(devocional.published_at);
+        // para a url de link com a página aberta use o id e o slug
+        console.log(`${devocional.id}/${devocional.slug}`);
+
+        // para a página aberta de algum devocional
+        // parecido com https://lagoinha.com/lagoinha-news/24628/o-temor-de-deus-no-coracao-dos-homens
+        console.log(devocional.page.image);
+        console.log(devocional.page.main_color);
+        console.log(devocional.page.title);
+        console.log(devocional.page.text);
+        console.log(devocional.published_at);
+        // repare no main_color. é uma cor que a api nos dá calculada com base na image. isso pode ser usado aqui e na lista se vc achar necessário
+        // repare que a página aberta deles não mostra a data de publicação mas no nosso coloque
+    }
+
     private async initialize(): Promise<void> {
         // lista os canais imediatamente e também agenta o interval
         this.listData();
