@@ -1264,6 +1264,22 @@ border: 0;
 .contact  address > a  {
 	color: var(--white) !important;
 }
+
+/* ********************** Cards Devocinal ********************* */
+.dev-summary{
+	font-weight: 500;
+}
+.dev-published_at{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.1em
+}
+.dev-calendar{
+	font-size: 1.8em;
+    margin: -5px 0 0 0;
+    color: blueviolet;
+}
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops

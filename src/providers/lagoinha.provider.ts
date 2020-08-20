@@ -4,8 +4,8 @@ import { wLogger } from '../shared/logger';
 
 //  Models
 import { IParamsRequestLagoinha } from './../models/params-request-lagoinha.model';
-import { IObjectLagoinha } from 'src/models/object-lagoinha.model';
-import { IResponseLagoinha } from 'src/models/response-lagoinha.model';
+import { IObjectLagoinha } from './../models/object-lagoinha.model';
+import { IResponseLagoinha } from './../models/response-lagoinha.model';
 
 // Constantes
 const DEVOCIONAIS_CATEG = 488;

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lagoinha Promissão - Devocionais</title>
+
+    <base href="<%= // baseHref %>">
+
+    <!-- Bootstrap -->
+    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--  Css Personalizado  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/violetstyle.css" rel="stylesheet">
+    <link href="css/font/fontello.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <%- // include('comum/favicon') -%>
+
+</head>
+
+<body>
+    <!--  Menu -->
+    <%- include('comum/menu') -%>
+
+    <div class="devocionais" style="margin-top: 120px;">
+        <section class="generic service animated fadeInUp delay2">
+            <div class="container">
+                <%=  //JSON.stringify(devos) %>
+                <!-- title -->
+                <div class="row text-center title">
+                    <div class="col-sm-12">
+                        <h2> Devocionais </h2>
+                        <span class="dotts"> . . . . . . </span>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <%  for (devocional of devos){  %>
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="padding: 0 10px 25px 10px">
+                        <%  if (devocional){  %>
+                        <%= //  JSON.stringify(devocional.page.title)  %>
+                        <div class="card-group">
+                            <a href="<%= '/devocional/'+ devocional.id + '/' + devocional.slug %>">
+                                <div class="card" style="min-height: 52.1em;">
+                                    <img class="card-img-top" src="<%= devocional.page.thumbnail %> "
+                                        alt="<%= devocional.page.title %> ">
+                                    <div class="card-body">
+                                        <h3 class="card-title"> <%= devocional.page.title %> </h3>
+                                        <p class="card-text dev-summary"> <%= devocional.page.summary %>...</p>
+
+                                    </div>
+                                    <div class="card-footer bg-transparent animation delay4">
+                                        <div class="d-flex flex-row  justify-content-end">
+                                            <div class="p-2">
+                                                <div class="dev-calendar">
+                                                    <i class="icon-calendar"></i>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div class="dev-published_at">
+                                                    <%= devocional.published_at %>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- fim do if -->
+                        <% } %>
+
+
+                    </div>
+                    <%   }  %>
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        
+    </div>
+
+    <!-- Footer -->
+    <%- include('comum/footer') -%>
+
+
+    <a href="#" class="scrollup animated bounceInUp"> </a>
+
+    <%- include('comum/includeJs') -%>
+
+    <!-- Script Principal  -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
