@@ -1,7 +1,6 @@
 import { get, RequestOptions } from 'https';
 import * as qs from 'querystring';
 import { wLogger } from '../shared/logger';
-import jsonfile from 'jsonfile';
 
 //  Models
 export interface IParamsRequestLagoinha {
