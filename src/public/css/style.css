@@ -521,14 +521,22 @@ header.navbar ul li a {
 	background: #fff;
 }
 .navimag{
-	width: 4.5rem;
+	width: 12rem;
 }
- 
+.imglogofooter {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding: 2px 0 5px 0;
+}
+ .imglogofooter img{
+	 width: 70px;
+ }
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
 footer {
 	background: #232323;
-	height: 100px;
+	height: 110px;
 }
 
 footer .copy {
@@ -564,7 +572,7 @@ footer .copy h6 {
 }
 
 .slide1 .text {
-	font-size: 5em;
+	font-size: 6em;
 	letter-spacing: 0.05em;
 	line-height: 1.1em;
 	overflow: hidden;
@@ -574,6 +582,7 @@ footer .copy h6 {
 	white-space: normal !important;
 	width: 8em;
 	margin-right: 0.5em;
+	top: 1em;
 }
 
 .slide1 .text.a {
@@ -644,6 +653,9 @@ footer .copy h6 {
 
 .slide2 .quote {
 	margin-left: 15em;
+}
+.slide1 .text span {
+    color: var(--white) !important;
 }
 
 /****************************** Sobre ****************************/
@@ -1241,4 +1253,85 @@ border: 0;
 .contact .form-control[type="text"],
 .contact .form-control[type="email"] {
 	height: 43px;
+}
+.contact .iconfooteraddress{
+	 width: 25px;
+    padding: 0 2px 0;
+    vertical-align: middle;
+
+ 
+}
+.contact  address > a  {
+	color: var(--white) !important;
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .slide1 .text {  
+	  top: 1em !important;
+}
+.slide1 .quote, .slide2 .quote {
+	margin-top: 14.5em !important
+}
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+ 
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+ 
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+ 
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .slide1 .quote, .slide2 .quote {
+	margin-top: 12.5em !important
+}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+   .slide1 .quote, .slide2 .quote {
+	margin-top: 12.5em !important
+}
+  
 }
