@@ -40,24 +40,24 @@
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
-                        <h2> Devocionais </h2>
+                        <h2> Estudos GC </h2>
                         <span class="dotts"> . . . . . . </span>
                     </div>
                 </div>
                 <div class="row">
 
-                    <%  for (devocional of devos){  %>
+                    <%  for (estudocg of estudosgc){  %>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="padding: 0 10px 25px 10px">
-                        <%  if (devocional){  %>
+                        <%  if (estudocg){  %>
                         <%= //  JSON.stringify(devocional.page.title)  %>
                         <div class="card-group">
-                            <a href="<%= '/devocional/'+ devocional.id + '/' + devocional.slug %>">
+                            <a href="<%= '/estudo-gc/'+ estudocg.id + '/' + estudocg.slug %>">
                                 <div class="card" style="min-height: 52.1em;">
-                                    <img class="card-img-top" src="<%= devocional.page.thumbnail %> "
-                                        alt="<%= devocional.page.title %> ">
+                                    <img class="card-img-top" src="<%= estudocg.page.thumbnail %> "
+                                        alt="<%= estudocg.page.title %> ">
                                     <div class="card-body">
-                                        <h3 class="card-title"> <%= devocional.page.title %> </h3>
-                                        <p class="card-text dev-summary"> <%= devocional.page.summary %>...</p>
+                                        <h3 class="card-title dev-title"> <%= estudocg.page.title %> </h3>
+                                        <p class="card-text dev-summary"> <%= estudocg.page.summary %>...</p>
 
                                     </div>
                                     <div class="card-footer bg-transparent animation delay4">
@@ -69,7 +69,7 @@
                                             </div>
                                             <div class="p-2">
                                                 <div class="dev-published_at">
-                                                    <%= devocional.published_at %>
+                                                    <%= estudocg.published_at %>
                                                 </div>
                                             </div>
                                         </div>
