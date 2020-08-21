@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lagoinha Promissão - Devocionais</title>
+    <title>Lagoinha Promissão - Devocional : <%= devocional[0].page.title %></title>
 
     <base href="<%= baseHref %>" />
 
@@ -33,24 +33,59 @@
     <!--  Menu -->
     <%- include('comum/menu') -%>
 
-    <div class="devocionais" style="margin-top: 120px;">
+    <div class="devocional-item-main">
         <section class="generic service animated fadeInUp delay2">
             <div class="container">
                 <%=  //JSON.stringify(devos) %>
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
-                        <h2> <%= devocional.page.title %> </h2>
+                        <h2> <%= devocional[0].page.title %> </h2>
                         <span class="dotts"> . . . . . . </span>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row ">
+                    <div class="col">
+  
+                        <div class="card dev-card-item">
+                            <figure figure class="figure" <%= 'style=background-color:#' + devocional[0].page.main_color %>>
 
-                    <div class="card">
-                        <%= baseHref %>
-                        <%= JSON.stringify(devocional.page ) %>
+                                <img src="<%=  devocional[0].page.image  %> " class="figure-img img-fluid"
+                                    alt="<%=  devocional[0].page.title %>"
+                                    style="width: 400px; display: flex; margin: 0 auto;">
+                            </figure>
+                            <div class="card-body">
+                                <h2> <%=  devocional[0].page.title %> </h2>
+                                <span> Publicado em:
+                                    <%=   moment( devocional[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                </span>
 
-                    </div> 
+                                <%- (devocional[0].page.text ) %>
+                            </div>
+
+                            <div class="card-footer bg-transparent animation delay4">
+                                <div class="d-flex flex-row  justify-content-end">
+                                    <div class="p-2">
+                                        <div class="dev-calendar">
+                                            <i class="icon-calendar"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <div class="dev-published_at">
+                                            <%=   moment( devocional[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div> 
+
+                    </div>
+
                 </div>
             </div>
 

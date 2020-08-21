@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from '../providers/lagoinha.provider';
-
+import moment from 'moment';
 export class EstudoGcRouter {
 
     public router: Router;
@@ -21,9 +21,10 @@ export class EstudoGcRouter {
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
-           const estudogc = this.estgcProv.estudoGC[0];
+           const gc = this.estgcProv.estudoGC;
+           const estudogc = gc.filter(estudo => req.params.id == estudo.id);
            const baseHref = '../../';
-           res.render('estudogc-item', { estudogc , baseHref});
+           res.render('estudogc-item', { estudogc , baseHref, moment});
         });
     }
 

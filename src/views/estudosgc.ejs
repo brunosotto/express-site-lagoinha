@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lagoinha Promissão - Devocionais</title>
 
-    <base href="<%= // baseHref %>">
+    <base href="<%=  baseHref %>">
 
     <!-- Bootstrap -->
     <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <!--  Menu -->
     <%- include('comum/menu') -%>
 
-    <div class="devocionais" style="margin-top: 120px;">
+    <div class="devocional-item-main">
         <section class="generic service animated fadeInUp delay2">
             <div class="container">
                 <%=  //JSON.stringify(devos) %>
@@ -69,7 +69,7 @@
                                             </div>
                                             <div class="p-2">
                                                 <div class="dev-published_at">
-                                                    <%= estudocg.published_at %>
+                                                    <%=  moment( estudocg.published_at ).format('DD/MM/YYYY - h:mm') %>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,14 +82,8 @@
                         </div>
                         <!-- fim do if -->
                         <% } %>
-
-
                     </div>
                     <%   }  %>
-
-
-
-
 
                 </div>
             </div>
@@ -102,11 +96,9 @@
     <!-- Footer -->
     <%- include('comum/footer') -%>
 
-
     <a href="#" class="scrollup animated bounceInUp"> </a>
 
     <%- include('comum/includeJs') -%>
-
     <!-- Script Principal  -->
     <script src="js/main.js"></script>
 
