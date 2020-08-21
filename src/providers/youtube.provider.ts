@@ -17,7 +17,7 @@ const API_KEY = 'AIzaSyCqTDq1Envdq1czGv6CcCNu09LhHwSfB7k';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 const RECENT_MAX_RESULTS = 6;
 const PLAYLIST_MAX_RESULTS = 12;
-const PLAYLIST_ITEMS_MAX_RESULTS = 6;
+const PLAYLIST_ITEMS_MAX_RESULTS = 3;
 
 export class YouTubeProvider {
 
