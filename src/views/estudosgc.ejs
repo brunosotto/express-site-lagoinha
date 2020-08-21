@@ -34,7 +34,7 @@
     <%- include('comum/menu') -%>
 
     <div class="devocional-item-main">
-        <section class="generic service animated fadeInUp delay2">
+        <section class="generic service animated fadeInUp delay3">
             <div class="container">
                 <%=  //JSON.stringify(devos) %>
                 <!-- title -->
@@ -46,9 +46,9 @@
                 </div>
                 <div class="row">
 
+               
                     <%  for (estudocg of estudosgc){  %>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="padding: 0 10px 25px 10px">
-                        <%  if (estudocg){  %>
                         <%= //  JSON.stringify(devocional.page.title)  %>
                         <div class="card-group">
                             <a href="<%= '/estudo-gc/'+ estudocg.id + '/' + estudocg.slug %>">
@@ -81,9 +81,9 @@
                             </a>
                         </div>
                         <!-- fim do if -->
-                        <% } %>
                     </div>
                     <%   }  %>
+               
 
                 </div>
             </div>

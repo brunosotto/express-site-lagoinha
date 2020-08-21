@@ -21,9 +21,12 @@ export class EstudoGcRouter {
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
-           const gc = this.estgcProv.estudoGC;
-           const estudogc = gc.filter(estudo => req.params.id == estudo.id);
            const baseHref = '../../';
+           const gc = this.estgcProv.estudoGC;
+           // Converter string para Number.
+           const idparams = parseInt(req.params.id, 10);
+           // Filtro para pegar o id vindo no parametro e verificar se e mesmo id obj.
+           const estudogc = gc.filter(estudo => idparams === estudo.id);
            res.render('estudogc-item', { estudogc , baseHref, moment});
         });
     }

@@ -22,9 +22,12 @@ export class DevocionalRouter {
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
-           const devo = this.devoProv.devocionais;
-           const devocional = devo.filter(dev => req.params.id == dev.id);
            const baseHref = '../../';
+           const devo = this.devoProv.devocionais;
+            // Converter string para Number.
+           const idparams = parseInt(req.params.id, 10);
+           // Filtro para pegar o id vindo no parametro e verificar se e mesmo id obj.
+           const devocional = devo.filter(dev => idparams === dev.id);
            res.render('devocional-item', {devocional, baseHref, moment});
         });
     }
