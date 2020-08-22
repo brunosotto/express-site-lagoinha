@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from './../providers/lagoinha.provider';
-
+import moment from 'moment';
 export class DevocionaisRouter {
 
     public router: Router;
@@ -22,7 +22,8 @@ export class DevocionaisRouter {
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
            const devos = this.devoProv.devocionais;
-           res.render('devocionais', {devos});
+           const baseHref = '../';
+           res.render('devocionais', {devos, moment, baseHref});
         });
     }
 

@@ -532,6 +532,16 @@ header.navbar ul li a {
  .imglogofooter img{
 	 width: 70px;
  }
+
+ .dropdown:hover>.dropdown-menu {
+	display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+	/*Without this, clicking will make it sticky*/
+	  pointer-events: none;
+  }
+
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
 footer {
@@ -558,7 +568,7 @@ footer .copy h6 {
 
 .fullwidthbanner-container {
 	/* font-family: 'Skinny', 'Dosis', sans-serif; */
-	margin-top: 90px;
+	margin-top: 86px;
 	position: relative;
 }
 
@@ -1280,8 +1290,16 @@ border: 0;
     margin: -5px 0 0 0;
     color: blueviolet;
 }
- .dev-title {
-line-height: 1.5em !important;
+.dev-title {
+	line-height: 1.5em !important;
+}
+
+/* ********************** Cards Devocinal/GC Item ********************* */
+.dev-card-item{
+	box-shadow: 3px 3px 9px 5px #b67bff61;
+}
+.devocional-item-main{
+	margin-top: 80px;
 }
 /* 
   ##Device = Desktops
@@ -1340,6 +1358,12 @@ line-height: 1.5em !important;
   .slide1 .quote, .slide2 .quote {
 	margin-top: 12.5em !important
 }
+.devocional-item-main{
+	margin-top:0 !important
+}
+.generic {
+    padding: 60px 13px;
+}
 }
 
 /* 
@@ -1352,5 +1376,11 @@ line-height: 1.5em !important;
    .slide1 .quote, .slide2 .quote {
 	margin-top: 12.5em !important
 }
+.devocional-item-main{
+	margin-top:0 !important
+}
   
+.generic {
+    padding: 60px 13px;
+}
 }

@@ -21,8 +21,9 @@ export class VideoRouter {
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
+            const baseHref = '../';
             const channels = this.youTube.channels;
-            res.render('videos', { channels });
+            res.render('videos', { channels, baseHref });
         });
     }
 
