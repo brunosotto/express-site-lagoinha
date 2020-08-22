@@ -3,14 +3,9 @@ import { Router } from 'express';
 import { HomeRouter } from './home.router';
 import { VideoRouter } from './videos.router';
 import { DizimoRouter } from './dizimo.router';
-
-// Lista Devocionais
 import { DevocionaisRouter } from './devocionais.router';
-//  Um item Devocional
 import { DevocionalRouter } from './devocional.router';
-// Lista de Estudos
 import { EstudosGcRouter } from './estudosgc.router';
-// um Estudo GC
 import { EstudoGcRouter } from './estudogc.router';
 
 export class BaseRouter {

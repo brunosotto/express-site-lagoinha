@@ -2,6 +2,7 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from '../providers/lagoinha.provider';
 import moment from 'moment';
+
 export class EstudosGcRouter {
 
     public router: Router;

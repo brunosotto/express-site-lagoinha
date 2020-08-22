@@ -53,7 +53,7 @@
                         <div class="card-group">
                             <a href="<%= '/devocional/'+ devocional.id + '/' + devocional.slug %>">
                                 <div class="card" style="min-height: 52.1em;">
-                                    <img class="card-img-top" src="<%= devocional.page.thumbnail %> "
+                                    <img class="card-img-top" src="<%= devocional.page.app_image %> "
                                         alt="<%= devocional.page.title %> ">
                                     <div class="card-body">
                                         <h3 class="card-title dev-title"> <%= devocional.page.title %> </h3>
@@ -109,6 +109,9 @@
 
     <!-- Script Principal  -->
     <script src="js/main.js"></script>
+    <script>
+        home.selectNav('devocionais');
+    </script>
 
 </body>
 

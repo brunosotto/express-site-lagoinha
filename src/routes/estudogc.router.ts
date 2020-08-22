@@ -2,6 +2,7 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from '../providers/lagoinha.provider';
 import moment from 'moment';
+
 export class EstudoGcRouter {
 
     public router: Router;
@@ -24,9 +25,9 @@ export class EstudoGcRouter {
            const baseHref = '../../';
            const gc = this.estgcProv.estudoGC;
            // Converter string para Number.
-           const idparams = parseInt(req.params.id, 10);
+           const id = parseInt(req.params.id, 10);
            // Filtro para pegar o id vindo no parametro e verificar se e mesmo id obj.
-           const estudogc = gc.filter(estudo => idparams === estudo.id);
+           const estudogc = gc.filter(e => id === e.id);
            res.render('estudogc-item', { estudogc , baseHref, moment});
         });
     }

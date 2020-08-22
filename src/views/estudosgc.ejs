@@ -53,7 +53,7 @@
                         <div class="card-group">
                             <a href="<%= '/estudo-gc/'+ estudocg.id + '/' + estudocg.slug %>">
                                 <div class="card" style="min-height: 52.1em;">
-                                    <img class="card-img-top" src="<%= estudocg.page.thumbnail %> "
+                                    <img class="card-img-top" src="<%= estudocg.page.app_image %> "
                                         alt="<%= estudocg.page.title %> ">
                                     <div class="card-body">
                                         <h3 class="card-title dev-title"> <%= estudocg.page.title %> </h3>
@@ -101,6 +101,9 @@
     <%- include('comum/includeJs') -%>
     <!-- Script Principal  -->
     <script src="js/main.js"></script>
+    <script>
+        home.selectNav('estudos-gc');
+    </script>
 
 </body>
 
