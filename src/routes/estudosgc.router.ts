@@ -1,12 +1,12 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
-import { YouTubeProvider } from 'src/providers/youtube.provider';
-
-export class HomeRouter {
+import { LagoinhaProvider } from '../providers/lagoinha.provider';
+import moment from 'moment';
+export class EstudosGcRouter {
 
     public router: Router;
     public path: string;
-    private youTube: YouTubeProvider;
+    private estgcProv: LagoinhaProvider;
 
     constructor(
         private readonly app: Express,
@@ -14,15 +14,16 @@ export class HomeRouter {
         this.router = Router();
         this.path = '';
 
-        this.youTube = this.app.get('youTube');
+        this.estgcProv = this.app.get('lagoinha');
 
         this.setGet();
     }
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
-            const channels = this.youTube.channels;
-            res.render('home', { channels });
+           const estudosgc = this.estgcProv.estudoGC;
+           const baseHref = '../';
+           res.render('estudosgc', { estudosgc, moment, baseHref });
         });
     }
 

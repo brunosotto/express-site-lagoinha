@@ -34,13 +34,13 @@
   <%- include('comum/menu') -%>
 
   <!-- Slider -->
-  <%- include('comum/slideHome') -%>
+  <%- include('home/slideHome') -%>
 
   <!-- Sobre -->
   <%- include('home/sobre') -%>
 
   <!-- Videos Recentes -->
-  <%- include('home/videosRecentes') -%>
+  <%- include('home/homeVideosRecentes') -%>
 
   <!-- Nossos Pastores -->
   <%- include('home/pastores') -%>
@@ -54,9 +54,19 @@
   <!-- Footer -->
   <%- include('comum/footer') -%>
 
-  <a href="#" class="scrollup" style="display: inline;"><i class="icon-up-open"></i></a>
-  <%- include('comum/includeJS') -%>
-  <script src="js/script.js"></script>
+  <a href="#" class="scrollup animated bounceInUp"> </a>
+  
+  <%- include('comum/includeJs') -%>
+
+  <!-- Script Principal  -->
+  <script src="js/main.js"></script>
+
+  <!-- Instagram Confi e Plugin jQuery  -->
+  <script src="plugins/instagram/js/jquery.instagramFeed.min.js"></script>
+  <!-- Config para Instagram Igreja Lagoinha promissao -->
+  <script src="js/instagramConfigIblp.js"></script>
+  <!-- Config para Instagram Legacy promissao -->
+  <script src="js/instagramConfigLegacy.js"></script>
 
 </body>
 

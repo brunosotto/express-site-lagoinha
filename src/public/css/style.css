@@ -383,13 +383,18 @@ li {
 /***************************** Go to top arrow *****************************/
 
 .scrollup {
-	width: 50px;
-	height: 50px;
+
+	width: 30px;
+	height: 30px;
 	position: fixed;
 	bottom: 80px;
 	right: 30px;
 	display: none;
-	background: transparent url("../img/to-top.png") center center no-repeat;
+	background: transparent url('../images/logo.jpg') center center no-repeat;
+	border-radius: 100%;
+	transform: rotate(180deg) !important;
+	overflow: hidden;
+	background-size: contain;
 }
 
 .scrollup i {
@@ -401,7 +406,9 @@ li {
 }
 
 .scrollup:hover {
-	opacity: 0.7;
+	opacity: 0.8;
+	cursor: pointer;
+
 }
 
 
@@ -415,7 +422,7 @@ li {
 /********************************** General ********************************/
 
 .generic {
-	padding: 90px 30px;
+	padding: 60px 30px;
 }
 
 .title {
@@ -424,7 +431,7 @@ li {
 
 .title h2 {
 	font-weight: 700;
-	font-size: 1.7em;
+	font-size: 2.7em;
 	line-height: 1;
 }
 
@@ -442,6 +449,15 @@ li {
 	margin-top: 0px;
 	padding: 7px 28px;
 	text-transform: uppercase;
+}
+
+.instagramBtn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background: rgb(182 123 255);
+	padding: 10px 0px 10px 0px;
+
 }
 
 .btn:hover {
@@ -474,12 +490,13 @@ i {
 
 /***************************************************************************/
 /************************ General Styles for Header ************************/
-.navbar-header{
+.navbar-header {
 	width: 100%;
 }
+
 header.navbar {
 	width: 100% !important;
-	padding: 20px 0;
+	padding: 8px 0;
 	margin: 0;
 	background: white;
 }
@@ -507,12 +524,35 @@ header.navbar ul li a {
 	background: #fff;
 }
 
- 
+.navimag {
+	width: 12rem;
+}
+
+.imglogofooter {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding: 2px 0 5px 0;
+}
+
+.imglogofooter img {
+	width: 70px;
+}
+
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+	/*Without this, clicking will make it sticky*/
+	pointer-events: none;
+}
+
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
 footer {
 	background: #232323;
-	height: 100px;
+	height: 110px;
 }
 
 footer .copy {
@@ -533,7 +573,8 @@ footer .copy h6 {
 /********************************** Slider Home  ********************************/
 
 .fullwidthbanner-container {
-	font-family: 'Skinny', 'Dosis', sans-serif;
+	/* font-family: 'Skinny', 'Dosis', sans-serif; */
+	margin-top: 86px;
 	position: relative;
 }
 
@@ -547,16 +588,17 @@ footer .copy h6 {
 }
 
 .slide1 .text {
-	font-size: 10em;
+	font-size: 6em;
 	letter-spacing: 0.05em;
-	line-height: 1em;
+	line-height: 1.1em;
 	overflow: hidden;
 	padding: 10px;
 	text-align: right;
 	text-transform: uppercase;
 	white-space: normal !important;
-	width: 450px;
+	width: 8em;
 	margin-right: 0.5em;
+	top: 1em;
 }
 
 .slide1 .text.a {
@@ -572,27 +614,27 @@ footer .copy h6 {
 }
 
 .slide2 .title {
-	font-size: 8em;
+	font-size: 6em;
 	overflow: hidden;
 	padding: 10px;
 	text-align: left;
 	text-transform: uppercase;
 	white-space: normal !important;
-	width: 6em;
-	margin: 1.5em 0 0 1em;
+	width: 7em;
+	margin: 0.1em 0 0 1.2em !important
 }
 
 .slide2 .text {
-	font-size: 2.5em;
+	/* font-size: 2.5em; */
 	font-weight: 400;
 	letter-spacing: 0.2em;
-	line-height: 1.1em;
+	line-height: 1.3em;
 	overflow: hidden;
 	text-align: left;
 	text-transform: uppercase;
 	white-space: normal !important;
 	width: 15em;
-	margin: 8.5em 0 0 3em;
+	margin: 2.7em 0 0 3em !important
 }
 
 .slide2 .text .pink {
@@ -618,7 +660,7 @@ footer .copy h6 {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-weight: 700;
-	margin-top: 13em;
+	margin-top: 13.5em !important
 }
 
 .slide1 .quote {
@@ -627,6 +669,10 @@ footer .copy h6 {
 
 .slide2 .quote {
 	margin-left: 15em;
+}
+
+.slide1 .text span {
+	color: var(--white) !important;
 }
 
 /****************************** Sobre ****************************/
@@ -707,50 +753,81 @@ h2 i {
 	color: #00885e;
 }
 
+/******************************* Channels - Videos Recente pasta comum ****************************/
+.channel {
+	display: flex;
+	margin-top: 20px
+}
 
+.img-channel {
+	width: 50px;
+}
+
+.title-channel {
+	position: relative;
+	left: 15px
+}
+
+.playlist {
+	position: relative;
+	margin: 27px 0 0px 0;
+	width: 100%;
+	left: 10px;
+}
 
 /******************************* Pastores ****************************/
-ul .no-padding .no-margin{
-	    margin: 0;
-		padding: 0;
+ul .no-padding .no-margin {
+	margin: 0;
+	padding: 0;
 }
+
 .footer-icon {
-    list-style: none;
-    display: inline-block;
+	list-style: none;
+	display: inline-block;
 }
+
 .footer-lr-pad {
-    padding-left: 10px;
+	padding-left: 10px;
 }
+
 .common-res-bottom-1 {
-        padding-bottom: 40px;
-    }
+	padding-bottom: 40px;
+}
+
 .pastores-fixed {
-        width: 400px !important;
-        margin: 0 auto;
-    }
+	width: 400px !important;
+	margin: 0 auto;
+}
+
 .center {
-	  position: relative;
-    display: flex;
-    justify-content: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
 }
-.pastoresbg{
- background-color: #b67bff
+
+.pastoresbg {
+	background-color: #b67bff
 }
-.image-grow{
+
+.image-grow {
 	border-radius: 8px;
 }
+
 .image-grow:hover {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+	box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
-.pastoresbg-icon-pad{
- padding: 15px 0;
-    margin-bottom: 20px;
+
+.pastoresbg-icon-pad {
+	padding: 15px 0;
+	margin-bottom: 20px;
 }
+
 .image-center {
-    margin: 0 auto;
+	margin: 0 auto;
 }
+
 .videosRecentes {
 	background: #f0f2f5;
 }
@@ -807,24 +884,27 @@ ul .no-padding .no-margin{
 	padding: 10px 30px;
 }
 
+.groups {
+	padding: 5px 5px 10px 5px;
+
+}
+
 .videosRecentes .groups {
-   border-radius: 5px;
-    float: left;
-    height: 375px;
-    left: 30%;
-    margin: 10px 0px 15px 0;
-    padding: 20px;
-    top: 0;
-    width: 33%;
-    z-index: 10;
-    text-align: center;
+	border-radius: 5px;
+	min-height: 270px;
+	max-height: 300px;
+	margin: 15px 0px 15px 0px;
+	width: 100%;
+	z-index: 10;
+	text-align: center;
 	display: flex;
-    flex-direction: column;
-    align-items: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ffffff;
 }
 
 .videosRecentes .groups:hover {
-	background: #fff;
+	background: #ececee;
 	box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
 	-webkit-transform: scale(1.1);
 	-moz-transform: scale(1.1);
@@ -834,8 +914,9 @@ ul .no-padding .no-margin{
 }
 
 .videosRecentes .groups .title {
-	font-size: 2em;
-	margin: 20px 0 20px 0;
+	color: #6610f2;
+	font-size: 1.3em;
+	margin: 5px 0 5px 0;
 }
 
 .videosRecentes .groups .studies {
@@ -861,6 +942,7 @@ ul .no-padding .no-margin{
 .videosRecentes .groups .videosRecentes-contact i {
 	font-size: .7em;
 	margin-left: 10px;
+	vertical-align: top;
 }
 
 .videosRecentes .groups .more {
@@ -889,6 +971,16 @@ ul .no-padding .no-margin{
 }
 
 
+
+/****************************** Plugin Instagram **************************/
+
+.instagram_username {
+	font-size: 2.2em !important;
+}
+
+.instagram_biography {
+	font-size: 2em !important;
+}
 
 /****************************** Behind the Pulpit **************************/
 
@@ -928,7 +1020,7 @@ ul .no-padding .no-margin{
 }
 
 .gallery .image a {
-	background-image: url("../img/leaves.png");
+	background-image: url("../images/leaves.png");
 	background-position: 50px 0;
 	display: block;
 	height: 100%;
@@ -1129,13 +1221,51 @@ ul .no-padding .no-margin{
 }
 
 .contact h2 {
-	font-size: 2.5em;
+	font-size: 3em;
 }
 
 .contact p,
 .contact h2 {
 	color: #fff;
+	font-weight: 600;
+}
+
+#map {
+	overflow: hidden
+}
+
+.contact address {
 	font-weight: 500;
+	padding: 10px 15px 10px 15px;
+	background: #131d1a52;
+	border-radius: 5px;
+	margin: 5px;
+
+}
+
+.linkrota {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.contact a:hover {
+
+	color: #ffffff !important;
+}
+
+.contact .rota {
+
+	padding-left: 5px;
+}
+
+.contact .cardcontato {
+	padding: 10px 0 10px 0;
+	background: #00000054;
+	border-radius: 5px;
+}
+
+.map {
+	border: 0;
 }
 
 .contact #map {
@@ -1169,4 +1299,128 @@ ul .no-padding .no-margin{
 .contact .form-control[type="text"],
 .contact .form-control[type="email"] {
 	height: 43px;
+}
+
+.contact .iconfooteraddress {
+	width: 25px;
+	padding: 0 2px 0;
+	vertical-align: middle;
+
+
+}
+
+.contact address>a {
+	color: var(--white) !important;
+}
+
+/* ********************** Cards Devocinal ********************* */
+.dev-summary {
+	font-weight: 500;
+}
+
+.dev-published_at {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.1em
+}
+
+.dev-calendar {
+	font-size: 1.8em;
+	margin: -5px 0 0 0;
+	color: blueviolet;
+}
+
+.dev-title {
+	line-height: 1.5em !important;
+}
+
+/* ********************** Cards Devocinal/GC Item ********************* */
+.dev-card-item {
+	box-shadow: 3px 3px 9px 5px #b67bff61;
+}
+
+.devocional-item-main {
+	margin-top: 80px;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+	.slide1 .text {
+		top: 1em !important;
+	}
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 14.5em !important
+	}
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 12.5em !important
+	}
+
+	.devocional-item-main {
+		margin-top: 0 !important
+	}
+
+	.generic {
+		padding: 60px 13px;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 12.5em !important
+	}
+
+	.devocional-item-main {
+		margin-top: 0 !important
+	}
+
+	.generic {
+		padding: 60px 13px;
+	}
 }

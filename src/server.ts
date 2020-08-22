@@ -10,6 +10,7 @@ import { wLogger } from './shared/logger';
 import { Express } from 'express';
 import cors from 'cors';
 import { YouTubeProvider } from './providers/youtube.provider';
+import { LagoinhaProvider } from './providers/lagoinha.provider';
 
 export class AppServer {
     public static readonly PORT: number = 8080;
@@ -39,6 +40,9 @@ export class AppServer {
 
         // youtube
         this.app.set('youTube', new YouTubeProvider());
+
+        // lagoinha
+        this.app.set('lagoinha', new LagoinhaProvider());
 
         // api
         const baseRouter = new BaseRouter(this.app);

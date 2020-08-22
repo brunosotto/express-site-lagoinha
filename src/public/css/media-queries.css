@@ -16,7 +16,7 @@ only screen and (max-width: 1200px) {
 
 	.jp-gui .jp-progress {
 		width: 75%;
-	}
+	} 
 }
 
 
@@ -81,7 +81,7 @@ only screen and (max-width: 992px) {
 
 	.sermons .playlist {
 		margin-top: 20px;
-	}
+	} 
 }
 
 
@@ -92,9 +92,9 @@ only screen and (max-width: 992px) {
 @media handheld,
 only screen and (max-width: 768px) {
 
-	.navbar-fixed-top {
-		position: static;
-	}
+ .fixed-top{
+	position: revert !important; 
+ }
 
 	.fullwidthbanner-container {
 		margin-top: 0;
@@ -195,6 +195,6 @@ only screen and (max-width: 480px) {}
 @media handheld,
 only screen and (max-width: 320px) {
 	#menu-jumbotron {
-		display: none;
+		display: initial;
 	}
 }
