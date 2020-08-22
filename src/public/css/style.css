@@ -383,18 +383,18 @@ li {
 /***************************** Go to top arrow *****************************/
 
 .scrollup {
-	
+
 	width: 30px;
-    height: 30px;
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
-    display: none;
-    background: transparent url('../images/logo.jpg') center center no-repeat;
-    border-radius: 100%;
-    transform: rotate(180deg) !important;
-    overflow: hidden;
-    background-size: contain; 
+	height: 30px;
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	display: none;
+	background: transparent url('../images/logo.jpg') center center no-repeat;
+	border-radius: 100%;
+	transform: rotate(180deg) !important;
+	overflow: hidden;
+	background-size: contain;
 }
 
 .scrollup i {
@@ -408,7 +408,7 @@ li {
 .scrollup:hover {
 	opacity: 0.8;
 	cursor: pointer;
-	 
+
 }
 
 
@@ -450,14 +450,16 @@ li {
 	padding: 7px 28px;
 	text-transform: uppercase;
 }
- .instagramBtn{
-	 position: relative;
-    display: flex;
-    justify-content: center;
+
+.instagramBtn {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	background: rgb(182 123 255);
-    padding: 10px 0px 10px 0px;
-    
+	padding: 10px 0px 10px 0px;
+
 }
+
 .btn:hover {
 	color: #fff;
 }
@@ -488,9 +490,10 @@ i {
 
 /***************************************************************************/
 /************************ General Styles for Header ************************/
-.navbar-header{
+.navbar-header {
 	width: 100%;
 }
+
 header.navbar {
 	width: 100% !important;
 	padding: 8px 0;
@@ -520,27 +523,30 @@ header.navbar ul li a {
 .nav>li>a:focus {
 	background: #fff;
 }
-.navimag{
+
+.navimag {
 	width: 12rem;
 }
+
 .imglogofooter {
 	display: flex;
 	position: relative;
 	justify-content: center;
 	padding: 2px 0 5px 0;
 }
- .imglogofooter img{
-	 width: 70px;
- }
 
- .dropdown:hover>.dropdown-menu {
+.imglogofooter img {
+	width: 70px;
+}
+
+.dropdown:hover>.dropdown-menu {
 	display: block;
-  }
-  
-  .dropdown>.dropdown-toggle:active {
+}
+
+.dropdown>.dropdown-toggle:active {
 	/*Without this, clicking will make it sticky*/
-	  pointer-events: none;
-  }
+	pointer-events: none;
+}
 
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
@@ -608,7 +614,7 @@ footer .copy h6 {
 }
 
 .slide2 .title {
-	font-size: 6em;    
+	font-size: 6em;
 	overflow: hidden;
 	padding: 10px;
 	text-align: left;
@@ -649,7 +655,7 @@ footer .copy h6 {
 
 .slide1 .quote,
 .slide2 .quote {
-	font-size: 2.5em;  
+	font-size: 2.5em;
 	text-align: right;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -664,8 +670,9 @@ footer .copy h6 {
 .slide2 .quote {
 	margin-left: 15em;
 }
+
 .slide1 .text span {
-    color: var(--white) !important;
+	color: var(--white) !important;
 }
 
 /****************************** Sobre ****************************/
@@ -745,62 +752,82 @@ h2 i {
 	border-top: 3px solid #00c88a;
 	color: #00885e;
 }
+
 /******************************* Channels - Videos Recente pasta comum ****************************/
-.channel{
+.channel {
 	display: flex;
-margin-top: 20px
-}
-.img-channel{
-width: 50px;
-}
-.title-channel{
-	position: relative;
-    left: 15px
+	margin-top: 20px
 }
 
+.img-channel {
+	width: 50px;
+}
+
+.title-channel {
+	position: relative;
+	left: 15px
+}
+
+.playlist {
+	position: relative;
+	margin: 27px 0 0px 0;
+	width: 100%;
+	left: 10px;
+}
 
 /******************************* Pastores ****************************/
-ul .no-padding .no-margin{
-	    margin: 0;
-		padding: 0;
+ul .no-padding .no-margin {
+	margin: 0;
+	padding: 0;
 }
+
 .footer-icon {
-    list-style: none;
-    display: inline-block;
+	list-style: none;
+	display: inline-block;
 }
+
 .footer-lr-pad {
-    padding-left: 10px;
+	padding-left: 10px;
 }
+
 .common-res-bottom-1 {
-        padding-bottom: 40px;
-    }
+	padding-bottom: 40px;
+}
+
 .pastores-fixed {
-        width: 400px !important;
-        margin: 0 auto;
-    }
+	width: 400px !important;
+	margin: 0 auto;
+}
+
 .center {
-	  position: relative;
-    display: flex;
-    justify-content: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
 }
-.pastoresbg{
- background-color: #b67bff
+
+.pastoresbg {
+	background-color: #b67bff
 }
-.image-grow{
+
+.image-grow {
 	border-radius: 8px;
 }
+
 .image-grow:hover {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+	box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
-.pastoresbg-icon-pad{
- padding: 15px 0;
-    margin-bottom: 20px;
+
+.pastoresbg-icon-pad {
+	padding: 15px 0;
+	margin-bottom: 20px;
 }
+
 .image-center {
-    margin: 0 auto;
+	margin: 0 auto;
 }
+
 .videosRecentes {
 	background: #f0f2f5;
 }
@@ -856,22 +883,24 @@ ul .no-padding .no-margin{
 	overflow: visible;
 	padding: 10px 30px;
 }
-.groups{
-padding: 5px 5px 10px 5px;
+
+.groups {
+	padding: 5px 5px 10px 5px;
 
 }
+
 .videosRecentes .groups {
-    border-radius: 5px;
-    min-height: 270px;
-    max-height: 300px;
-    margin: 15px 0px 15px 0px;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
+	border-radius: 5px;
+	min-height: 270px;
+	max-height: 300px;
+	margin: 15px 0px 15px 0px;
+	width: 100%;
+	z-index: 10;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ffffff;
 }
 
 .videosRecentes .groups:hover {
@@ -887,7 +916,7 @@ padding: 5px 5px 10px 5px;
 .videosRecentes .groups .title {
 	color: #6610f2;
 	font-size: 1.3em;
-    margin: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
 }
 
 .videosRecentes .groups .studies {
@@ -945,13 +974,14 @@ padding: 5px 5px 10px 5px;
 
 /****************************** Plugin Instagram **************************/
 
-.instagram_username{
+.instagram_username {
 	font-size: 2.2em !important;
 }
 
-.instagram_biography{
+.instagram_biography {
 	font-size: 2em !important;
 }
+
 /****************************** Behind the Pulpit **************************/
 
 .pulpit .data {
@@ -1199,39 +1229,45 @@ padding: 5px 5px 10px 5px;
 	color: #fff;
 	font-weight: 600;
 }
+
 #map {
- overflow: hidden
-}
-.contact address{
-	font-weight: 500;
-    padding: 10px 15px 10px 15px;
-    background: #131d1a52;
-    border-radius: 5px;
-    margin: 5px;
-	
-}
- .linkrota {
-	 color: #FFF;
-	cursor: pointer;
-}
-.contact a:hover {
-	
-	color: #ffffff !important;
-}
- 
-.contact .rota{
-	 
-	padding-left: 5px;
-}
-.contact .cardcontato {
-padding: 10px 0 10px 0;
- background: #00000054; 
- border-radius: 5px;
+	overflow: hidden
 }
 
-.map{
-border: 0;
+.contact address {
+	font-weight: 500;
+	padding: 10px 15px 10px 15px;
+	background: #131d1a52;
+	border-radius: 5px;
+	margin: 5px;
+
 }
+
+.linkrota {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.contact a:hover {
+
+	color: #ffffff !important;
+}
+
+.contact .rota {
+
+	padding-left: 5px;
+}
+
+.contact .cardcontato {
+	padding: 10px 0 10px 0;
+	background: #00000054;
+	border-radius: 5px;
+}
+
+.map {
+	border: 0;
+}
+
 .contact #map {
 	min-height: 575px;
 	position: absolute;
@@ -1264,57 +1300,66 @@ border: 0;
 .contact .form-control[type="email"] {
 	height: 43px;
 }
-.contact .iconfooteraddress{
-	 width: 25px;
-    padding: 0 2px 0;
-    vertical-align: middle;
 
- 
+.contact .iconfooteraddress {
+	width: 25px;
+	padding: 0 2px 0;
+	vertical-align: middle;
+
+
 }
-.contact  address > a  {
+
+.contact address>a {
 	color: var(--white) !important;
 }
 
 /* ********************** Cards Devocinal ********************* */
-.dev-summary{
+.dev-summary {
 	font-weight: 500;
 }
-.dev-published_at{
+
+.dev-published_at {
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
 	font-size: 1.1em
 }
-.dev-calendar{
+
+.dev-calendar {
 	font-size: 1.8em;
-    margin: -5px 0 0 0;
-    color: blueviolet;
+	margin: -5px 0 0 0;
+	color: blueviolet;
 }
+
 .dev-title {
 	line-height: 1.5em !important;
 }
 
 /* ********************** Cards Devocinal/GC Item ********************* */
-.dev-card-item{
+.dev-card-item {
 	box-shadow: 3px 3px 9px 5px #b67bff61;
 }
-.devocional-item-main{
+
+.devocional-item-main {
 	margin-top: 80px;
 }
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
 
 @media (min-width: 1281px) {
-  
-  .slide1 .text {  
-	  top: 1em !important;
-}
-.slide1 .quote, .slide2 .quote {
-	margin-top: 14.5em !important
-}
-  
+
+	.slide1 .text {
+		top: 1em !important;
+	}
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 14.5em !important
+	}
+
 }
 
 /* 
@@ -1322,32 +1367,21 @@ border: 0;
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
- 
-  
-}
+@media (min-width: 1025px) and (max-width: 1280px) {}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  
- 
-  
-}
+@media (min-width: 768px) and (max-width: 1024px) {}
 
 /* 
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
- 
-  
-}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -1355,15 +1389,19 @@ border: 0;
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .slide1 .quote, .slide2 .quote {
-	margin-top: 12.5em !important
-}
-.devocional-item-main{
-	margin-top:0 !important
-}
-.generic {
-    padding: 60px 13px;
-}
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 12.5em !important
+	}
+
+	.devocional-item-main {
+		margin-top: 0 !important
+	}
+
+	.generic {
+		padding: 60px 13px;
+	}
 }
 
 /* 
@@ -1372,15 +1410,17 @@ border: 0;
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-   .slide1 .quote, .slide2 .quote {
-	margin-top: 12.5em !important
-}
-.devocional-item-main{
-	margin-top:0 !important
-}
-  
-.generic {
-    padding: 60px 13px;
-}
+
+	.slide1 .quote,
+	.slide2 .quote {
+		margin-top: 12.5em !important
+	}
+
+	.devocional-item-main {
+		margin-top: 0 !important
+	}
+
+	.generic {
+		padding: 60px 13px;
+	}
 }
