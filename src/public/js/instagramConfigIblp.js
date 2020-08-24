@@ -5,7 +5,7 @@
                 'username': 'lagoinhapromissao',
                 'container': "#instagramLP",
                 'display_profile': true,
-                'display_biography': true,
+                'display_biography': false,
                 'display_gallery': true,
                 'callback': null,
                 'styling': true,

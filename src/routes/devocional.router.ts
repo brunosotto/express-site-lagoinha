@@ -2,6 +2,7 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from './../providers/lagoinha.provider';
 import moment from 'moment';
+
 export class DevocionalRouter {
 
     public router: Router;
@@ -12,8 +13,7 @@ export class DevocionalRouter {
         private readonly app: Express,
     ) {
         this.router = Router();
-         this.path = '/:id/:slug/';
- 
+        this.path = '/:id/:slug/';
 
         this.devoProv = this.app.get('lagoinha');
 
@@ -25,9 +25,9 @@ export class DevocionalRouter {
            const baseHref = '../../';
            const devo = this.devoProv.devocionais;
             // Converter string para Number.
-           const idparams = parseInt(req.params.id, 10);
+           const id = parseInt(req.params.id, 10);
            // Filtro para pegar o id vindo no parametro e verificar se e mesmo id obj.
-           const devocional = devo.filter(dev => idparams === dev.id);
+           const devocional = devo.filter(d => id === d.id);
            res.render('devocional-item', {devocional, baseHref, moment});
         });
     }

@@ -17,7 +17,8 @@ export class DizimoRouter {
 
     private setGet(): void {
         this.router.get(this.path, async (req: Request, res: Response) => {
-            res.render('dizimo');
+            const baseHref = '../';
+            res.render('dizimo', { baseHref });
         });
     }
 
