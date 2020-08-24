@@ -808,9 +808,13 @@ ul .no-padding .no-margin {
 .pastoresbg {
 	background-color: #b67bff
 }
+.h2-bottom{
+	font-weight: 600;
+	margin-bottom: auto;
+}
 
 .image-grow {
-	border-radius: 8px;
+  border-radius: 0 0 8px 8px;  
 }
 
 .image-grow:hover {
@@ -1400,7 +1404,16 @@ ul .no-padding .no-margin {
 	}
 
 	.generic {
-		padding: 60px 13px;
+		padding: 0px;
+	}
+	#map{
+		max-width: 92%;
+	}
+	.instagram_biography {
+		font-size: 1.2em !important;
+	}
+	.h2-bottom{
+		margin-bottom: 32px;
 	}
 }
 
@@ -1422,5 +1435,18 @@ ul .no-padding .no-margin {
 
 	.generic {
 		padding: 60px 13px;
+	}
+	#map{
+		max-width: 92%;
+	}
+	.instagram_biography {
+		font-size: 1.2em !important;
+	}
+	.h2-bottom{
+		margin-bottom: 32px;
+	}
+	.contact #contact_bg { 
+		width: 94%; 
+		margin: 0 auto;
 	}
 }
