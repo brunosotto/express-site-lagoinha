@@ -186,10 +186,12 @@ li {
 /********************** General Styles for Components **********************/
 
 /********************************* Carousel *******************************/
-.videos {
-	display: flex;
+.centralizando {
+	position: relative;
+	margin: 0 auto;
 }
 
+ 
 .cu-controls {
 	padding: 40px 0 0 0;
 	position: relative;
@@ -769,10 +771,15 @@ h2 i {
 }
 
 .playlist {
-	position: relative;
+	 
 	margin: 27px 0 0px 0;
 	width: 100%;
-	left: 10px;
+	padding-left: 50px;
+}
+.listvideos{
+	position: relative;
+	margin: 30px auto !important;
+	
 }
 
 /******************************* Pastores ****************************/
@@ -1345,7 +1352,7 @@ ul .no-padding .no-margin {
 }
 
 .devocional-item-main {
-	margin-top: 80px;
+	margin: 150px 0 40px 0;;
 }
 
 /* 
@@ -1378,14 +1385,22 @@ ul .no-padding .no-margin {
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.video-main {
+		margin: 70px 0 0 0;
+	}
+}
 
 /* 
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.video-main {
+		margin: 80px 0 0 0;
+	}
+}
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -1400,7 +1415,7 @@ ul .no-padding .no-margin {
 	}
 
 	.devocional-item-main {
-		margin-top: 0 !important
+		margin: 30px 0 30px 0;
 	}
 
 	.generic {
@@ -1416,7 +1431,9 @@ ul .no-padding .no-margin {
 		margin-bottom: 32px;
 	}
 }
-
+.video-main{
+	margin: 86px 0 0 0;
+}
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
@@ -1430,14 +1447,15 @@ ul .no-padding .no-margin {
 	}
 
 	.devocional-item-main {
-		margin-top: 0 !important
+		margin: 30px 0 30px 0;
 	}
 
 	.generic {
-		padding: 60px 13px;
+	 
 	}
 	#map{
-		max-width: 92%;
+		max-width: 94%;
+		left: 10px;
 	}
 	.instagram_biography {
 		font-size: 1.2em !important;
@@ -1448,5 +1466,8 @@ ul .no-padding .no-margin {
 	.contact #contact_bg { 
 		width: 94%; 
 		margin: 0 auto;
+	}
+	.video-main {
+		  margin: 0
 	}
 }
