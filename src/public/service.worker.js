@@ -1,6 +1,11 @@
 var cacheName = 'logoinhapromissao';
 var filesToCache = [
-  '/', 
+  '/',
+  '/videos',
+  '/devocionais',
+  '/estudos-gc',
+  '/dizimo',
+  'css/darkmode.css',
   'css/style.css',
   '/css/animate.css',
   '/css/violetstyle.css',
@@ -14,7 +19,17 @@ var filesToCache = [
   '/js/instagramConfigIblp.js',
   '/js/instagramConfigLegacy.js',
   '/assets/jquery/jquery.nav.js',
-  '/assets/jquery/jquery.scrollTo.js'
+  '/assets/jquery/jquery.scrollTo.js',
+  '/plugins/revolution/js/jquery.plugins.min.js',
+  '/plugins/revolution/js/jquery.revolution.min.js',
+  '/images/logo-lagoinha-promissao-branco.svg',
+  '/images/menu.svg',
+  '/images/pastor-dani-familia.jpg',
+  '/images/slide/slide01.jpeg',
+  '/images/slide/slide2.png',
+  '/images/slide/slide3.png',
+
+
 ];
 
 /* Start the service worker and cache all of the app's content */

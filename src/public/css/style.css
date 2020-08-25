@@ -95,8 +95,6 @@ address {
 
 html,
 body {
-    background: #fff;
-    color: #404040;
     font-family: 'Dosis', sans-serif;
     font-size: 80%;
     font-weight: 400;
@@ -114,7 +112,6 @@ h5,
 h6 {
     font-weight: 400;
     font-family: 'Dosis', sans-serif;
-    color: #404040;
 }
 
 h1 {
@@ -155,7 +152,7 @@ p {
 }
 
 li {
-    color: #555;
+    /* color: #555; */
     text-decoration: none;
     outline: none;
     -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
@@ -179,202 +176,16 @@ li {
     margin: 0 auto;
 }
 
-.cu-controls {
-    padding: 40px 0 0 0;
-    position: relative;
-}
-
-.cu-controls > div {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.cu-controls a.sercacontrol {
-    border-radius: 50%;
-    border: 1px solid #dddddd;
-    color: #aaaaaa;
-    display: block;
-    padding: 10px;
-    position: absolute;
-    background: #fff;
-}
-
-.cu-controls a.sercacontrol:hover {
-    color: #00885e;
-    border: 1px solid #00c88a;
-}
-
-.cu-controls a.sercacontrol.next {
-    left: 100%;
-    margin-left: -36px;
-}
-
-.cu-controls .carousel-indicators {
-    width: 95%;
-    position: static;
-    margin: 0 auto;
-}
-
-.cu-controls .carousel-indicators li {
-    background: none;
-    border-radius: 0;
-    border: none;
-    height: auto;
-    margin: 0;
-    text-indent: 0;
-}
-
-.cu-controls .carousel-indicators li.middle {
-    border-top: 1px solid #dddddd;
-    width: 33.3%;
-    display: block;
-    float: left;
-    font-size: 1.3em;
-    margin-top: 15px;
-    padding-top: 7px;
-    text-align: center;
-}
-
-.cu-controls .carousel-indicators li.middle:hover,
-.cu-controls .carousel-indicators li.middle.active {
-    padding-top: 5px;
-}
-
-/*****************************    jPlayer    *******************************/
-.player-container {
-    height: 240px;
-    background: #e2ecf6;
-}
-
-.player-container .jp-jplayer {
-    margin: 0 auto;
-}
-
-#jquery_jplayer_1 {
-    width: 100% !important;
-    display: inline-block;
-}
-
-#jquery_jplayer_1 img {
-    width: 100% !important;
-}
-
-.jp-gui {
-    background: #fff;
-    height: auto;
-    padding: 20px;
-}
-
-.jp-gui .jp-btn {
-    border-radius: 50%;
-    color: #fff;
-    display: block;
-    float: left;
-    height: 45px;
-    line-height: 45px;
-    text-align: center;
-    width: 45px;
-    top: 0;
-}
-
-.jp-gui .jp-btn i {
-    font-size: 3em;
-    top: 6px;
-}
-
-.jp-gui .jp-btn:hover {
-    color: #fff;
-}
-
-.jp-gui .jp-pause {
-    display: none;
-}
-
-.jp-gui .jp-play i {
-    left: 2px;
-}
-
-.jp-gui .jp-pause i {
-    left: 1px;
-}
-
-.jp-gui .jp-progress {
-    width: 80%;
-    margin: 0 0 0 100px;
-}
-
-.jp-gui .jp-progress .jp-seek-bar {
-    border-radius: 3px;
-    height: 13px;
-}
-
-.jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
-    border-radius: 3px;
-    height: 13px;
-}
-
-.jp-gui .jp-progress .jp-current-time,
-.jp-gui .jp-progress .jp-duration {
-    line-height: 13px;
-    font-size: 12px;
-}
-
-.jp-gui .jp-progress .jp-current-time {
-    float: left;
-    margin-left: -40px;
-}
-
-.jp-gui .jp-progress .jp-duration {
-    float: right;
-    margin-right: -40px;
-}
-
-.jp-gui .jp-title {
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 5px 0 24px 60px;
-}
-
-.jp-gui .jp-video-play {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 242px;
-    margin: 0 15px;
-}
-
-.jp-gui .jp-video-play .jp-video-play-icon {
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    margin: -50px 0 0 -50px;
-    font-size: 2.3em;
-    opacity: 0.8;
-}
-
-.jp-gui .jp-video-play .jp-video-play-icon:hover {
-    opacity: 1;
-}
-
-.jp-gui .jp-video-play .jp-video-play-icon i {
-    top: 12px;
-    left: 6px;
-}
-
 /***************************** Go to top arrow *****************************/
 
 .scrollup {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     position: fixed;
     bottom: 80px;
     right: 30px;
     display: none;
-    background: transparent url('../images/logo.jpg') center center no-repeat;
+    background: transparent url('../images/logo-branco.png') center center no-repeat;
     border-radius: 100%;
     transform: rotate(180deg) !important;
     overflow: hidden;
@@ -398,9 +209,10 @@ li {
 /******************* General Styles for Commons Sections *******************/
 
 /********************************** General ********************************/
-.margin-top-bottom{
+.margin-top-bottom {
     margin: 60px 0 auto;
 }
+
 .generic {
     padding: 60px 30px;
 }
@@ -456,13 +268,13 @@ i {
 }
 
 .navbar-toggle {
-    background: #00c88a;
-    margin-top: 28px;
+    /* background: #00c88a; */
+    background: #b67bff;
+    
 }
 
-.navbar-toggle span {
-    color: #fff;
-    font-size: 2em;
+.navbar-toggle img {
+     width: 25.5px;
 }
 
 /***************************************************************************/
@@ -475,7 +287,7 @@ header.navbar {
     width: 100% !important;
     padding: 8px 0;
     margin: 0;
-    background: white;
+     
 }
 
 header .navbar-brand {
@@ -493,12 +305,11 @@ header.navbar ul li a {
     line-height: 2;
     padding: 0;
     margin: 0 15px;
-    color: #555;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-    background: #fff;
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background: transparent;
 }
 
 .navimag {
@@ -513,14 +324,15 @@ header.navbar ul li a {
 }
 
 .imglogofooter img {
-    width: 70px;
+    width: 10em;
+    height: auto;
 }
 
-.dropdown:hover > .dropdown-menu {
+.dropdown:hover>.dropdown-menu {
     display: block;
 }
 
-.dropdown > .dropdown-toggle:active {
+.dropdown>.dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
@@ -528,7 +340,6 @@ header.navbar ul li a {
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
 footer {
-    background: #232323;
     height: 110px;
 }
 
@@ -655,9 +466,7 @@ footer .copy h6 {
 /****************************** Sobre ****************************/
 
 .info-box {
-    padding: 0% 3% 3% 3%;
-    background: #e1ecf6;
-    border: 1px solid #9fafbd;
+    padding: 0% 3% 3% 3%; 
 }
 
 .info-box p {
@@ -700,7 +509,7 @@ h2 i {
     padding: 40px 0 0 0;
 }
 
-.service .cu-controls > div {
+.service .cu-controls>div {
     padding-right: 0;
     padding-left: 0;
 }
@@ -750,6 +559,7 @@ h2 i {
     width: 100%;
     padding-left: 50px;
 }
+
 .listvideos {
     position: relative;
     margin: 30px auto !important;
@@ -788,6 +598,7 @@ ul .no-padding .no-margin {
 .pastoresbg {
     background-color: #b67bff;
 }
+
 .h2-bottom {
     font-weight: 600;
     margin-bottom: auto;
@@ -810,10 +621,6 @@ ul .no-padding .no-margin {
 
 .image-center {
     margin: 0 auto;
-}
-
-.videosRecentes {
-    background: #f0f2f5;
 }
 
 .videosRecentes .title {
@@ -882,11 +689,10 @@ ul .no-padding .no-margin {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
 }
 
 .videosRecentes .groups:hover {
-    background: #ececee;
+    background: #100c0c;
     box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -898,7 +704,8 @@ ul .no-padding .no-margin {
 .videosRecentes .groups .title {
     color: #6610f2;
     font-size: 1.3em;
-    margin: 5px 0 5px 0;
+    margin: 5px 0 5px 0; 
+    padding: 5px;
 }
 
 .videosRecentes .groups .studies {
@@ -1085,8 +892,7 @@ ul .no-padding .no-margin {
     margin-right: 20px;
 }
 
-.events .eventlist ul li .event-date .number {
-}
+.events .eventlist ul li .event-date .number {}
 
 .events .eventlist ul li .event-date .month {
     color: #dddddd;
@@ -1125,7 +931,7 @@ ul .no-padding .no-margin {
     margin: 3% 0 0 0;
 }
 
-.control-arrow > div {
+.control-arrow>div {
     padding-right: 0;
     padding-left: 0;
 }
@@ -1276,7 +1082,7 @@ ul .no-padding .no-margin {
     vertical-align: middle;
 }
 
-.contact address > a {
+.contact address>a {
     color: var(--white) !important;
 }
 
@@ -1289,13 +1095,14 @@ ul .no-padding .no-margin {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    font-size: 1.1em;
+    font-size: 1.5em;
+    color: #fff !important;
 }
 
 .dev-calendar {
     font-size: 1.8em;
     margin: -5px 0 0 0;
-    color: blueviolet;
+    color:  #fff !important;
 }
 
 .dev-title {
@@ -1304,20 +1111,27 @@ ul .no-padding .no-margin {
 
 /* ********************** Cards Devocinal/GC Item ********************* */
 .card-estugogc-devocional {
- padding: 0 10px 25px 10px;
+    padding: 0 10px 25px 10px;
 }
+
 .dev-card-item {
     box-shadow: 3px 3px 9px 5px #b67bff61;
 }
-.card-item-devocional-gc{
-min-height: 52.1em;
+
+.card-item-devocional-gc {
+    min-height: 52.1em;
 }
+
 .devocional-item-main {
     margin: 150px 0 40px 0;
 }
-.devocional-card-image{
-   width: 400px; display: flex; margin: 0 auto;
+
+.devocional-card-image {
+    width: 400px;
+    display: flex;
+    margin: 0 auto;
 }
+
 .btn-doacao {
     background: #53337b;
     border-radius: 20px;
@@ -1329,30 +1143,37 @@ min-height: 52.1em;
     padding: 7px 28px;
     text-transform: uppercase;
 }
+
 .dizimo-banco-deposito {
     font-size: 35px;
     text-align: center;
 }
+
 .dizimo-deposito {
     font-size: 3em;
     font-weight: 500;
     padding-bottom: 10px;
 }
+
 .dizimo-deposito-border {
     border-bottom: 5px solid #b67bff;
 }
+
 .dizimo-cartao-deposito {
     font-size: 3em;
     font-weight: 500;
     padding-top: 10px;
 }
+
 .dizimo-deposito-cnpj {
     font-size: 2em;
 }
+
 .dizimo-fotos {
     padding: 5px;
     margin: 10px 0;
 }
+
 .dizimo-versiculo {
     width: 100%;
     display: flex;
@@ -1361,6 +1182,7 @@ min-height: 52.1em;
     background-color: #7420e00f;
     padding: 20px;
 }
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -1382,8 +1204,7 @@ min-height: 52.1em;
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
+@media (min-width: 1025px) and (max-width: 1280px) {}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -1413,6 +1234,7 @@ min-height: 52.1em;
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+
     .slide1 .quote,
     .slide2 .quote {
         margin-top: 12.5em !important;
@@ -1422,31 +1244,38 @@ min-height: 52.1em;
         margin: 30px 0 30px 0;
     }
 
-.margin-top-bottom {
+    .margin-top-bottom {
         margin: 0;
     }
+
     .generic {
         padding: 0px;
     }
+
     #map {
         max-width: 92%;
     }
+
     .instagram_biography {
         font-size: 1.2em !important;
     }
+
     .h2-bottom {
         margin-bottom: 32px;
     }
 }
+
 .video-main {
     margin: 86px 0 0 0;
 }
+
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+
     .slide1 .quote,
     .slide2 .quote {
         margin-top: 12.5em !important;
@@ -1455,30 +1284,37 @@ min-height: 52.1em;
     .devocional-item-main {
         margin: 30px 0 30px 0;
     }
+
     .margin-top-bottom {
         margin: 0;
     }
-    .text-descricao-paginas{
-       font-size: 1.2em;
-    margin-top: 11px;
-    text-align: center; 
+
+    .text-descricao-paginas {
+        font-size: 1.2em;
+        margin-top: 11px;
+        text-align: center;
     }
-    .generic {
-    }
+
+    .generic {}
+
     #map {
         max-width: 94%;
         left: 10px;
     }
+
     .instagram_biography {
         font-size: 1.2em !important;
     }
+
     .h2-bottom {
         margin-bottom: 32px;
     }
+
     .contact #contact_bg {
         width: 94%;
         margin: 0 auto;
     }
+
     .video-main {
         margin: 0;
     }
