@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lagoinha Promissão - Devocional : <%= devocional[0].page.title %></title>
+    <title>Lagoinha Promissão - Devocional : <%= devocional.page.title %></title>
 
     <base href="<%= baseHref %>" />
 
@@ -40,7 +40,7 @@
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
-                        <h2> <%= devocional[0].page.title %> </h2>
+                        <h2> <%= devocional.page.title %> </h2>
                         <span class="dotts"> . . . . . . </span>
                     </div>
                 </div>
@@ -48,19 +48,19 @@
                     <div class="col">
   
                         <div class="card dev-card-item">
-                            <figure figure class="figure" <%= 'style=background-color:#' + devocional[0].page.main_color %>>
+                            <figure figure class="figure" <%= 'style=background-color:#' + devocional.page.main_color %>>
 
-                                <img src="<%=  devocional[0].page.image  %> " class="figure-img img-fluid"
-                                    alt="<%=  devocional[0].page.title %>"
+                                <img src="<%=  devocional.page.image  %> " class="figure-img img-fluid"
+                                    alt="<%=  devocional.page.title %>"
                                     style="width: 400px; display: flex; margin: 0 auto;">
                             </figure>
                             <div class="card-body">
-                                <h2> <%=  devocional[0].page.title %> </h2>
+                                <h2> <%=  devocional.page.title %> </h2>
                                 <span> Publicado em:
-                                    <%=   moment( devocional[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                    <%=   moment( devocional.published_at ).format('DD/MM/YYYY - h:mm') %>
                                 </span>
 
-                                <%- (devocional[0].page.text ) %>
+                                <%- (devocional.page.text ) %>
                             </div>
 
                             <div class="card-footer bg-transparent animation delay4">
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="dev-published_at">
-                                            <%=   moment( devocional[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                            <%=   moment( devocional.published_at ).format('DD/MM/YYYY - h:mm') %>
                                         </div>
                                     </div>
                                 </div>

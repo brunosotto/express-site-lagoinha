@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lagoinha Promissão - Estudo Gc : <%= estudogc[0].page.title %></title>
+    <title>Lagoinha Promissão - Estudo Gc : <%= estudogc.page.title %></title>
 
     <base href="<%= baseHref %>" />
 
@@ -40,9 +40,8 @@
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
-                        <h2> <%= estudogc[0].page.title %> </h2>
+                        <h2> <%= estudogc.page.title %> </h2>
                         <span class="dotts"> . . . . . . </span>
-
                     </div>
                 </div>
 
@@ -51,17 +50,17 @@
                     <div class="col">
 
                         <div class="card dev-card-item">
-                            <figure class="figure" <%= 'style=background-color:#' + estudogc[0].page.main_color %>>
-                                <img src="<%= estudogc[0].page.image  %> " class="figure-img img-fluid"
-                                    alt="<%= estudogc[0].page.title %>"
+                            <figure class="figure" <%= 'style=background-color:#' + estudogc.page.main_color %>>
+                                <img src="<%= estudogc.page.image  %> " class="figure-img img-fluid"
+                                    alt="<%= estudogc.page.title %>"
                                     style="width: 400px; display: flex; margin: 0 auto;">
                             </figure>
                             <div class="card-body">
-                                <h2> <%= estudogc[0].page.title %> </h2>
-                                <span> Publicado em: <%=  moment( estudogc[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                <h2> <%= estudogc.page.title %> </h2>
+                                <span> Publicado em: <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
                                 </span>
 
-                                <%- (estudogc[0].page.text ) %>
+                                <%- (estudogc.page.text ) %>
                             </div>
 
                             <div class="card-footer bg-transparent animation delay4">
@@ -73,15 +72,12 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="dev-published_at">
-                                            <%=  moment( estudogc[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                            <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
                                         </div>
                                     </div>
                                 </div>
 
-
-
                             </div>
-
 
                         </div>
 
