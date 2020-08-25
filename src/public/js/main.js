@@ -73,20 +73,35 @@ var home = (function ($) {
     }
 
     /***************************  Fotos Galaria dizimo  ********************************/
-    var dir = 'images/galeria/'; // Carregar fotos da pasta images galeria
-    var fileextension = '.jpeg'; // formato da imagem
-    var i = '1';
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
 
-    $(function imageloop() {
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    const dir = 'images/galeria/'; // Carregar fotos da pasta images galeria
+    const fileextension = '.jpeg'; // formato da imagem
+    const qtde = 13;
+    const arr = Array.from(Array(qtde), (_, i) => i + 1);
+    const limit = 3;
+
+    shuffle(arr).slice(0, limit).forEach(i => {
         $('<img style="margin: 10px 0 10px 0;padding: 5px;border-radius: 10px;" />')
             .attr('src', dir + i + fileextension)
             .appendTo('.galeriadizimo');
-        if (i == 13) {
-            // alert('imagems carregadas');
-        } else {
-            i++;
-            imageloop();
-        }
     });
 
     return {
