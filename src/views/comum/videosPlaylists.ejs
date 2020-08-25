@@ -8,11 +8,11 @@
 				<span class="dotts"> . . . . . . </span>
 			</div>
 		</div>
-		<!-- end title --> 
+		<!-- end title -->
 		<div class="row animated fadeInUp delay4">
 			<% for (channel of channels){ %>
 
-			<div class="channel ">
+			<div class="channel listvideos">
 				<div class="img-channel"><img class="mg-fluid rounded-circle"
 						src="<%- channel.snippet.thumbnails.default.url %>">
 				</div>
@@ -20,39 +20,38 @@
 					<h2><%= channel.snippet.title %></h2>
 				</div>
 
-                        </div>
-                        <% for (playlist of channel.playlists ){  %>
+			</div>
+			<% for (playlist of channel.playlists ){  %>
 
-                                <div class="channel playlist">
-                                        <div class="img-channel">
-                                                <img class="mg-fluid" src="<%- playlist.snippet.thumbnails.default.url %>">
-                                        </div>
-                                        <div class="title-channel">
-                                                <h2><%= playlist.snippet.title %></h2>
-                                        </div>
-                                </div>
-                      
-			<div class="row">
-                                <% for (item of playlist.items){ %>
+			<div class="channel playlist listavideosplaylist">
+				<div class="img-channel">
+					<img class="mg-fluid" src="<%- playlist.snippet.thumbnails.default.url %>">
+				</div>
+				<div class="title-channel">
+					<h2><%= playlist.snippet.title %></h2>
+				</div>
+			</div>
+
+			<div class="row centralizando">
+				<% for (item of playlist.items){ %>
 				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                        <a href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>">
-                                                <div class="groups">
-							<img class="mg-fluid"
-                                                        src="<%- item.snippet.thumbnails.medium.url %>">
+					<a href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>">
+						<div class="groups">
+							<img class="mg-fluid" src="<%- item.snippet.thumbnails.medium.url %>">
 							<div class="title">
-                                                                <h4><%= item.snippet.title %></h2>
+								<h4><%= item.snippet.title %></h2>
 							</div>
-					</div>
-                                               
-                                                
-                                                 
-                                        </a>
-						 
+						</div>
+
+
+
+					</a>
+
 				</div>
 				<% } %>
-                        </div>
-                        <% } %>
+			</div>
 			<% } %>
-		</div> 
+			<% } %>
+		</div>
 	</div>
 </section>
