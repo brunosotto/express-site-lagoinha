@@ -25,7 +25,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <%- // include('comum/favicon') -%>
+    <%-  include('comum/favicon') -%>
 
 </head>
 
@@ -33,26 +33,30 @@
     <!--  Menu -->
     <%- include('comum/menu') -%>
 
-   
-        <section class="generic service animated fadeInUp delay3">
+   <div class="margin-top-bottom"> 
+    <section class="generic service animated fadeInUp delay3">
             <div class="container">
-                <%=  //JSON.stringify(devos) %>
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
                         <h2> Estudos GC </h2>
+                        <blockquote class="blockquote text-right">
+                                <p class="mb-0 text-descricao-paginas">Os GCs são o coração da igreja, em que cada um tem a oportunidade de conhecer pessoas, criar vínculos, servir, ter comunhão e se edificar.
+                                 São muitos os benefícios que um GC pode proporcionar à vida de uma pessoa e à igreja.
+                                 GCs são pequenos grupos de Crescimentos, aonde nós nos reunimos para estudar e meditar em comunhão a palavra de Deus.</p>
+                                <!-- <span>Provérbios <cite>3:9-10</cite></span> -->
+                            </blockquote>
                         <span class="dotts"> . . . . . . </span>
                     </div>
                 </div>
                 <div class="row">
 
-               
                     <%  for (estudocg of estudosgc){  %>
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="padding: 0 10px 25px 10px">
-                        <%= //  JSON.stringify(devocional.page.title)  %>
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 card-estugogc-devocional">
+
                         <div class="card-group">
                             <a href="<%= '/estudo-gc/'+ estudocg.id + '/' + estudocg.slug %>">
-                                <div class="card" style="min-height: 52.1em;">
+                                <div class="card card-item-devocional-gc">
                                     <img class="card-img-top" src="<%= estudocg.page.app_image %> "
                                         alt="<%= estudocg.page.title %> ">
                                     <div class="card-body">
@@ -73,9 +77,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
                                     </div>
                                 </div>
                             </a>
@@ -83,15 +84,12 @@
                         <!-- fim do if -->
                     </div>
                     <%   }  %>
-               
 
                 </div>
             </div>
 
         </section>
-
-        
-        <!-- <div class="devocional-item-main">  </div> -->
+   </div>
 
     <!-- Footer -->
     <%- include('comum/footer') -%>

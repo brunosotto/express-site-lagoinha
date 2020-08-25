@@ -25,7 +25,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <%- // include('comum/favicon') -%>
+    <%- include('comum/favicon') -%>
 
 </head>
 
@@ -33,10 +33,8 @@
     <!--  Menu -->
     <%- include('comum/menu') -%>
 
-  
         <section class="devocional-item-main service animated fadeInUp delay3">
             <div class="container">
-                <%=  //JSON.stringify(devos) %>
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
@@ -50,9 +48,8 @@
                         <div class="card dev-card-item">
                             <figure figure class="figure" <%= 'style=background-color:#' + devocional.page.main_color %>>
 
-                                <img src="<%=  devocional.page.image  %> " class="figure-img img-fluid"
-                                    alt="<%=  devocional.page.title %>"
-                                    style="width: 400px; display: flex; margin: 0 auto;">
+                                <img src="<%=  devocional.page.image  %> " class="figure-img img-fluid devocional-card-image"
+                                    alt="<%=  devocional.page.title %>">
                             </figure>
                             <div class="card-body">
                                 <h2> <%=  devocional.page.title %> </h2>
@@ -77,10 +74,7 @@
                                     </div>
                                 </div>
 
-
-
                             </div>
-
 
                         </div> 
 
@@ -91,17 +85,12 @@
 
         </section>
 
-
-   
-
     <!-- Footer -->
     <%- include('comum/footer') -%>
-
 
     <a href="#" class="scrollup animated bounceInUp"> </a>
 
     <%- include('comum/includeJs') -%>
-
     <!-- Script Principal  -->
     <script src="js/main.js"></script>
     <script>
