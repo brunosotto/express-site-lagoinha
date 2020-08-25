@@ -120,7 +120,7 @@ export class YouTubeProvider {
 
         if (!hasUnfinished) {
             // no complete passa a lista nova
-            this.channels = this.loadingChannels;
+            this.channels = this.loadingChannels.reverse().reverse();
         }
     }
 
