@@ -1135,8 +1135,8 @@ ul .no-padding .no-margin {
 .btn-doacao {
     background: #53337b;
     border-radius: 20px;
-    border: 1px solid #fff;
-    color: white;
+    border: 1px solid #000;
+    color: #000;
     font-size: 1.5em;
     font-weight: 500;
     margin-top: 0px;
@@ -1167,6 +1167,10 @@ ul .no-padding .no-margin {
 
 .dizimo-deposito-cnpj {
     font-size: 2em;
+}
+
+.card.dizimo-fotos {
+    background-color: #3b3b3b41;
 }
 
 .dizimo-fotos {
