@@ -1,0 +1,56 @@
+html,
+body {
+    background: hsl(268deg 90% 4%) !important;
+    /* #0a0113 */
+    color: #f8f9fa;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #b67bff !important;
+}
+p{
+   
+}
+li {
+    color: #fefefe !important;
+    }
+/* Header */
+ header{
+     background: #160e1d !important;
+ }
+header.navbar ul li a {
+    background: transparent;
+    /* #0a0113  rgb(37 37 37)*/
+    color: #fbfbfb9c
+}
+.header.navbar {
+    color: #e2e0e075
+}
+
+/* Info Box Horario */
+.info-box {
+    background: #151219 !important;
+    border: 1px solid #2e2c31 !important;
+}
+.pastoresbg {
+    background-color: #622ea2 !important;
+}
+.gallery {
+    background: #100817 !important;
+}
+.videosRecentes {
+    background: #100817;
+}
+.videosRecentes .groups {
+  background-color: #21252a;
+}
+footer {
+    background: #160e1d !important ;
+}
+.card-item-devocional-gc{
+background: #21252a !important;
+}
