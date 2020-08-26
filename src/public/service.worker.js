@@ -25,11 +25,10 @@ var filesToCache = [
   '/images/logo-lagoinha-promissao-branco.svg',
   '/images/menu.svg',
   '/images/pastor-dani-familia.jpg',
-  '/images/slide/slide01.jpeg',
-  '/images/slide/slide2.png',
-  '/images/slide/slide3.png',
-
-
+  '/images/slide/s1.jpeg',
+  '/images/slide/s2.png',
+  '/images/slide/s3.png',
+  '/images/slide/s4.png',
 ];
 
 /* Start the service worker and cache all of the app's content */
