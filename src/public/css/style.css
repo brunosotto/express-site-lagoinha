@@ -398,7 +398,9 @@ li {
 /******************* General Styles for Commons Sections *******************/
 
 /********************************** General ********************************/
-
+.margin-top-bottom{
+    margin: 60px 0 auto;
+}
 .generic {
     padding: 60px 30px;
 }
@@ -1301,12 +1303,20 @@ ul .no-padding .no-margin {
 }
 
 /* ********************** Cards Devocinal/GC Item ********************* */
+.card-estugogc-devocional {
+ padding: 0 10px 25px 10px;
+}
 .dev-card-item {
     box-shadow: 3px 3px 9px 5px #b67bff61;
 }
-
+.card-item-devocional-gc{
+min-height: 52.1em;
+}
 .devocional-item-main {
     margin: 150px 0 40px 0;
+}
+.devocional-card-image{
+   width: 400px; display: flex; margin: 0 auto;
 }
 .btn-doacao {
     background: #53337b;
@@ -1412,6 +1422,9 @@ ul .no-padding .no-margin {
         margin: 30px 0 30px 0;
     }
 
+.margin-top-bottom {
+        margin: 0;
+    }
     .generic {
         padding: 0px;
     }
@@ -1442,7 +1455,14 @@ ul .no-padding .no-margin {
     .devocional-item-main {
         margin: 30px 0 30px 0;
     }
-
+    .margin-top-bottom {
+        margin: 0;
+    }
+    .text-descricao-paginas{
+       font-size: 1.2em;
+    margin-top: 11px;
+    text-align: center; 
+    }
     .generic {
     }
     #map {
