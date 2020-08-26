@@ -21,8 +21,9 @@ export class HomeRouter {
 
     private setGet(): void {
         this.router.get(this.path, (req: Request, res: Response) => {
+            const channelKeys = this.youTube.channelKeys;
             const channels = this.youTube.channels;
-            res.render('home', { channels });
+            res.render('home', { channels, channelKeys });
         });
     }
 

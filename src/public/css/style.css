@@ -892,8 +892,6 @@ ul .no-padding .no-margin {
     margin-right: 20px;
 }
 
-.events .eventlist ul li .event-date .number {}
-
 .events .eventlist ul li .event-date .month {
     color: #dddddd;
     text-transform: uppercase;
@@ -1298,8 +1296,6 @@ ul .no-padding .no-margin {
         margin-top: 11px;
         text-align: center;
     }
-
-    .generic {}
 
     #map {
         max-width: 94%;

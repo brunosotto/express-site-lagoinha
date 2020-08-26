@@ -12,7 +12,6 @@ import { IPlaylist } from './../models/playlist.model';
 const USING_MOCK_DB = (process.env.USE_MOCK_DB || '').toLowerCase();
 const TIMEOUT_REQ_LAGOINHA = 8 * 60 * 60 * 1000; // 8 horas
 const DB_FILE_PATH = 'src/providers/youtube.mock.json';
-const CHANNEL_KEYS = ['UC-A4tH3VNuty6SjZqO9vtfw', 'UCJzDLUYpybKcK5FkZlSQVZQ'];
 const API_KEY = 'AIzaSyCqTDq1Envdq1czGv6CcCNu09LhHwSfB7k';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 const RECENT_MAX_RESULTS = 6;
@@ -21,6 +20,7 @@ const PLAYLIST_ITEMS_MAX_RESULTS = 3;
 
 export class YouTubeProvider {
 
+    public channelKeys = ['UC-A4tH3VNuty6SjZqO9vtfw', 'UCJzDLUYpybKcK5FkZlSQVZQ'];
     public channels: IChannel[] = [];
     private loadingChannels: IChannel[] = [];
 
@@ -50,7 +50,7 @@ export class YouTubeProvider {
 
         const params = {
             part: 'snippet',
-            id: CHANNEL_KEYS.join(),
+            id: this.channelKeys.join(),
         };
 
         const success = (response: any) => {
@@ -120,7 +120,7 @@ export class YouTubeProvider {
 
         if (!hasUnfinished) {
             // no complete passa a lista nova
-            this.channels = this.loadingChannels.reverse().reverse();
+            this.channels = this.loadingChannels;
         }
     }
 
