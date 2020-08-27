@@ -1123,9 +1123,6 @@ ul .no-padding .no-margin {
     padding: 7px 28px;
     text-transform: uppercase;
 }
-.btn-doacao button a:hover{
-    color: #00c88a !important;
-}
 
 .dizimo-banco-deposito {
     font-size: 35px;
