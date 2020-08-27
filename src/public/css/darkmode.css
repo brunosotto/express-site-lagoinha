@@ -40,7 +40,9 @@ header.navbar ul li a {
     background-color: #622ea2 !important;
 }
 .gallery {
-    background: #100817 !important;
+    /* background: #100817 !important;
+     */
+    background: hsl(272deg 48% 6%) !important
 }
 .videosRecentes {
     background: #100817;

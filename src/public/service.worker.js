@@ -1,7 +1,5 @@
 var cacheName = 'logoinhapromissao';
 var filesToCache = [
-  '/',
-  '/videos',
   '/devocionais',
   '/estudos-gc',
   '/dizimo',
@@ -11,11 +9,13 @@ var filesToCache = [
   '/css/violetstyle.css',
   '/assets/boostrap/css/bootstrap.min.css',
   '/assets/boostrap/js/bootstrap.min.js',
+  '/assets/font-awesome/css/font-awesome.min.css',
   '/css/font/fontello.css',
   '/css/media-queries.css',
   '/manifest.json',
   '/plugins/revolution/css/settings.css',
   '/js/main.js',
+  '/plugins/instagram/js/jquery.instagramFeed.min.js',
   '/js/instagramConfigIblp.js',
   '/js/instagramConfigLegacy.js',
   '/assets/jquery/jquery.nav.js',
@@ -25,11 +25,11 @@ var filesToCache = [
   '/images/logo-lagoinha-promissao-branco.svg',
   '/images/menu.svg',
   '/images/pastor-dani-familia.jpg',
-  '/images/slide/slide01.jpeg',
-  '/images/slide/slide2.png',
-  '/images/slide/slide3.png',
-
-
+  '/images/pastornilson.jpg',
+  '/images/slide/s1.jpeg',
+  '/images/slide/s2.png',
+  '/images/slide/s3.png',
+  '/images/slide/s4.png',
 ];
 
 /* Start the service worker and cache all of the app's content */
