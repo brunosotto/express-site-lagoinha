@@ -1,9 +1,6 @@
 var home = (function ($) {
     'use strict';
-    /*************************  Iniciar Install PWA banner footer  *****************************/
-    if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('./service.worker.js')
-    }
+    
     /*************************  Navegação  *****************************/
     const def = 'main';
     const offtop = 80;
