@@ -209,12 +209,16 @@ li {
 /******************* General Styles for Commons Sections *******************/
 
 /********************************** General ********************************/
-.margin-top-bottom {
-    margin: 60px 0 auto;
+.tp-bullets {
+    display: none !important;
+}
+
+.padding-top-bottom {
+    padding: 60px 25px 60px 25px;
 }
 
 .generic {
-    padding: 60px 30px;
+    padding: 160px 30px;
 }
 
 .title {
@@ -312,6 +316,23 @@ header.navbar ul li a {
     background: transparent;
 }
 
+.dropdown-menu {
+    background-color: #160e1d;
+
+}
+
+.dropdown-item {
+    color: #9d9ca0;
+    width: 200px;
+}
+
+.dropdown-menu>a:hover,
+.dropdown-menu>a:focus {
+    background-color: transparent;
+    color: #b67bff;
+}
+
+
 .navimag {
     width: 12rem;
 }
@@ -340,7 +361,8 @@ header.navbar ul li a {
 /***************************************************************************/
 /************************ General Styles for Footer ************************/
 footer {
-    height: 110px;
+    height: 22%;
+    min-height: 135px;
 }
 
 footer .copy {
@@ -429,7 +451,7 @@ footer .copy h6 {
     color: #b67bff !important;
     text-shadow: -1px 1px 0px #c4c3c4;
 }
- 
+
 .slide1 .quote,
 .slide2 .quote {
     font-size: 2.5em;
@@ -477,7 +499,7 @@ footer .copy h6 {
     margin: 0 0;
 }
 
- 
+
 
 h2 i {
     color: #fff;
@@ -758,26 +780,25 @@ ul .no-padding .no-margin {
 
 /****************************** Behind the Pulpit **************************/
 /****************************** Midias Sociais **************************/
- 
-  .midiassociais-icons  h5{
-color: #d7d7d7 !important;
-  }
-  .midiassociais-icons{
+
+.midiassociais-icons h5 {
+    color: #d7d7d7 !important;
+}
+
+.midiassociais-icons {
     cursor: pointer;
     border: none;
     background: transparent;
     padding: 40px;
     text-align: center;
     font-size: initial;
-  }
-  .midiassociais-icons a{
-    
-  }
- .midiassociaisimgs:hover > img{
+}
+
+.midiassociaisimgs:hover>a>img {
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
     box-shadow: 3px 3px 2px rgba(192, 189, 189, 0.1);
- }
+}
 
 /******************************** Photo Albums *****************************/
 
@@ -947,46 +968,6 @@ color: #d7d7d7 !important;
     margin: 0 10px;
 }
 
-/******************************* Latest Sermons ****************************/
-
-.sermons {
-    background: #f0f2f5;
-}
-
-.sermons .playlist {
-    background: #fff;
-    padding: 30px;
-    margin: 0 15px;
-}
-
-.sermons .playlist h3 {
-    font-size: 3em;
-    font-weight: 500;
-    line-height: 2em;
-}
-
-.sermons .playlist li {
-    list-style: none;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.sermons .playlist li .active {
-    color: #00c889;
-}
-
-.sermons .playlist a {
-    font-size: 1.7em;
-    line-height: 2em;
-    color: #aaa;
-}
-
-.sermons .playlist .loadmore {
-    text-align: center;
-    display: block;
-}
 
 /*********************************** Contact *******************************/
 
@@ -1070,10 +1051,7 @@ color: #d7d7d7 !important;
     font-size: 1.6em;
 }
 
-.contact .form-control[type='text'],
-.contact .form-control[type='email'] {
-    height: 43px;
-}
+
 
 .contact .iconfooteraddress {
     width: 25px;
@@ -1114,6 +1092,7 @@ color: #d7d7d7 !important;
 }
 
 .dev-card-item {
+    background: #160e1d;
     box-shadow: 3px 3px 9px 5px #b67bff61;
 }
 
@@ -1237,11 +1216,10 @@ color: #d7d7d7 !important;
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-
-    .slide1 .quote,
-    .slide2 .quote {
-        margin-top: 12.5em !important;
+    .generic {
+        padding: 80px 30px;
     }
+
 
     .devocional-item-main {
         margin: 30px 0 30px 0;
@@ -1249,10 +1227,6 @@ color: #d7d7d7 !important;
 
     .margin-top-bottom {
         margin: 0;
-    }
-
-    .generic {
-        padding: 0px;
     }
 
     #map {
@@ -1268,6 +1242,13 @@ color: #d7d7d7 !important;
         margin: 0 auto;
         text-align: center;
     }
+
+    .midiassociais-icons {
+        padding: 0 !important;
+        width: 150px;
+        height: 200px;
+        margin: 0 auto;
+    }
 }
 
 .video-main {
@@ -1280,10 +1261,8 @@ color: #d7d7d7 !important;
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-
-    .slide1 .quote,
-    .slide2 .quote {
-        margin-top: 12.5em !important;
+    .generic {
+        padding: 80px 30px;
     }
 
     .devocional-item-main {
@@ -1320,7 +1299,10 @@ color: #d7d7d7 !important;
         margin: 0 auto;
     }
 
-    .video-main {
-        margin: 0;
+    .midiassociais-icons {
+        padding: 0 !important;
+        width: 150px;
+        height: 200px;
+        margin: 0 auto;
     }
 }

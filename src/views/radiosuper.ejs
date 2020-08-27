@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lagoinha Promissão - Rádio Super</title>
+
+    <base href="<%=  baseHref %>">
+    
+    <!-- Css -->
+  <%-  include('comum/includeCss') -%>
+  
+    <%-  include('comum/favicon') -%>
+
+</head>
+
+<body>
+    <!--  Menu -->
+    <%- include('comum/menu') -%>
+
+    <section class="generic animated fadeInUp delay3">
+            <div class="container">
+                <!-- title -->
+                <div class="row text-center title">
+                    <div class="col-sm-12">
+                        <h2> Rádio Super </h2>
+                        <span class="dotts"> . . . . . . </span>
+                          <blockquote class="blockquote text-right">
+                                <p class="mb-0 text-descricao-paginas">Levar a mensagem do amor de Cristo por meio das ondas de rádio. <br>
+                                Essa é a missão da Rádio Super FM. A emissora faz parte do setor de comunicação da Igreja Batista da Lagoinha e, 
+                                há um ano, é veiculada online e na frequência 90.1 FM (por enquanto somente em Belo Horizonte – MG).</p>
+                            </blockquote>
+                    </div>
+                </div>
+                 
+                <div class="row text center">
+                <div class="col-12 text">  <p>Ouça agora mesmo a <strong> Rádio Super ao Vivo!</strong> aperte o play abaixo:  </p></div>
+              
+                    <div class="center card-estugogc-devocional">
+                    
+                        <div class="card-group">
+                        
+                          <video autoplay="autoplay" controls="controls">
+                          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">&#65279;</span>
+                          <source src="https://servidor32.brlogic.com:8200/live" type="audio/mpeg">
+                          </video>
+                        </div>
+                        <!-- fim do if -->
+                    </div>
+                   
+                    <div class="mt-30"></div>
+                </div>
+            </div>
+
+        </section>
+   
+
+     <a href="#" class="scrollup animated bounceInUp"> </a>
+ 
+    <!-- Footer -->
+    <%- include('comum/footer') -%>
+    <%- include('comum/includeJs') -%>
+    <!-- Script Principal  -->
+    <script src="js/main.js"></script>
+    <script>
+        home.selectNav('radio-super');
+    </script>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<section id="videosrecentes" class="generic videosRecentes animated fadeInUp delay4">
+<section id="videosrecentes" class="padding-top-bottom videosRecentes animated fadeInUp delay4">
 	<div class="container">
 
 		<!-- begin title -->
@@ -10,10 +10,7 @@
 		</div>
 		<!-- end title --> 
 		<div class="row animated fadeInUp delay6">
-			<% 
-				for (key of channelKeys){ 
-					var channel = channels.find(c => c.id === key);
-			%>
+			<% for (key of channelKeys){ var channel = channels.find(c => c.id === key);%>
 
 			<div class="channel">
 				<div class="img-channel"><img class="mg-fluid rounded-circle"
