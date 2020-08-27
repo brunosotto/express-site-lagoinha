@@ -5,14 +5,9 @@
   "lang": "pt-BR",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "white",
-  "theme_color": "white",
-  "resources": {
-    "files": [
-      "/assets/**",
-      "/images/**"
-    ]
-  },
+  "background_color": "#100817",
+  "theme_color": "#b67bff",
+  
   "icons": [
     {
       "src": "./favicon/android-icon-36x36.png",
