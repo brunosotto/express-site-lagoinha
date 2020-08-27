@@ -187,7 +187,13 @@ li {
     display: none;
     background: transparent url('../images/logo-branco.png') center center no-repeat;
     border-radius: 100%;
-    transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important; 
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+   
+
     overflow: hidden;
     background-size: contain;
 }
@@ -236,7 +242,7 @@ li {
 }
 
 .btn {
-    background: rgba(0, 0, 0, 0);
+    /* background: rgba(0, 0, 0, 0); */
     border-radius: 0;
     border: 1px solid #fff;
     color: #fff;
@@ -256,7 +262,7 @@ li {
 }
 
 .btn:hover {
-    color: #fff;
+    color: #fff; 
 }
 
 i {
@@ -802,10 +808,6 @@ ul .no-padding .no-margin {
 
 /******************************** Photo Albums *****************************/
 
-.gallery {
-    background: #f0f2f5;
-}
-
 .gallery .album-title {
     text-transform: uppercase;
     text-align: center;
@@ -1114,7 +1116,7 @@ ul .no-padding .no-margin {
     background: #53337b;
     border-radius: 20px;
     border: 1px solid #000;
-    color: #000;
+    /* color: #000; */
     font-size: 1.5em;
     font-weight: 500;
     margin-top: 0px;

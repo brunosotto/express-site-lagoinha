@@ -69,7 +69,7 @@ var home = (function ($) {
             startheight: 370,
             shadow: 0,
             touchenabled: 'on',
-            navigationType: 'bullet',
+            // navigationType: 'bullet',
             navigationStyle: 'round-old',
             hideAllCaptionAtLimit: 350,
         });
