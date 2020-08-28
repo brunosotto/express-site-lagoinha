@@ -1,9 +1,6 @@
 var home = (function ($) {
     'use strict';
-    /*************************  Iniciar Install PWA banner footer  *****************************/
-    if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('./service.worker.js')
-    }
+    
     /*************************  Navegação  *****************************/
     const def = 'main';
     const offtop = 80;
@@ -69,7 +66,7 @@ var home = (function ($) {
             startheight: 370,
             shadow: 0,
             touchenabled: 'on',
-            navigationType: 'bullet',
+            // navigationType: 'bullet',
             navigationStyle: 'round-old',
             hideAllCaptionAtLimit: 350,
         });

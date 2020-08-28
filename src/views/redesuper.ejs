@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lagoinha Promissão - Rede Super</title>
+
+    <base href="<%=  baseHref %>">
+    
+    <!-- Css -->
+  <%-  include('comum/includeCss') -%>
+  
+    <%-  include('comum/favicon') -%>
+
+</head>
+
+<body>
+    <!--  Menu -->
+    <%- include('comum/menu') -%>
+
+   <div class="margin-top-bottom"> 
+    <section class="generic service animated fadeInUp delay3">
+            <div class="container">
+                <!-- title -->
+                <div class="row text-center title">
+                    <div class="col-sm-12">
+                        <h2> Rede Super </h2>
+                        <blockquote class="blockquote text-right">
+                                <p class="mb-0 text-descricao-paginas">Assista agora mesmo a Rede Super de Televisão</p>
+                            </blockquote>
+                        <span class="dotts"> . . . . . . </span>
+                    </div>
+                </div>
+                <div class="row text center">
+
+                
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 card-estugogc-devocional">
+
+                        <div class="card-group">
+                          <iframe class="iframe-rede-super" style="width: 100%; height: 50em;" src="https://livestream.com/accounts/10205943/events/3429501/player?width=640&amp;height=360&amp;enableInfoAndActivity=true&amp;autoPlay=true&amp;mute=false" frameborder="0" scrolling="no" allowfullscreen=""> </iframe>
+                        </div>
+                        <!-- fim do if -->
+                    </div>
+                   
+
+                </div>
+            </div>
+
+        </section>
+   </div>
+
+    <!-- Footer -->
+    <%- include('comum/footer') -%>
+
+    <a href="#" class="scrollup animated bounceInUp"> </a>
+
+    <%- include('comum/includeJs') -%>
+    <!-- Script Principal  -->
+    <script src="js/main.js"></script>
+    <script>
+        home.selectNav('rede-super');
+    </script>
+
+</body>
+
+</html>

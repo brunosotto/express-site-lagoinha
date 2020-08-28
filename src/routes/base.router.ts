@@ -1,3 +1,4 @@
+import { RedeSuperRouter } from './redesuper.router';
 import { Express } from 'express';
 import { Router } from 'express';
 import { HomeRouter } from './home.router';
@@ -7,6 +8,7 @@ import { DevocionaisRouter } from './devocionais.router';
 import { DevocionalRouter } from './devocional.router';
 import { EstudosGcRouter } from './estudosgc.router';
 import { EstudoGcRouter } from './estudogc.router';
+import { RadioSuperRouter } from './radiosuper.router';
 
 export class BaseRouter {
     public router: Router;
@@ -46,5 +48,13 @@ export class BaseRouter {
         // Rota Estudo GC Detalhes
         const estudoGCRoute = new EstudoGcRouter(this.app);
         this.router.use('/estudo-gc', estudoGCRoute.router);
+
+        // Rota Rede Super
+        const redesuperRoute = new RedeSuperRouter(this.app);
+        this.router.use('/rede-super', redesuperRoute.router);
+
+        // Rota Rede Super
+        const radiosuperRoute = new RadioSuperRouter(this.app);
+        this.router.use('/radio-super', radiosuperRoute.router);
     }
 }
