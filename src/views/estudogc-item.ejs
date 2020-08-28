@@ -5,27 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lagoinha Promissão - Estudo Gc : <%= estudogc[0].page.title %></title>
+    <title>Lagoinha Promissão - Estudo Gc : <%= estudogc.page.title %></title>
 
     <base href="<%= baseHref %>" />
 
-    <!-- Bootstrap -->
-    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Css -->
+    <%-  include('comum/includeCss') -%>
 
-    <!--  Css Personalizado  -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/violetstyle.css" rel="stylesheet">
-    <link href="css/font/fontello.css" rel="stylesheet">
-    <link href="css/media-queries.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <%- // include('comum/favicon') -%>
+    <%- include('comum/favicon') -%>
 
 </head>
 
@@ -36,32 +23,28 @@
   
         <section class="devocional-item-main service animated fadeInUp delay3">
             <div class="container">
-                <%=  //JSON.stringify(devos) %>
                 <!-- title -->
                 <div class="row text-center title">
                     <div class="col-sm-12">
-                        <h2> <%= estudogc[0].page.title %> </h2>
+                        <h2> <%= estudogc.page.title %> </h2>
                         <span class="dotts"> . . . . . . </span>
-
                     </div>
                 </div>
-
 
                 <div class="row ">
                     <div class="col">
 
                         <div class="card dev-card-item">
-                            <figure class="figure" <%= 'style=background-color:#' + estudogc[0].page.main_color %>>
-                                <img src="<%= estudogc[0].page.image  %> " class="figure-img img-fluid"
-                                    alt="<%= estudogc[0].page.title %>"
-                                    style="width: 400px; display: flex; margin: 0 auto;">
+                            <figure class="figure" <%= 'style=background-color:#' + estudogc.page.main_color %>>
+                                <img src="<%= estudogc.page.image  %> " class="figure-img img-fluid devocional-card-image"
+                                    alt="<%= estudogc.page.title %>">
                             </figure>
                             <div class="card-body">
-                                <h2> <%= estudogc[0].page.title %> </h2>
-                                <span> Publicado em: <%=  moment( estudogc[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                <h2> <%= estudogc.page.title %> </h2>
+                                <span> Publicado em: <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
                                 </span>
 
-                                <%- (estudogc[0].page.text ) %>
+                                <%- (estudogc.page.text ) %>
                             </div>
 
                             <div class="card-footer bg-transparent animation delay4">
@@ -73,15 +56,12 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="dev-published_at">
-                                            <%=  moment( estudogc[0].published_at ).format('DD/MM/YYYY - h:mm') %>
+                                            <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
                                         </div>
                                     </div>
                                 </div>
 
-
-
                             </div>
-
 
                         </div>
 
@@ -93,12 +73,8 @@
 
         </section>
 
-
-  
-
     <!-- Footer -->
     <%- include('comum/footer') -%>
-
 
     <a href="#" class="scrollup animated bounceInUp"> </a>
 

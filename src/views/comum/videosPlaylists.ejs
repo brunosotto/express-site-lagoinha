@@ -6,11 +6,19 @@
 			<div class="col-sm-12">
 				<h2>Videos</h2>
 				<span class="dotts"> . . . . . . </span>
+				<blockquote class="blockquote text-right">
+                                <p class="mb-0 text-descricao-paginas">
+								Veja abaixo os nossos vídeos dos canais do YouTube Lagoinha Promissão e Pastor Nilson Vargens. 
+								Aqui você encontra nossas playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.</p>
+                            </blockquote>
 			</div>
 		</div>
 		<!-- end title -->
 		<div class="row animated fadeInUp delay4">
-			<% for (channel of channels){ %>
+			<% 
+				for (key of channelKeys){ 
+					var channel = channels.find(c => c.id === key);
+			%>
 
 			<div class="channel listvideos">
 				<div class="img-channel"><img class="mg-fluid rounded-circle"
@@ -42,9 +50,6 @@
 								<h4><%= item.snippet.title %></h2>
 							</div>
 						</div>
-
-
-
 					</a>
 
 				</div>

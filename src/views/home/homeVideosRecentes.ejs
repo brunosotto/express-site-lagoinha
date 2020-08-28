@@ -10,7 +10,10 @@
 		</div>
 		<!-- end title --> 
 		<div class="row animated fadeInUp delay6">
-			<% for (channel of channels){ %>
+			<% 
+				for (key of channelKeys){ 
+					var channel = channels.find(c => c.id === key);
+			%>
 
 			<div class="channel">
 				<div class="img-channel"><img class="mg-fluid rounded-circle"
