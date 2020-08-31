@@ -107,8 +107,8 @@
                 var html = "";
                 //Displaying profile
                 if (options.display_profile) {
-                    html += "<div class='instagram_profile'" + styles.profile_container + ">";
-                    html += "<img class='instagram_profile_image' src='" + data.profile_pic_url  + "' alt='"+ (is_tag ? data.name + " tag pic" : data.username + " profile pic") + "'" + styles.profile_image + (options.lazy_load ? " loading='lazy'" : '') + " />";
+                    html += "<div class='instagram_profile'" + styles.profile_container + "><a href='https://www.instagram.com/" + options.username + "' rel='noopener' target='_blank'>";
+                    html += "<img class='instagram_profile_image' src='" + data.profile_pic_url  + "' alt='"+ (is_tag ? data.name + " tag pic" : data.username + " profile pic") + "'" + styles.profile_image + (options.lazy_load ? " loading='lazy'" : '') + " /></a>";
                     if (is_tag)
                         html += "<p class='instagram_tag'" + styles.profile_name + "><a href='https://www.instagram.com/explore/tags/" + options.tag + "' rel='noopener' target='_blank'>#" + options.tag + "</a></p>";
                     else

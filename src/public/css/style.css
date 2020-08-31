@@ -155,16 +155,16 @@ li {
     /* color: #555; */
     text-decoration: none;
     outline: none;
-    -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -ms-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -o-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out,
+        outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out,
+        outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -ms-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out,
+        outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -o-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out,
+        outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out,
+        outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 
 /***************************************************************************/
@@ -187,12 +187,11 @@ li {
     display: none;
     background: transparent url('../images/logo-branco.png') center center no-repeat;
     border-radius: 100%;
-    transform: rotate(180deg) !important; 
+    transform: rotate(180deg) !important;
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
-   
 
     overflow: hidden;
     background-size: contain;
@@ -241,6 +240,15 @@ li {
     font-size: 1.7em;
 }
 
+.title-midias {
+    margin: 25px 0 0;
+}
+
+.title-midias h2 {
+    font-weight: 700 !important;
+    line-height: 1;
+}
+
 .btn {
     /* background: rgba(0, 0, 0, 0); */
     border-radius: 0;
@@ -261,8 +269,13 @@ li {
     padding: 10px 0px 10px 0px;
 }
 
+.instagram_profile_image {
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
 .btn:hover {
-    color: #fff; 
+    color: #fff;
 }
 
 i {
@@ -280,7 +293,6 @@ i {
 .navbar-toggle {
     /* background: #00c88a; */
     background: #b67bff;
-
 }
 
 .navbar-toggle img {
@@ -297,7 +309,6 @@ header.navbar {
     width: 100% !important;
     padding: 8px 0;
     margin: 0;
-
 }
 
 header .navbar-brand {
@@ -317,14 +328,13 @@ header.navbar ul li a {
     margin: 0 15px;
 }
 
-.nav>li>a:hover,
-.nav>li>a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
     background: transparent;
 }
 
 .dropdown-menu {
     background-color: #160e1d;
-
 }
 
 .dropdown-item {
@@ -332,12 +342,11 @@ header.navbar ul li a {
     width: 200px;
 }
 
-.dropdown-menu>a:hover,
-.dropdown-menu>a:focus {
+.dropdown-menu > a:hover,
+.dropdown-menu > a:focus {
     background-color: transparent;
     color: #b67bff;
 }
-
 
 .navimag {
     width: 12rem;
@@ -355,11 +364,11 @@ header.navbar ul li a {
     height: 26px;
 }
 
-.dropdown:hover>.dropdown-menu {
+.dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-.dropdown>.dropdown-toggle:active {
+.dropdown > .dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
@@ -505,8 +514,6 @@ footer .copy h6 {
     margin: 0 0;
 }
 
-
-
 h2 i {
     color: #fff;
     border-radius: 50%;
@@ -523,7 +530,7 @@ h2 i {
     padding: 40px 0 0 0;
 }
 
-.service .cu-controls>div {
+.service .cu-controls > div {
     padding-right: 0;
     padding-left: 0;
 }
@@ -555,11 +562,11 @@ h2 i {
 
 /******************************* Channels - Videos Recente pasta comum ****************************/
 .channel {
-     display: flex;
+    display: flex;
     margin-top: 20px;
 }
 
-   .img-channel {
+.img-channel {
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
@@ -580,10 +587,11 @@ h2 i {
     width: 100%;
     padding-left: 1em;
 }
-.playlist-h4{
 
-font-size: 1.5em;
+.playlist-h4 {
+    font-size: 1.5em;
 }
+
 .listvideos {
     position: relative;
     margin: 30px auto !important;
@@ -651,7 +659,12 @@ ul .no-padding .no-margin {
 .videosRecentes .title {
     margin-bottom: 0;
 }
-
+.videosRecentes a {
+    color: #ffffff;
+}
+.videosRecentes a:hover {
+    color: #8340c8 !important;
+}
 .videosRecentes .cu-controls {
     padding: 0;
 }
@@ -795,17 +808,17 @@ ul .no-padding .no-margin {
     font-size: 2em !important;
 }
 
-/****************************** Behind the Pulpit **************************/
 /****************************** Midias Sociais **************************/
 
 .midiassociais-icons h5 {
     color: #d7d7d7 !important;
 }
- .midiasimages{
-   width: 10em !important;
+
+.midiasimages {
+    width: 10em !important;
     height: 10em !important;
     margin: 0 auto;
- }
+}
 
 .midiassociais-icons {
     cursor: pointer;
@@ -815,12 +828,11 @@ ul .no-padding .no-margin {
     text-align: center;
     font-size: initial;
 }
- 
+
 .midiasimages:hover img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
 }
 
 /******************************** Photo Albums *****************************/
@@ -970,7 +982,7 @@ ul .no-padding .no-margin {
     margin: 3% 0 0 0;
 }
 
-.control-arrow>div {
+.control-arrow > div {
     padding-right: 0;
     padding-left: 0;
 }
@@ -986,7 +998,6 @@ ul .no-padding .no-margin {
     width: 35px;
     margin: 0 10px;
 }
-
 
 /*********************************** Contact *******************************/
 
@@ -1070,15 +1081,13 @@ ul .no-padding .no-margin {
     font-size: 1.6em;
 }
 
-
-
 .contact .iconfooteraddress {
     width: 25px;
     padding: 0 2px 0;
     vertical-align: middle;
 }
 
-.contact address>a {
+.contact address > a {
     color: var(--white) !important;
 }
 
@@ -1205,7 +1214,8 @@ ul .no-padding .no-margin {
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -1239,7 +1249,6 @@ ul .no-padding .no-margin {
         padding: 80px 30px;
     }
 
-
     .devocional-item-main {
         margin: 30px 0 30px 0;
     }
@@ -1266,16 +1275,15 @@ ul .no-padding .no-margin {
         padding: 0 !important;
         margin: 0 auto;
     }
- 
-    .midiasimages {
-    width: 8em !important;
-    margin: 0 auto;
-}
-.videosRecentes .groups{
-    min-width: auto;
-}
 
-    
+    .midiasimages {
+        width: 8em !important;
+        margin: 0 auto;
+    }
+
+    .videosRecentes .groups {
+        min-width: auto;
+    }
 }
 
 .video-main {
@@ -1328,16 +1336,16 @@ ul .no-padding .no-margin {
 
     .midiassociais-icons {
         padding: 0 !important;
-        
+
         margin: 0 auto;
     }
-    .midiasimages {
-    width: 8em !important;
-    margin: 0 auto;
-}
- 
-.videosRecentes .groups{
-    min-width: auto;
-}
 
+    .midiasimages {
+        width: 8em !important;
+        margin: 0 auto;
+    }
+
+    .videosRecentes .groups {
+        min-width: auto;
+    }
 }
