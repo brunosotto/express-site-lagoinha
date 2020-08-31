@@ -1,0 +1,147 @@
+.appended {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    padding: 10px 10vw;
+    text-align: center;
+    color: #fff;
+}
+
+.appended .gif {
+    margin-top: 20px!important;
+}
+
+h1, h2 {
+    margin-top: 20px!important;
+    font-size: 40px!important;
+    line-height: 1.5!important;
+}
+h2 {
+    font-size: 20px!important;
+}
+
+nav, footer, header{
+    display: none!important;
+}
+
+._4bSq7, .fx7hk{
+    display: none!important;
+}
+
+.v9tJq.AAaSh.VfzDr{
+    max-width: 40vw!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+body, .SCxLW{
+    background-color: #000000!important;
+}
+
+.Nnq7C{
+    flex-direction: column!important;
+    margin: 0!important;
+    max-width: 40vw!important;
+}
+
+.v1Nh3{
+    margin-bottom: 20px!important;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800,900');
+.id8oV, .NXc7H, .EZdmt {
+    display: none;
+}
+.yQ0j1 {
+    visibility: hidden;
+}
+.info {
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    font-family: 'Catamaran', sans-serif;
+    color: #fff;
+}
+.info h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.info p {
+    font-size: 1em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    opacity: 0.6;
+    font-weight: 300;
+}
+body {
+    background: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b2b3eeca79a80926667ec71b01eac12&auto=format&fit=crop&w=2250&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+._3Laht, .o64aR {
+    background-color: transparent !important;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        background: #222;
+    }
+    to   { opacity: 1; }
+}
+.v1Nh3.kIKUG {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 60px 0 rgba(0,0,0,0.1);
+    border: 10px solid #fff;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadein 1s;
+}
+.FFVAD {
+    visibility: visible !important;
+}
+.weEfm {
+    margin-bottom: 0;
+}
+/* Count Down */
+#countdown {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+}
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  animation: countdown 60s linear infinite forwards;
+}
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
