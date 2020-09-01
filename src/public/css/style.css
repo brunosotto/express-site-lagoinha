@@ -6,7 +6,7 @@
 @import url('../plugins/revolution/css/settings.css');
 /************************** Import Fonts and Icons *************************/
 
-@import url('http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
 @font-face {
     font-family: 'Skinny';
     src: url('./font/skinny-regular.ttf') format('truetype');
@@ -513,18 +513,29 @@ h2 i {
 }
 
 .img-channel {
-    width: 50px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    border: solid;
+    position: relative;
+    margin: 0 0 20px 0;
 }
 
 .title-channel {
     position: relative;
     left: 15px;
+    top: 2em;
 }
 
 .playlist {
     margin: 27px 0 0px 0;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 1em;
+}
+
+.playlist-h4 {
+    font-size: 1.5em;
 }
 
 .listvideos {
@@ -648,6 +659,7 @@ ul .no-padding .no-margin {
 
 .videosRecentes .groups {
     border-radius: 5px;
+    min-width: 350px;
     min-height: 270px;
     max-height: 300px;
     margin: 15px 0px 15px 0px;
@@ -745,19 +757,25 @@ ul .no-padding .no-margin {
     color: #d7d7d7 !important;
 }
 
+.midiasimages {
+    width: 10em !important;
+    height: 10em !important;
+    margin: 0 auto;
+}
+
 .midiassociais-icons {
     cursor: pointer;
     border: none;
     background: transparent;
-    padding: 40px;
+    padding: 20px 0 30px 0;
     text-align: center;
     font-size: initial;
 }
 
-.midiassociaisimgs:hover>a>img {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-    box-shadow: 3px 3px 2px rgba(192, 189, 189, 0.1);
+.midiasimages:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /******************************** Photo Albums *****************************/
@@ -1194,9 +1212,14 @@ ul .no-padding .no-margin {
     }
     .midiassociais-icons {
         padding: 0 !important;
-        width: 150px;
-        height: 200px;
         margin: 0 auto;
+    }
+    .midiasimages {
+        width: 8em !important;
+        margin: 0 auto;
+    }
+    .videosRecentes .groups {
+        min-width: auto;
     }
 }
 
@@ -1242,8 +1265,13 @@ ul .no-padding .no-margin {
     }
     .midiassociais-icons {
         padding: 0 !important;
-        width: 150px;
-        height: 200px;
         margin: 0 auto;
+    }
+    .midiasimages {
+        width: 8em !important;
+        margin: 0 auto;
+    }
+    .videosRecentes .groups {
+        min-width: auto;
     }
 }
