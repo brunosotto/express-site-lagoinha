@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%-  include('comum/metatags') -%>
     <title>Lagoinha Promissão - Devocionais</title>
 
     <base href="<%=  baseHref %>">
 
-     <!-- Css -->
+    <!-- Css -->
     <%-  include('comum/includeCss') -%>
 
     <%- include('comum/favicon') -%>
@@ -19,64 +20,68 @@
 <body>
     <!--  Menu -->
     <%- include('comum/menu') -%>
- 
-       <section class="generic service animated fadeInUp delay3">
-            <div class="container">
-                <!-- title -->
-                <div class="row text-center title">
-                    <div class="col-sm-12">
-                        <h2> Devocionais </h2>
-                        <span class="dotts"> . . . . . . </span>
-                         <blockquote class="blockquote text-right">
-                                <p class="mb-0 text-descricao-paginas">Devocional é um pequeno tempo que investimos em nossas vidas para buscarmos a presença de Deus, sentirmos sua essência manifesta, ouvirmos e falarmos com nosso Pai, devocional é buscarmos aquilo que é prioridade e primordial para nossa existencia; e aqui nós tentamos te ajudar com pequenas palavras que possa te inspirar todos os dias.</p>
-                            </blockquote>
-                    </div>
-                </div>
-                <div class="row">
 
-                    <%  for (devocional of devos){  %>
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 card-estugogc-devocional">
-                        <%  if (devocional){  %>
-
-                        <div class="card-group">
-                            <a href="<%= '/devocional/'+ devocional.id + '/' + devocional.slug %>">
-                                <div class="card card-item-devocional-gc">
-                                    <img class="card-img-top" src="<%= devocional.page.app_image %> "
-                                        alt="<%= devocional.page.title %> ">
-                                    <div class="card-body">
-                                        <h3 class="card-title dev-title"> <%= devocional.page.title %> </h3>
-                                        <p class="card-text dev-summary"> <%= devocional.page.summary %>...</p>
-
-                                    </div>
-                                    <div class="card-footer bg-transparent animation delay4">
-                                        <div class="d-flex flex-row  justify-content-end">
-                                            <div class="p-2">
-                                                <div class="dev-calendar">
-                                                    <i class="icon-calendar"></i>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div class="dev-published_at">
-                                                    <%= moment( devocional.published_at ).format('DD/MM/YYYY - h:mm') %>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- fim do if -->
-                        <% } %>
-
-                    </div>
-                    <%   }  %>
-
+    <section class="generic service animated fadeInUp delay3">
+        <div class="container">
+            <!-- title -->
+            <div class="row text-center title">
+                <div class="col-sm-12">
+                    <h2> Devocionais </h2>
+                    <span class="dotts"> . . . . . . </span>
+                    <blockquote class="blockquote text-right">
+                        <p class="mb-0 text-descricao-paginas">Devocional é um pequeno tempo que investimos em nossas
+                            vidas para buscarmos a presença de Deus, sentirmos sua essência manifesta, ouvirmos e
+                            falarmos com nosso Pai, devocional é buscarmos aquilo que é prioridade e primordial para
+                            nossa existencia; e aqui nós tentamos te ajudar com pequenas palavras que possa te inspirar
+                            todos os dias.</p>
+                    </blockquote>
                 </div>
             </div>
+            <div class="row">
 
-        </section>
-      
+                <%  for (devocional of devos){  %>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 card-estugogc-devocional">
+                    <%  if (devocional){  %>
+
+                    <div class="card-group">
+                        <a href="<%= '/devocional/'+ devocional.id + '/' + devocional.slug %>">
+                            <div class="card card-item-devocional-gc">
+                                <img class="card-img-top" src="<%= devocional.page.app_image %> "
+                                    alt="<%= devocional.page.title %> ">
+                                <div class="card-body">
+                                    <h3 class="card-title dev-title"> <%= devocional.page.title %> </h3>
+                                    <p class="card-text dev-summary"> <%= devocional.page.summary %>...</p>
+
+                                </div>
+                                <div class="card-footer bg-transparent animation delay4">
+                                    <div class="d-flex flex-row  justify-content-end">
+                                        <div class="p-2">
+                                            <div class="dev-calendar">
+                                                <i class="icon-calendar"></i>
+                                            </div>
+                                        </div>
+                                        <div class="p-2">
+                                            <div class="dev-published_at">
+                                                <%= moment( devocional.published_at ).format('DD/MM/YYYY - h:mm') %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- fim do if -->
+                    <% } %>
+
+                </div>
+                <%   }  %>
+
+            </div>
+        </div>
+
+    </section>
+
 
     <!-- Footer -->
     <%- include('comum/footer') -%>
