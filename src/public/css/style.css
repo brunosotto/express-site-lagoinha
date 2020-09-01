@@ -1,15 +1,12 @@
 @charset "utf-8";
-
 /******************************* Import Styles ******************************/
 
 @import url('animate.css');
 @import url('../plugins/prettyPhoto/css/prettyPhoto.css');
 @import url('../plugins/revolution/css/settings.css');
-
 /************************** Import Fonts and Icons *************************/
 
 @import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
-
 @font-face {
     font-family: 'Skinny';
     src: url('./font/skinny-regular.ttf') format('truetype');
@@ -18,40 +15,10 @@
 }
 
 /***************************************************************************/
+
 /****************************  Reset & Clearfix ****************************/
 
-html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-a,
-img,
-small,
-sub,
-b,
-dl,
-dd,
-dt,
-ul,
-li,
-label,
-article,
-details,
-footer,
-header,
-menu,
-nav,
-input,
-textarea,
-select {
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, small, sub, b, dl, dd, dt, ul, li, label, article, details, footer, header, menu, nav, input, textarea, select {
     background: transparent;
     border: 0;
     outline: 0;
@@ -75,16 +42,14 @@ img {
 }
 
 /***************************************************************************/
+
 /************************* General Styles for Tags *************************/
 
 a:hover {
     text-decoration: none;
 }
 
-a:focus,
-a:hover,
-a:focus,
-.btn:focus {
+a:focus, a:hover, a:focus, .btn:focus {
     outline: none;
 }
 
@@ -93,8 +58,7 @@ address {
     line-height: 2em;
 }
 
-html,
-body {
+html, body {
     font-family: 'Dosis', sans-serif;
     font-size: 80%;
     font-weight: 400;
@@ -104,12 +68,7 @@ body {
     width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-family: 'Dosis', sans-serif;
 }
@@ -155,22 +114,19 @@ li {
     /* color: #555; */
     text-decoration: none;
     outline: none;
-    -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -ms-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    -o-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
-    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease,
-        padding 0.3s ease, margin 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -ms-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    -o-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease-in-out, outline 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 
 /***************************************************************************/
+
 /********************** General Styles for Components **********************/
 
 /********************************* Carousel *******************************/
+
 .centralizando {
     position: relative;
     margin: 0 auto;
@@ -187,13 +143,11 @@ li {
     display: none;
     background: transparent url('../images/logo-branco.png') center center no-repeat;
     border-radius: 100%;
-    transform: rotate(180deg) !important; 
+    transform: rotate(180deg) !important;
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
-   
-
     overflow: hidden;
     background-size: contain;
 }
@@ -212,9 +166,11 @@ li {
 }
 
 /***************************************************************************/
+
 /******************* General Styles for Commons Sections *******************/
 
 /********************************** General ********************************/
+
 .tp-bullets {
     display: none !important;
 }
@@ -241,6 +197,15 @@ li {
     font-size: 1.7em;
 }
 
+.title-midias {
+    margin: 25px 0 0;
+}
+
+.title-midias h2 {
+    font-weight: 700 !important;
+    line-height: 1;
+}
+
 .btn {
     /* background: rgba(0, 0, 0, 0); */
     border-radius: 0;
@@ -261,8 +226,13 @@ li {
     padding: 10px 0px 10px 0px;
 }
 
+.instagram_profile_image {
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
 .btn:hover {
-    color: #fff; 
+    color: #fff;
 }
 
 i {
@@ -280,7 +250,6 @@ i {
 .navbar-toggle {
     /* background: #00c88a; */
     background: #b67bff;
-
 }
 
 .navbar-toggle img {
@@ -288,7 +257,9 @@ i {
 }
 
 /***************************************************************************/
+
 /************************ General Styles for Header ************************/
+
 .navbar-header {
     width: 100%;
 }
@@ -297,7 +268,6 @@ header.navbar {
     width: 100% !important;
     padding: 8px 0;
     margin: 0;
-
 }
 
 header .navbar-brand {
@@ -317,14 +287,12 @@ header.navbar ul li a {
     margin: 0 15px;
 }
 
-.nav>li>a:hover,
-.nav>li>a:focus {
+.nav>li>a:hover, .nav>li>a:focus {
     background: transparent;
 }
 
 .dropdown-menu {
     background-color: #160e1d;
-
 }
 
 .dropdown-item {
@@ -332,12 +300,10 @@ header.navbar ul li a {
     width: 200px;
 }
 
-.dropdown-menu>a:hover,
-.dropdown-menu>a:focus {
+.dropdown-menu>a:hover, .dropdown-menu>a:focus {
     background-color: transparent;
     color: #b67bff;
 }
-
 
 .navimag {
     width: 12rem;
@@ -365,7 +331,9 @@ header.navbar ul li a {
 }
 
 /***************************************************************************/
+
 /************************ General Styles for Footer ************************/
+
 footer {
     height: 22%;
     min-height: 135px;
@@ -383,6 +351,7 @@ footer .copy h6 {
 }
 
 /***************************************************************************/
+
 /*********************** Specific Styles for Sections  *********************/
 
 /********************************** Slider Home  ********************************/
@@ -458,8 +427,7 @@ footer .copy h6 {
     text-shadow: -1px 1px 0px #c4c3c4;
 }
 
-.slide1 .quote,
-.slide2 .quote {
+.slide1 .quote, .slide2 .quote {
     font-size: 2.5em;
     text-align: right;
     text-transform: uppercase;
@@ -504,8 +472,6 @@ footer .copy h6 {
     line-height: 1.5;
     margin: 0 0;
 }
-
-
 
 h2 i {
     color: #fff;
@@ -554,12 +520,13 @@ h2 i {
 }
 
 /******************************* Channels - Videos Recente pasta comum ****************************/
+
 .channel {
-     display: flex;
+    display: flex;
     margin-top: 20px;
 }
 
-   .img-channel {
+.img-channel {
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
@@ -580,16 +547,18 @@ h2 i {
     width: 100%;
     padding-left: 1em;
 }
-.playlist-h4{
 
-font-size: 1.5em;
+.playlist-h4 {
+    font-size: 1.5em;
 }
+
 .listvideos {
     position: relative;
     margin: 30px auto !important;
 }
 
 /******************************* Pastores ****************************/
+
 ul .no-padding .no-margin {
     margin: 0;
     padding: 0;
@@ -652,6 +621,14 @@ ul .no-padding .no-margin {
     margin-bottom: 0;
 }
 
+.videosRecentes a {
+    color: #ffffff;
+}
+
+.videosRecentes a:hover {
+    color: #8340c8 !important;
+}
+
 .videosRecentes .cu-controls {
     padding: 0;
 }
@@ -664,8 +641,7 @@ ul .no-padding .no-margin {
     margin: 9px 0 0 0;
 }
 
-.videosRecentes .cu-controls .carousel-indicators .middle:hover,
-.videosRecentes .cu-controls .carousel-indicators .middle.active {
+.videosRecentes .cu-controls .carousel-indicators .middle:hover, .videosRecentes .cu-controls .carousel-indicators .middle.active {
     margin-top: 14px;
     padding-top: 6px;
 }
@@ -796,16 +772,18 @@ ul .no-padding .no-margin {
 }
 
 /****************************** Behind the Pulpit **************************/
+
 /****************************** Midias Sociais **************************/
 
 .midiassociais-icons h5 {
     color: #d7d7d7 !important;
 }
- .midiasimages{
-   width: 10em !important;
+
+.midiasimages {
+    width: 10em !important;
     height: 10em !important;
     margin: 0 auto;
- }
+}
 
 .midiassociais-icons {
     cursor: pointer;
@@ -815,12 +793,11 @@ ul .no-padding .no-margin {
     text-align: center;
     font-size: initial;
 }
- 
+
 .midiasimages:hover img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
 }
 
 /******************************** Photo Albums *****************************/
@@ -883,7 +860,6 @@ ul .no-padding .no-margin {
     position: absolute;
     top: -60px;
     width: 80px;
-
     -webkit-transition: top 0.3s ease-in-out;
     -moz-transition: top 0.3s ease-in-out;
     -ms-transition: top 0.3s ease-in-out;
@@ -987,7 +963,6 @@ ul .no-padding .no-margin {
     margin: 0 10px;
 }
 
-
 /*********************************** Contact *******************************/
 
 .contact {
@@ -1001,8 +976,7 @@ ul .no-padding .no-margin {
     font-size: 3em;
 }
 
-.contact p,
-.contact h2 {
+.contact p, .contact h2 {
     color: #fff;
     font-weight: 600;
 }
@@ -1070,8 +1044,6 @@ ul .no-padding .no-margin {
     font-size: 1.6em;
 }
 
-
-
 .contact .iconfooteraddress {
     width: 25px;
     padding: 0 2px 0;
@@ -1083,6 +1055,7 @@ ul .no-padding .no-margin {
 }
 
 /* ********************** Cards Devocinal ********************* */
+
 .dev-summary {
     font-weight: 500;
 }
@@ -1106,6 +1079,12 @@ ul .no-padding .no-margin {
 }
 
 /* ********************** Cards Devocinal/GC Item ********************* */
+
+.conteudo-texto .text p {
+    color: #f6f6f6 !important;
+    font: caption;
+}
+
 .card-estugogc-devocional {
     padding: 0 10px 25px 10px;
 }
@@ -1193,9 +1172,7 @@ ul .no-padding .no-margin {
     .slide1 .text {
         top: 1em !important;
     }
-
-    .slide1 .quote,
-    .slide2 .quote {
+    .slide1 .quote, .slide2 .quote {
         margin-top: 14.5em !important;
     }
 }
@@ -1238,44 +1215,34 @@ ul .no-padding .no-margin {
     .generic {
         padding: 80px 30px;
     }
-
-
     .devocional-item-main {
         margin: 30px 0 30px 0;
     }
-
     .margin-top-bottom {
         margin: 0;
     }
-
     #map {
         max-width: 92%;
     }
-
     .instagram_biography {
         font-size: 1.2em !important;
     }
-
     .h2-bottom {
         padding: 0 15px 0 15px;
         margin: 0 auto;
         text-align: center;
     }
-
     .midiassociais-icons {
         padding: 0 !important;
         margin: 0 auto;
     }
- 
     .midiasimages {
-    width: 8em !important;
-    margin: 0 auto;
-}
-.videosRecentes .groups{
-    min-width: auto;
-}
-
-    
+        width: 8em !important;
+        margin: 0 auto;
+    }
+    .videosRecentes .groups {
+        min-width: auto;
+    }
 }
 
 .video-main {
@@ -1291,53 +1258,42 @@ ul .no-padding .no-margin {
     .generic {
         padding: 80px 30px;
     }
-
     .devocional-item-main {
         margin: 30px 0 30px 0;
     }
-
     .margin-top-bottom {
         margin: 0;
     }
-
     .text-descricao-paginas {
         font-size: 1.2em;
         margin-top: 11px;
         text-align: center;
     }
-
     #map {
         max-width: 94%;
         left: 10px;
     }
-
     .instagram_biography {
         font-size: 1.2em !important;
     }
-
     .h2-bottom {
         padding: 0 15px 0 15px;
         margin: 0 auto;
         text-align: center;
     }
-
     .contact #contact_bg {
         width: 94%;
         margin: 0 auto;
     }
-
     .midiassociais-icons {
         padding: 0 !important;
-        
         margin: 0 auto;
     }
     .midiasimages {
-    width: 8em !important;
-    margin: 0 auto;
-}
- 
-.videosRecentes .groups{
-    min-width: auto;
-}
-
+        width: 8em !important;
+        margin: 0 auto;
+    }
+    .videosRecentes .groups {
+        min-width: auto;
+    }
 }

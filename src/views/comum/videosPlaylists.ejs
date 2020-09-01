@@ -7,10 +7,11 @@
 				<h2>Videos</h2>
 				<span class="dotts"> . . . . . . </span>
 				<blockquote class="blockquote text-right">
-                                <p class="mb-0 text-descricao-paginas">
-								Veja abaixo os nossos vídeos dos canais do YouTube Lagoinha Promissão e Pastor Nilson Vargens. 
-								Aqui você encontra nossas playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.</p>
-                            </blockquote>
+					<p class="mb-0 text-descricao-paginas">
+						Veja abaixo os nossos vídeos dos canais do YouTube Lagoinha Promissão e Pastor Nilson Vargens.
+						Aqui você encontra nossas playlists separadas por cultos e temas com os vídeos recentes de cada
+						uma delas.</p>
+				</blockquote>
 			</div>
 		</div>
 		<!-- end title -->
@@ -32,7 +33,8 @@
 			</a>
 			<% for (playlist of channel.playlists ){  %>
 
-			<a href="https://www.youtube.com/watch?v=<%- playlist.items[0].snippet.resourceId.videoId %>&list=<%- playlist.id %>" target="_blank">
+			<a href="https://www.youtube.com/watch?v=<%- playlist.items[0].snippet.resourceId.videoId %>&list=<%- playlist.id %>"
+				target="_blank">
 				<div class="channel playlist listavideosplaylist">
 					<div class="img-channel">
 						<img class="mg-fluid" src="<%- playlist.snippet.thumbnails.default.url %>">
@@ -46,7 +48,8 @@
 			<div class="row centralizando">
 				<% for (item of playlist.items){ %>
 				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-					<a href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>&list=<%- playlist.id %>">
+					<a
+						href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>&list=<%- playlist.id %>">
 						<div class="groups">
 							<img class="mg-fluid" src="<%- item.snippet.thumbnails.medium.url %>">
 							<div class="title">
