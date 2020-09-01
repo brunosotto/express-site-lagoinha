@@ -197,6 +197,15 @@ li {
     font-size: 1.7em;
 }
 
+.title-midias {
+    margin: 25px 0 0;
+}
+
+.title-midias h2 {
+    font-weight: 700 !important;
+    line-height: 1;
+}
+
 .btn {
     /* background: rgba(0, 0, 0, 0); */
     border-radius: 0;
@@ -215,6 +224,11 @@ li {
     justify-content: center;
     background: rgb(182 123 255);
     padding: 10px 0px 10px 0px;
+}
+
+.instagram_profile_image {
+    border-radius: 50%;
+    border: solid 2px white;
 }
 
 .btn:hover {
@@ -605,6 +619,14 @@ ul .no-padding .no-margin {
 
 .videosRecentes .title {
     margin-bottom: 0;
+}
+
+.videosRecentes a {
+    color: #ffffff;
+}
+
+.videosRecentes a:hover {
+    color: #8340c8 !important;
 }
 
 .videosRecentes .cu-controls {
