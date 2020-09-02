@@ -31,12 +31,12 @@ export class DizimoRouter {
     private getMetaTags(): ImetaTags {
         return {
             title: 'Lagoinha Promissão - Dizimo',
-            description: `Honra ao Senhor com os teus bens e com as primícias de 
+            description: `Honra ao Senhor com os teus bens e com as primícias de
             toda a tua renda e se encherão fartamente os teus celeiros,
              e transbordarão de vinho os teus lagares`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/dizimo'
-        }
+            url: 'https://lagoinhapromissao.com/dizimo',
+        };
     }
 
 }

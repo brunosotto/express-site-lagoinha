@@ -32,22 +32,22 @@ export class EstudosGcRouter {
                 estudosgc,
                 moment,
                 baseHref,
-                metaTag
+                metaTag,
             });
         });
     }
     private getMetaTags(): ImetaTags {
         return {
             title: 'Lagoinha Promissão - Estudos GC',
-            description: `Os GCs são o coração da igreja, 
-            em que cada um tem a oportunidade de conhecer pessoas, 
-            criar vínculos, servir, ter comunhão e se edificar. 
-            São muitos os benefícios que um GC pode proporcionar 
+            description: `Os GCs são o coração da igreja,
+            em que cada um tem a oportunidade de conhecer pessoas,
+            criar vínculos, servir, ter comunhão e se edificar.
+            São muitos os benefícios que um GC pode proporcionar
             à vida de uma pessoa e à igreja. GCs são pequenos grupos de Crescimentos,
             aonde nós nos reunimos para estudar e meditar em comunhão a palavra de Deus.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/estudos-gc'
-        }
+            url: 'https://lagoinhapromissao.com/estudos-gc',
+        };
     }
 
 }

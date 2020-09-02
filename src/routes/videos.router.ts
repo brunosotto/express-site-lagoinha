@@ -39,12 +39,12 @@ export class VideoRouter {
     private getMetaTags(): ImetaTags {
         return {
             title: 'Lagoinha Promissão - Videos',
-            description: `Veja abaixo os nossos vídeos dos canais do YouTube 
-            Lagoinha Promissão e Pastor Nilson Vargens. Aqui você encontra nossas 
+            description: `Veja abaixo os nossos vídeos dos canais do YouTube
+            Lagoinha Promissão e Pastor Nilson Vargens. Aqui você encontra nossas
             playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao/videos'
-        }
+            url: 'https://lagoinhapromissao/videos',
+        };
     }
 
 }

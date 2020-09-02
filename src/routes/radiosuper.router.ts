@@ -32,11 +32,11 @@ export class RadioSuperRouter {
         return {
             title: 'Lagoinha Promissão - Rádio Super',
             description: `Levar a mensagem do amor de Cristo por meio das ondas de rádio.
-            Essa é a missão da Rádio Super FM. A emissora faz parte do setor de 
-            comunicação da Igreja Batista da Lagoinha e, há um ano, é veiculada online 
+            Essa é a missão da Rádio Super FM. A emissora faz parte do setor de
+            comunicação da Igreja Batista da Lagoinha e, há um ano, é veiculada online
             e na frequência 90.1 FM (por enquanto somente em Belo Horizonte – MG).`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/radio-super'
-        }
+            url: 'https://lagoinhapromissao.com/radio-super',
+        };
     }
 }

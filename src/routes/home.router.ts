@@ -37,12 +37,12 @@ export class HomeRouter {
     private getMetaTags(): ImetaTags {
         return {
             title: 'Lagoinha Promissão',
-            description: `Igreja Bastista Lagoinha Promissão - 
-            A Igreja Batista da Lagoinha nasceu em Belo Horizonte e há 60 anos 
+            description: `Igreja Bastista Lagoinha Promissão -
+            A Igreja Batista da Lagoinha nasceu em Belo Horizonte e há 60 anos
             atua de forma relevante na expansão do evangelho.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/'
-        }
+            url: 'https://lagoinhapromissao.com/',
+        };
     }
 
 }
