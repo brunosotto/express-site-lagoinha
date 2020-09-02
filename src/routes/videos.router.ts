@@ -1,6 +1,7 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { YouTubeProvider } from 'src/providers/youtube.provider';
+import { ImetaTags } from '../models/metatags.model';
 
 export class VideoRouter {
 
@@ -24,8 +25,25 @@ export class VideoRouter {
             const baseHref = '../';
             const channels = this.youTube.channels;
             const channelKeys = this.youTube.channelKeys;
-            res.render('videos', { channels, channelKeys, baseHref });
+            // Pegando as metaTags
+            const metaTag = this.getMetaTags();
+            res.render('videos', {
+                channels,
+                channelKeys,
+                baseHref,
+                metaTag,
+            });
         });
+    }
+
+    private getMetaTags(): ImetaTags {
+        return {
+            title: 'Lagoinha Promissão - Videos',
+            description: `Veja abaixo os nossos vídeos dos canais do YouTube 
+            Lagoinha Promissão e Pastor Nilson Vargens. Aqui você encontra nossas 
+            playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.`,
+            img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+        }
     }
 
 }
