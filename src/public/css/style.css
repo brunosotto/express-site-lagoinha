@@ -198,7 +198,7 @@ li {
 }
 
 .title-midias {
-    margin: 25px 0 0;
+    margin: 25px 0 15px;
 }
 
 .title-midias h2 {
@@ -775,23 +775,29 @@ ul .no-padding .no-margin {
 
 /****************************** Midias Sociais **************************/
 
-.midiassociais-icons h5 {
-    color: #d7d7d7 !important;
+.midiassocias-card {
+    background: transparent !important;
 }
 
-.midiasimages {
-    width: 10em !important;
-    height: 10em !important;
-    margin: 0 auto;
+.midiassociais-icons h5 {
+    color: #d7d7d7 !important;
+    margin: 3px auto;
+    font-size: 2em;
 }
 
 .midiassociais-icons {
     cursor: pointer;
     border: none;
     background: transparent;
-    padding: 20px 0 30px 0;
+    /* padding: 20px 0 30px 0; */
     text-align: center;
-    font-size: initial;
+}
+
+.midiasimages {
+    width: 50%;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
 }
 
 .midiasimages:hover img {
@@ -1232,12 +1238,14 @@ ul .no-padding .no-margin {
         margin: 0 auto;
         text-align: center;
     }
-    .midiassociais-icons {
-        padding: 0 !important;
-        margin: 0 auto;
+    .midiassocias-card {
+        background: transparent !important;
     }
+    .midiassociais-icons {}
     .midiasimages {
-        width: 8em !important;
+        position: relative;
+        width: 40%;
+        display: flex;
         margin: 0 auto;
     }
     .videosRecentes .groups {
@@ -1285,12 +1293,14 @@ ul .no-padding .no-margin {
         width: 94%;
         margin: 0 auto;
     }
-    .midiassociais-icons {
-        padding: 0 !important;
-        margin: 0 auto;
+    .midiassocias-card {
+        background: transparent !important;
     }
+    .midiassociais-icons {}
     .midiasimages {
-        width: 8em !important;
+        position: relative;
+        width: 40%;
+        display: flex;
         margin: 0 auto;
     }
     .videosRecentes .groups {
