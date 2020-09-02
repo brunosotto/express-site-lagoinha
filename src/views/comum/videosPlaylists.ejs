@@ -7,10 +7,11 @@
 				<h2>Videos</h2>
 				<span class="dotts"> . . . . . . </span>
 				<blockquote class="blockquote text-right">
-                                <p class="mb-0 text-descricao-paginas">
-								Veja abaixo os nossos vídeos dos canais do YouTube Lagoinha Promissão e Pastor Nilson Vargens. 
-								Aqui você encontra nossas playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.</p>
-                            </blockquote>
+					<p class="mb-0 text-descricao-paginas">
+						Veja abaixo os nossos vídeos dos canais do YouTube Lagoinha Promissão e Pastor Nilson Vargens.
+						Aqui você encontra nossas playlists separadas por cultos e temas com os vídeos recentes de cada
+						uma delas.</p>
+				</blockquote>
 			</div>
 		</div>
 		<!-- end title -->
@@ -20,34 +21,39 @@
 					var channel = channels.find(c => c.id === key);
 			%>
 
-			<div class="channel listvideos">
-				<div class="img-channel"><img class="mg-fluid rounded-circle"
-						src="<%- channel.snippet.thumbnails.default.url %>">
+			<a href="<%- 'https://www.youtube.com/channel/' + channel.id %>" class="d-flex w-100" target="_blank">
+				<div class="channel listvideos">
+					<div class="img-channel">
+						<img class="mg-fluid rounded-circle" src="<%- channel.snippet.thumbnails.default.url %>">
+					</div>
+					<div class="title-channel">
+						<h2><%= channel.snippet.title %></h2>
+					</div>
 				</div>
-				<div class="title-channel">
-					<h2><%= channel.snippet.title %></h2>
-				</div>
-
-			</div>
+			</a>
 			<% for (playlist of channel.playlists ){  %>
 
-			<div class="channel playlist listavideosplaylist">
-				<div class="img-channel">
-					<img class="mg-fluid" src="<%- playlist.snippet.thumbnails.default.url %>">
+			<a href="https://www.youtube.com/watch?v=<%- playlist.items[0].snippet.resourceId.videoId %>&list=<%- playlist.id %>"
+				target="_blank">
+				<div class="channel playlist listavideosplaylist">
+					<div class="img-channel">
+						<img class="mg-fluid" src="<%- playlist.snippet.thumbnails.default.url %>">
+					</div>
+					<div class="title-channel">
+						<h2><%= playlist.snippet.title %></h2>
+					</div>
 				</div>
-				<div class="title-channel">
-					<h2><%= playlist.snippet.title %></h2>
-				</div>
-			</div>
+			</a>
 
 			<div class="row centralizando">
 				<% for (item of playlist.items){ %>
-				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-					<a href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>">
+				<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+					<a
+						href="https://www.youtube.com/watch?v=<%= item.snippet.resourceId.videoId %>&list=<%- playlist.id %>">
 						<div class="groups">
 							<img class="mg-fluid" src="<%- item.snippet.thumbnails.medium.url %>">
 							<div class="title">
-								<h4><%= item.snippet.title %></h2>
+								<h4 class="playlist-h4"><%= item.snippet.title %></h2>
 							</div>
 						</div>
 					</a>

@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Lagoinha Promissão - Dizimo</title>
 
-        <base href="<%= baseHref %>" />
-         <!-- Css -->
-       <%-  include('comum/includeCss') -%>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%-  include('comum/metatags') -%>
 
-        <%-  include('comum/favicon') -%>
-    </head>
+    <base href="<%= baseHref %>" />
+    <!-- Css -->
+    <%-  include('comum/includeCss') -%>
 
-    <body>
-        <!--  Menu -->
-        <%- include('comum/menu') -%> <%- include('home/slideHome') -%>
-        <div class="dizimo">
-            <section class="generic animated fadeInUp delay1 galery">
-                <div class="container">
-                    <!-- title -->
-                    <div class="row text-center title">
-                        <div class="col-sm-12">
-                            <h2>Dizimos</h2>
-                            <blockquote class="blockquote text-right">
-                                <p class="mb-0">Honra ao Senhor com os teus bens e com as primícias de toda a tua renda
-                                    e se encherão fartamente os teus celeiros, e transbordarão de vinho os teus lagares.</p>
-                                <span>Provérbios <cite>3:9-10</cite></span>
-                            </blockquote>
-                            <span class="dotts"> . . . . . . </span>
-                        </div>
-                    </div>
+    <%-  include('comum/favicon') -%>
+</head>
 
-                    <div class="row text-center">
-                        <div class="col-sm-10">
-                            <section>
-                                <h2 class="dizimo-deposito">Depósito ou Transferência</h2>
-                                <img style="width: 22em;" src="./images/logo-lagoinha-promissao-branco.svg" />
-                                <p class="dizimo-deposito-cnpj">CNPJ 10.405.528/0001-02</p>
-
-                                <div class="rounded">
-                                    <p class="dizimo-banco-deposito">
-                                        Banco Bradesco
-                                    </p>
-                                    <p style="font-size: 30px;">
-                                        <span>Agência: <strong> 0038</strong> | Conta Corrente: <strong>0042503-6</strong></span>
-                                    </p>
-                                </div>
-                            </section>
-                            <div class="dizimo-deposito-border"></div>
-                            <section>
-                                <h2 class="dizimo-cartao-deposito">Cartão de Crédito ou Boleto</h2>
-                                <div class="rounded">
-                                    <p class="font_7" style="font-size: 25px; text-align: center;">
-                                        Clicando no botão abaixo você será direcionado ao PagSeguro na página de doação da Lagoinha
-                                        Promissão
-                                    </p>
-                                    <h3>Clique no botão a seguir</h3>
-                                    <a href="#" class="btn-doacao btn">
-                                        Doar via PageSeguro
-                                    </a>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="col-sm-2 text-center dizimo-fotos">
-                            <div class="card dizimo-fotos"><div class="card-img-top galeriadizimo"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="row text-center">
-                        <div class="col-sm-12"></div>
+<body>
+    <!--  Menu -->
+    <%- include('comum/menu') -%> <%- include('home/slideHome') -%>
+    <div class="dizimo">
+        <section class="generic animated fadeInUp delay1 galery">
+            <div class="container">
+                <!-- title -->
+                <div class="row text-center title">
+                    <div class="col-sm-12">
+                        <h2>Dizimos</h2>
+                        <blockquote class="blockquote text-right">
+                            <p class="mb-0">Honra ao Senhor com os teus bens e com as primícias de toda a tua renda
+                                e se encherão fartamente os teus celeiros, e transbordarão de vinho os teus lagares.</p>
+                            <span>Provérbios <cite>3:9-10</cite></span>
+                        </blockquote>
+                        <span class="dotts"> . . . . . . </span>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <div class="dizimo-versiculo">
-            <p class="">
-                <em>dai, e dar-se-vos-á; boa medida, recalcada, sacudida, transbordante, generosamente vos darão; porque com a medida com que tiverdes medido vos medirão também.</em>
-                <br /><span style="font-weight: bold;">Lucas <cite>6:38</cite></span>
-            </p>
-        </div>
-        <!-- Footer -->
-        <%- include('comum/footer') -%>
+                <div class="row text-center">
+                    <div class="col-sm-10">
+                        <section>
+                            <h2 class="dizimo-deposito">Depósito ou Transferência</h2>
+                            <img style="width: 22em;" src="./images/logo-lagoinha-promissao-branco.svg" />
+                            <p class="dizimo-deposito-cnpj">CNPJ 10.405.528/0001-02</p>
 
-        <a href="#" class="scrollup animated bounceInUp"> </a>
+                            <div class="rounded">
+                                <p class="dizimo-banco-deposito">
+                                    Banco Bradesco
+                                </p>
+                                <p style="font-size: 30px;">
+                                    <span>Agência: <strong> 0038</strong> | Conta Corrente:
+                                        <strong>0042503-6</strong></span>
+                                </p>
+                            </div>
+                        </section>
+                        <div class="dizimo-deposito-border"></div>
+                        <section>
+                            <h2 class="dizimo-cartao-deposito">Cartão de Crédito ou Boleto</h2>
+                            <div class="rounded">
+                                <p class="font_7" style="font-size: 25px; text-align: center;">
+                                    Clicando no botão abaixo você será direcionado ao PagSeguro na página de doação da
+                                    Lagoinha
+                                    Promissão
+                                </p>
+                                <h3>Clique no botão a seguir</h3>
+                                <a href="#" class="btn-doacao btn">
+                                    Doar via PageSeguro
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-2 text-center dizimo-fotos">
+                        <div class="card dizimo-fotos">
+                            <div class="card-img-top galeriadizimo"></div>
+                        </div>
+                    </div>
+                </div>
 
-        <%- include('comum/includeJs') -%>
+                <div class="row text-center">
+                    <div class="col-sm-12"></div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-        <!-- Script Principal  -->
-        <script src="js/main.js"></script>
-        <script>
-            home.selectNav('dizimo');
-        </script>
-    </body>
+    <div class="dizimo-versiculo">
+        <p class="">
+            <em>dai, e dar-se-vos-á; boa medida, recalcada, sacudida, transbordante, generosamente vos darão; porque com
+                a medida com que tiverdes medido vos medirão também.</em>
+            <br /><span style="font-weight: bold;">Lucas <cite>6:38</cite></span>
+        </p>
+    </div>
+    <!-- Footer -->
+    <%- include('comum/footer') -%>
+
+    <a href="#" class="scrollup animated bounceInUp"> </a>
+
+    <%- include('comum/includeJs') -%>
+
+    <!-- Script Principal  -->
+    <script src="js/main.js"></script>
+    <script>
+        home.selectNav('dizimo');
+    </script>
+</body>
+
 </html>

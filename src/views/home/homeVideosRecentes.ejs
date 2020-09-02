@@ -8,34 +8,35 @@
 				<span class="dotts"> . . . . . . </span>
 			</div>
 		</div>
-		<!-- end title --> 
+		<!-- end title -->
 		<div class="row animated fadeInUp delay6">
 			<% for (key of channelKeys){ var channel = channels.find(c => c.id === key);%>
 
-			<div class="channel">
-				<div class="img-channel"><img class="mg-fluid rounded-circle"
-						src="<%- channel.snippet.thumbnails.default.url %>">
+			<a href="<%- 'https://www.youtube.com/channel/' + channel.id %>" target="_blank">
+				<div class="channel">
+					<div class="img-channel"><img class="mg-fluid rounded-circle"
+							src="<%- channel.snippet.thumbnails.default.url %>">
+					</div>
+					<div class="title-channel">
+						<h2><%= channel.snippet.title %></h2>
+					</div>
 				</div>
-				<div class="title-channel">
-					<h2><%= channel.snippet.title %></h2>
-				</div>
-
-			</div> 
+			</a>
 			<div class="row">
 				<% for (recent of channel.recents){ %>
-				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-						<a href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">
-					<div class="groups">
+				<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+					<a href="https://www.youtube.com/watch?v=<%= recent.id.videoId %>">
+						<div class="groups">
 							<img class="mg-fluid" src="<%- recent.snippet.thumbnails.medium.url %>">
 							<div class="title">
 								<h4><%= recent.snippet.title %></h2>
 							</div>
-					</div>
-						</a>
+						</div>
+					</a>
 				</div>
 				<% } %>
 			</div>
 			<% } %>
-		</div> 
+		</div>
 	</div>
 </section>

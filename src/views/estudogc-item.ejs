@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%-  include('comum/metatags') -%>
     <title>Lagoinha Promissão - Estudo Gc : <%= estudogc.page.title %></title>
 
     <base href="<%= baseHref %>" />
@@ -20,47 +21,45 @@
     <!--  Menu -->
     <%- include('comum/menu') -%>
 
-  
-        <section class="devocional-item-main service animated fadeInUp delay3">
-            <div class="container">
-                <!-- title -->
-                <div class="row text-center title">
-                    <div class="col-sm-12">
-                        <h2> <%= estudogc.page.title %> </h2>
-                        <span class="dotts"> . . . . . . </span>
-                    </div>
+
+    <section class="devocional-item-main service animated fadeInUp delay3">
+        <div class="container">
+            <!-- title -->
+            <div class="row text-center title">
+                <div class="col-sm-12">
+                    <h2> <%= estudogc.page.title %> </h2>
+                    <span class="dotts"> . . . . . . </span>
                 </div>
+            </div>
 
-                <div class="row ">
-                    <div class="col">
+            <div class="row ">
+                <div class="col">
 
-                        <div class="card dev-card-item">
-                            <figure class="figure" <%= 'style=background-color:#' + estudogc.page.main_color %>>
-                                <img src="<%= estudogc.page.image  %> " class="figure-img img-fluid devocional-card-image"
-                                    alt="<%= estudogc.page.title %>">
-                            </figure>
-                            <div class="card-body">
-                                <h2> <%= estudogc.page.title %> </h2>
-                                <span> Publicado em: <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
-                                </span>
+                    <div class="card dev-card-item">
+                        <figure class="figure" <%= 'style=background-color:#' + estudogc.page.main_color %>>
+                            <img src="<%= estudogc.page.image  %> " class="figure-img img-fluid devocional-card-image"
+                                alt="<%= estudogc.page.title %>">
+                        </figure>
+                        <div class="card-body">
+                            <h2> <%= estudogc.page.title %> </h2>
+                            <span> Publicado em: <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
+                            </span>
 
-                                <%- (estudogc.page.text ) %>
-                            </div>
+                            <div class="conteudo-texto"><%- (estudogc.page.text ) %></div>
+                        </div>
 
-                            <div class="card-footer bg-transparent animation delay4">
-                                <div class="d-flex flex-row  justify-content-end">
-                                    <div class="p-2">
-                                        <div class="dev-calendar">
-                                            <i class="icon-calendar"></i>
-                                        </div>
-                                    </div>
-                                    <div class="p-2">
-                                        <div class="dev-published_at">
-                                            <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
-                                        </div>
+                        <div class="card-footer bg-transparent animation delay4">
+                            <div class="d-flex flex-row  justify-content-end">
+                                <div class="p-2">
+                                    <div class="dev-calendar">
+                                        <i class="icon-calendar"></i>
                                     </div>
                                 </div>
-
+                                <div class="p-2">
+                                    <div class="dev-published_at">
+                                        <%=  moment( estudogc.published_at ).format('DD/MM/YYYY - h:mm') %>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -71,7 +70,9 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
     <!-- Footer -->
     <%- include('comum/footer') -%>
