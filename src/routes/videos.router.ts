@@ -43,6 +43,7 @@ export class VideoRouter {
             Lagoinha Promissão e Pastor Nilson Vargens. Aqui você encontra nossas 
             playlists separadas por cultos e temas com os vídeos recentes de cada uma delas.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao/videos'
         }
     }
 

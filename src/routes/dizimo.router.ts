@@ -35,6 +35,7 @@ export class DizimoRouter {
             toda a tua renda e se encherão fartamente os teus celeiros,
              e transbordarão de vinho os teus lagares`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/dizimo'
         }
     }
 

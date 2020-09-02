@@ -41,6 +41,7 @@ export class HomeRouter {
             A Igreja Batista da Lagoinha nasceu em Belo Horizonte e há 60 anos 
             atua de forma relevante na expansão do evangelho.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/'
         }
     }
 

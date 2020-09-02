@@ -47,6 +47,7 @@ export class DevocionaisRouter {
              aquilo que é prioridade e primordial para nossa existencia; e aqui 
              nós tentamos te ajudar com pequenas palavras que possa te inspirar todos os dias.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/devocionais'
         }
     }
 

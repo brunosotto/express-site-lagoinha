@@ -46,6 +46,7 @@ export class EstudosGcRouter {
             à vida de uma pessoa e à igreja. GCs são pequenos grupos de Crescimentos,
             aonde nós nos reunimos para estudar e meditar em comunhão a palavra de Deus.`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/estudos-gc'
         }
     }
 
