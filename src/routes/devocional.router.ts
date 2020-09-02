@@ -2,6 +2,8 @@ import { Express, NextFunction } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from './../providers/lagoinha.provider';
 import moment from 'moment';
+import { IObjectLagoinha } from '../models/object-lagoinha.model';
+import { ImetaTags } from '../models/metatags.model';
 
 export class DevocionalRouter {
 
@@ -33,9 +35,23 @@ export class DevocionalRouter {
             if (!devocional) {
                 return next();
             }
-
-            res.render('devocional-item', { devocional, baseHref, moment });
+            // Pegando as metaTags
+            const metaTag = this.getMetaTags(devocional);
+            res.render('devocional-item', {
+                devocional,
+                baseHref,
+                moment,
+                metaTag,
+            });
         });
+    }
+
+    private getMetaTags(devo: IObjectLagoinha): ImetaTags {
+        return {
+            title: `Devocional: ${devo.page.title} - Lagoinha Promissão`,
+            description: devo.page.summary,
+            img: devo.page.thumbnail,
+        }
     }
 
 }
