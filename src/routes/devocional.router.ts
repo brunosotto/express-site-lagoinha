@@ -51,6 +51,8 @@ export class DevocionalRouter {
             title: `Devocional: ${devo.page.title} - Lagoinha Promissão`,
             description: devo.page.summary,
             img: devo.page.thumbnail,
+            url: `https://lagoinhapromissao.com/devocionais/${devo.id}/${devo.slug}`,
+
         }
     }
 

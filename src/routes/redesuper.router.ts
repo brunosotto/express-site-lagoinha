@@ -34,6 +34,7 @@ export class RedeSuperRouter {
             title: 'Lagoinha Promissão - TV Online - Rede Super',
             description: 'Assista agora mesmo a Rede Super de Televisão',
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/rede-super'
         }
     }
 

@@ -36,6 +36,7 @@ export class RadioSuperRouter {
             comunicação da Igreja Batista da Lagoinha e, há um ano, é veiculada online 
             e na frequência 90.1 FM (por enquanto somente em Belo Horizonte – MG).`,
             img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
+            url: 'https://lagoinhapromissao.com/radio-super'
         }
     }
 }

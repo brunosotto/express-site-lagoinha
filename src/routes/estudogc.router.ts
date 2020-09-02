@@ -51,6 +51,7 @@ export class EstudoGcRouter {
             title: `Estudo GC: ${gc.page.title} - Lagoinha Promissão`,
             description: gc.page.summary,
             img: gc.page.thumbnail,
+            url: `https://lagoinhapromissao.com/estudos-gc/${gc.id}/${gc.slug}`,
         }
     }
 
