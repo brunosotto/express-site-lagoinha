@@ -1,6 +1,7 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from './../enum/siteconf.enum';
 
 export class RedeSuperRouter {
 
@@ -30,11 +31,13 @@ export class RedeSuperRouter {
     }
 
     private getMetaTags(): ImetaTags {
+
         return {
-            title: 'Lagoinha Promissão - TV Online - Rede Super',
+            title: `${SiteConf.TITLE} - TV Online - Rede Super`,
             description: 'Assista agora mesmo a Rede Super de Televisão',
-            img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/rede-super',
+            img: SiteConf.IMG,
+            url: `${SiteConf.URL}/rede-super`,
+            site_name: SiteConf.SITE_NAME
         };
     }
 
