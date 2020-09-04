@@ -46,7 +46,7 @@ export class DevocionaisRouter {
              manifesta, ouvirmos e falarmos com nosso Pai, devocional é buscarmos
              aquilo que é prioridade e primordial para nossa existencia; e aqui
              nós tentamos te ajudar com pequenas palavras que possa te inspirar todos os dias.`,
-            img: SiteConf.TITLE,
+            img: SiteConf.IMG,
             url: `${SiteConf.URL}/devocionais`,
             site_name: SiteConf.SITE_NAME
         };

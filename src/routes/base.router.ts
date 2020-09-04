@@ -1,3 +1,4 @@
+import { SitemapRouter } from './sitemap.router';
 import { RedeSuperRouter } from './redesuper.router';
 import { Express } from 'express';
 import { Router } from 'express';
@@ -56,5 +57,9 @@ export class BaseRouter {
         // Rota Rede Super
         const radiosuperRoute = new RadioSuperRouter(this.app);
         this.router.use('/radio-super', radiosuperRoute.router);
+
+        // Rota Rede Super
+        const sitemapRoute = new SitemapRouter(this.app);
+        this.router.use('/sitemap', sitemapRoute.router);
     }
 }
