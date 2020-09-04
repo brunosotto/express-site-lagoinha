@@ -4,6 +4,7 @@ import { LagoinhaProvider } from '../providers/lagoinha.provider';
 import moment from 'moment';
 import { IObjectLagoinha } from '../models/object-lagoinha.model';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from 'src/enum/siteconf.enum';
 
 export class EstudoGcRouter {
 
@@ -48,10 +49,11 @@ export class EstudoGcRouter {
 
     private getMetaTags(gc: IObjectLagoinha): ImetaTags {
         return {
-            title: `Estudo GC: ${gc.page.title} - Lagoinha Promissão`,
+            title: `Estudo GC: ${gc.page.title} - ${SiteConf.TITLE}`,
             description: gc.page.summary,
             img: gc.page.thumbnail,
-            url: `https://lagoinhapromissao.com/estudos-gc/${gc.id}/${gc.slug}`,
+            url: `${SiteConf.URL}/estudo-gc/${gc.id}/${gc.slug}`,
+            site_name: SiteConf.SITE_NAME
         };
     }
 

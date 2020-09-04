@@ -1,6 +1,7 @@
 import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from './../enum/siteconf.enum';
 
 export class DizimoRouter {
 
@@ -29,13 +30,15 @@ export class DizimoRouter {
     }
 
     private getMetaTags(): ImetaTags {
+
         return {
-            title: 'Lagoinha Promissão - Dizimo',
+            title: `${SiteConf.TITLE} - Dizimo`,
             description: `Honra ao Senhor com os teus bens e com as primícias de
             toda a tua renda e se encherão fartamente os teus celeiros,
              e transbordarão de vinho os teus lagares`,
-            img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/dizimo',
+            img: SiteConf.IMG,
+            url: `${SiteConf.URL}/dizimo`,
+            site_name: SiteConf.SITE_NAME
         };
     }
 

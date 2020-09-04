@@ -2,8 +2,8 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from './../providers/lagoinha.provider';
 import moment from 'moment';
-import { IObjectLagoinha } from '../models/object-lagoinha.model';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from 'src/enum/siteconf.enum';
 
 export class DevocionaisRouter {
 
@@ -40,14 +40,15 @@ export class DevocionaisRouter {
 
     private getMetaTags(): ImetaTags {
         return {
-            title: 'Lagoinha Promissão - Devocionais',
+            title: `${SiteConf.TITLE} - Devocionais`,
             description: `Devocional é um pequeno tempo que investimos em nossas
              vidas para buscarmos a presença de Deus, sentirmos sua essência
              manifesta, ouvirmos e falarmos com nosso Pai, devocional é buscarmos
              aquilo que é prioridade e primordial para nossa existencia; e aqui
              nós tentamos te ajudar com pequenas palavras que possa te inspirar todos os dias.`,
-            img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-            url: 'https://lagoinhapromissao.com/devocionais',
+            img: SiteConf.TITLE,
+            url: `${SiteConf.URL}/devocionais`,
+            site_name: SiteConf.SITE_NAME
         };
     }
 
