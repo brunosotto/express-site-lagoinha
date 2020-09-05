@@ -109,5 +109,21 @@ export class LagoinhaProvider {
         });
         return;
     }
+    public lastPublishedAtDev() {
 
+        const datas = this.devocionais.map((devocional) => {
+            if (devocional.published_at)
+                return devocional.published_at;
+        });
+        return datas.sort().shift();
+    }
+
+    public lastPublishedAtGc() {
+
+        const datas = this.estudoGC.map((estudogc) => {
+            if (estudogc.published_at)
+                return estudogc.published_at;
+        });
+        return datas.shift();
+    }
 }

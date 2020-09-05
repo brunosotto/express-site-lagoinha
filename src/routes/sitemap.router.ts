@@ -25,12 +25,21 @@ export class SitemapRouter {
             const devocionais = this.proDvGc.devocionais;
             const estudogcs = this.proDvGc.estudoGC;
             const channels = this.youTube.channels;
+
+            const lastpublish = this.youTube.lastPublishedAt();
+            const lastpublishDev = this.proDvGc.lastPublishedAtDev();
+            const lastpublishGc = this.proDvGc.lastPublishedAtGc();
+
             res.setHeader('content-type', 'text/xml');
             res.render('sitemap', {
                 devocionais,
                 estudogcs,
                 channels,
                 moment,
+                lastpublish,
+                lastpublishDev,
+                lastpublishGc,
+
             });
         });
     }
