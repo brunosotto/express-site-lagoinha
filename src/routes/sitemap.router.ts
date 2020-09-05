@@ -2,7 +2,6 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from 'src/providers/lagoinha.provider';
 import { YouTubeProvider } from 'src/providers/youtube.provider';
-import moment from 'moment';
 
 export class SitemapRouter {
 
@@ -24,7 +23,6 @@ export class SitemapRouter {
         this.router.get(this.path, (req: Request, res: Response) => {
             const devocionais = this.proDvGc.devocionais;
             const estudogcs = this.proDvGc.estudoGC;
-            const channels = this.youTube.channels;
 
             const lastpublish = this.youTube.lastPublishedAt();
             const lastpublishDev = this.proDvGc.lastPublishedAtDev();
@@ -34,8 +32,6 @@ export class SitemapRouter {
             res.render('sitemap', {
                 devocionais,
                 estudogcs,
-                channels,
-                moment,
                 lastpublish,
                 lastpublishDev,
                 lastpublishGc,

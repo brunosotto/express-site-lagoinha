@@ -1,7 +1,7 @@
 import { get, RequestOptions } from 'https';
 import * as qs from 'querystring';
 import { wLogger } from '../shared/logger';
-
+import moment from 'moment';
 //  Models
 import { IParamsRequestLagoinha } from './../models/params-request-lagoinha.model';
 import { IObjectLagoinha } from './../models/object-lagoinha.model';
@@ -109,21 +109,15 @@ export class LagoinhaProvider {
         });
         return;
     }
-    public lastPublishedAtDev() {
 
-        const datas = this.devocionais.map((devocional) => {
-            if (devocional.published_at)
-                return devocional.published_at;
-        });
-        return datas.sort().shift();
+    public lastPublishedAtDev(): string {
+        const data = this.devocionais[0].published_at;
+        return moment(data).toISOString();
     }
 
-    public lastPublishedAtGc() {
+    public lastPublishedAtGc(): string {
+        const data = this.estudoGC[0].published_at;
+        return moment(data).toISOString();
 
-        const datas = this.estudoGC.map((estudogc) => {
-            if (estudogc.published_at)
-                return estudogc.published_at;
-        });
-        return datas.shift();
     }
 }

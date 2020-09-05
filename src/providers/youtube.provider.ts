@@ -164,16 +164,10 @@ export class YouTubeProvider {
     public lastPublishedAt() {
 
         const lastPublished = this.channels.map((channel) => {
-            const response = channel.recents.shift();
-            if (response)
-                return response.snippet.publishedAt;
+            return channel.recents[0].snippet.publishedAt;
         });
-
-        const datas = lastPublished.map((response) => {
-            return response;
-        });
-
-        return datas.sort().shift();
+        const data = lastPublished.sort().pop();
+        return data;
     }
 
 }
