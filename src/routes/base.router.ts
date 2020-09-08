@@ -60,6 +60,6 @@ export class BaseRouter {
 
         // Rota Rede Super
         const sitemapRoute = new SitemapRouter(this.app);
-        this.router.use('/sitemap', sitemapRoute.router);
+        this.router.use('/sitemap.xml', sitemapRoute.router);
     }
 }
