@@ -26,6 +26,7 @@ export class SitemapRouter {
             const lastpublish = this.youTube.lastPublishedAt();
             const lastpublishDev = this.proDvGc.lastPublishedAtDev();
             const lastpublishGc = this.proDvGc.lastPublishedAtGc();
+
             res.setHeader('content-type', 'text/xml');
             res.render('sitemap', {
                 devocionais,
