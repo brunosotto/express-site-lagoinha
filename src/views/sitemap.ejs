@@ -3,52 +3,63 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
     <url>
         <loc>https://lagoinhapromissao.com/</loc>
-        <% channels.forEach(channel => { %>
-        <% channel.recents.forEach(recent => { %>
-        <% const datas = recent.snippet.publishedAt %>
-        <!-- Falta fazer a logica de pegar a data mais atual -->
-        <% }) %>
-        <% }) %>
-        <lastmod> <%- moment.utc(new Date().getTime())  %> </lastmod>
+        <lastmod><%-lastpublish%></lastmod>
         <priority>1.00</priority>
     </url>
+
     <url>
         <loc>https://lagoinhapromissao.com/videos</loc>
-        <lastmod>2020-09-01T19:49:32+00:00</lastmod>
+        <lastmod><%- lastpublish %></lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://lagoinhapromissao.com/dizimo</loc>
-        <lastmod>2020-09-01T19:49:32+00:00</lastmod>
+        <lastmod><%- lastpublish %></lastmod>
         <priority>0.80</priority>
     </url>
+
     <url>
         <loc>https://lagoinhapromissao.com/rede-super</loc>
-        <lastmod>2020-09-01T19:49:32+00:00</lastmod>
+        <lastmod><%- lastpublish %></lastmod>
         <priority>0.80</priority>
     </url>
+
     <url>
         <loc>https://lagoinhapromissao.com/radio-super</loc>
-        <lastmod>2020-09-01T19:49:32+00:00</lastmod>
+        <lastmod><%- lastpublish %></lastmod>
         <priority>0.80</priority>
     </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/devocionais</loc>
+        <lastmod><%-lastpublishDev%></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/estudos-gc</loc>
+        <lastmod><%-lastpublishGc%></lastmod>
+        <priority>0.80</priority>
+    </url>
+
     <% devocionais.forEach(devocional => { %>
+
     <url>
         <loc>https://lagoinhapromissao.com/devocional/<%-devocional.id+'/'+devocional.slug%></loc>
-        <lastmod><%- moment.utc(devocional.published_at)%></lastmod>
+        <lastmod><%- devocional.published_at %></lastmod>
         <priority>0.64</priority>
     </url>
 
     <% }) %>
 
     <% estudogcs.forEach(estudogc => { %>
+
     <url>
         <loc>https://lagoinhapromissao.com/estudo-gc/<%-estudogc.id+'/'+estudogc.slug%></loc>
-        <lastmod><%- moment.utc(estudogc.published_at)%></lastmod>
+        <lastmod><%- estudogc.published_at %></lastmod>
         <priority>0.64</priority>
     </url>
 

@@ -8,6 +8,7 @@ import { IParamsRequestYT } from './../models/params-request-yt.model';
 import { IChannel } from './../models/channel.model';
 import { IPlaylist } from './../models/playlist.model';
 
+
 // Constantes
 const USING_MOCK_DB = (process.env.USE_MOCK_DB || '').toLowerCase();
 const TIMEOUT_REQ_LAGOINHA = 8 * 60 * 60 * 1000; // 8 horas
@@ -22,6 +23,7 @@ export class YouTubeProvider {
 
     public channelKeys = ['UC-A4tH3VNuty6SjZqO9vtfw', 'UCJzDLUYpybKcK5FkZlSQVZQ'];
     public channels: IChannel[] = [];
+
     private loadingChannels: IChannel[] = [];
 
     constructor() {
@@ -46,7 +48,7 @@ export class YouTubeProvider {
     }
 
     private listChannels(): void {
-        this.loadingChannels = [];
+        this.loadingChannels;
 
         const params = {
             part: 'snippet',
@@ -157,6 +159,15 @@ export class YouTubeProvider {
             });
         });
         return;
+    }
+
+    public lastPublishedAt() {
+
+        const lastPublished = this.channels.map((channel) => {
+            return channel.recents[0].snippet.publishedAt;
+        });
+        const data = lastPublished.sort().pop();
+        return data;
     }
 
 }
