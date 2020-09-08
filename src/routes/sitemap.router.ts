@@ -23,11 +23,9 @@ export class SitemapRouter {
         this.router.get(this.path, (req: Request, res: Response) => {
             const devocionais = this.proDvGc.devocionais;
             const estudogcs = this.proDvGc.estudoGC;
-
             const lastpublish = this.youTube.lastPublishedAt();
             const lastpublishDev = this.proDvGc.lastPublishedAtDev();
             const lastpublishGc = this.proDvGc.lastPublishedAtGc();
-
             res.setHeader('content-type', 'text/xml');
             res.render('sitemap', {
                 devocionais,
@@ -35,7 +33,6 @@ export class SitemapRouter {
                 lastpublish,
                 lastpublishDev,
                 lastpublishGc,
-
             });
         });
     }
