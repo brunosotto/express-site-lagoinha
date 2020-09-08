@@ -1,7 +1,7 @@
 import { get, RequestOptions } from 'https';
 import * as qs from 'querystring';
 import { wLogger } from '../shared/logger';
-
+import moment from 'moment';
 //  Models
 import { IParamsRequestLagoinha } from './../models/params-request-lagoinha.model';
 import { IObjectLagoinha } from './../models/object-lagoinha.model';
@@ -110,4 +110,14 @@ export class LagoinhaProvider {
         return;
     }
 
+    public lastPublishedAtDev(): string {
+        const data = this.devocionais[0].published_at;
+        return moment(data).toISOString();
+    }
+
+    public lastPublishedAtGc(): string {
+        const data = this.estudoGC[0].published_at;
+        return moment(data).toISOString();
+
+    }
 }

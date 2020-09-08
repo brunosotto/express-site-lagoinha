@@ -2,6 +2,7 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { YouTubeProvider } from 'src/providers/youtube.provider';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from 'src/enum/siteconf.enum';
 
 export class HomeRouter {
 
@@ -36,12 +37,12 @@ export class HomeRouter {
 
     private getMetaTags(): ImetaTags {
         return {
-            title: 'Lagoinha Promissão',
-            description: `Igreja Bastista Lagoinha Promissão - 
-            A Igreja Batista da Lagoinha nasceu em Belo Horizonte e há 60 anos 
-            atua de forma relevante na expansão do evangelho.`,
-            img: 'https://lagoinhapromissao.com/images/lagoinha-promissao-meta.png',
-        }
+            title: SiteConf.TITLE,
+            description: SiteConf.DESCRIPTION,
+            img: SiteConf.IMG,
+            url: SiteConf.URL,
+            site_name: SiteConf.SITE_NAME
+        };
     }
 
 }

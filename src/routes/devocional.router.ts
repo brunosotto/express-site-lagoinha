@@ -4,6 +4,7 @@ import { LagoinhaProvider } from './../providers/lagoinha.provider';
 import moment from 'moment';
 import { IObjectLagoinha } from '../models/object-lagoinha.model';
 import { ImetaTags } from '../models/metatags.model';
+import { SiteConf } from 'src/enum/siteconf.enum';
 
 export class DevocionalRouter {
 
@@ -47,11 +48,14 @@ export class DevocionalRouter {
     }
 
     private getMetaTags(devo: IObjectLagoinha): ImetaTags {
+
         return {
-            title: `Devocional: ${devo.page.title} - Lagoinha Promissão`,
+            title: `Devocional: ${devo.page.title} - ${SiteConf.TITLE}`,
             description: devo.page.summary,
             img: devo.page.thumbnail,
-        }
+            url: `${SiteConf.URL}/devocional/${devo.id}/${devo.slug}`,
+            site_name: SiteConf.SITE_NAME
+        };
     }
 
 }

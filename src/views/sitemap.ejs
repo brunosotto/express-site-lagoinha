@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://lagoinhapromissao.com/</loc>
+        <lastmod><%-lastpublish%></lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/videos</loc>
+        <lastmod><%- lastpublish %></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/dizimo</loc>
+        <lastmod><%- lastpublish %></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/rede-super</loc>
+        <lastmod><%- lastpublish %></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/radio-super</loc>
+        <lastmod><%- lastpublish %></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/devocionais</loc>
+        <lastmod><%-lastpublishDev%></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/estudos-gc</loc>
+        <lastmod><%-lastpublishGc%></lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <% devocionais.forEach(devocional => { %>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/devocional/<%-devocional.id+'/'+devocional.slug%></loc>
+        <lastmod><%- devocional.published_at %></lastmod>
+        <priority>0.64</priority>
+    </url>
+
+    <% }) %>
+
+    <% estudogcs.forEach(estudogc => { %>
+
+    <url>
+        <loc>https://lagoinhapromissao.com/estudo-gc/<%-estudogc.id+'/'+estudogc.slug%></loc>
+        <lastmod><%- estudogc.published_at %></lastmod>
+        <priority>0.64</priority>
+    </url>
+
+    <% }) %>
+
+</urlset>
