@@ -49,7 +49,7 @@
 
     <url>
         <loc>https://lagoinhapromissao.com/devocional/<%-devocional.id+'/'+devocional.slug%></loc>
-        <lastmod><%- moment(devocional.published_at).toISOString() %></lastmod>
+        <lastmod><%-moment(devocional.published_at).toISOString()%></lastmod>
         <priority>0.64</priority>
     </url>
 
@@ -59,7 +59,7 @@
 
     <url>
         <loc>https://lagoinhapromissao.com/estudo-gc/<%-estudogc.id+'/'+estudogc.slug%></loc>
-        <lastmod><%- moment(estudogc.published_at).toISOString() %></lastmod>
+        <lastmod><%-moment(estudogc.published_at).toISOString()%></lastmod>
         <priority>0.64</priority>
     </url>
 
