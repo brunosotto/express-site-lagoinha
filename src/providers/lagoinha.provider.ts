@@ -48,10 +48,17 @@ export class LagoinhaProvider {
         };
 
         const success = (response: IResponseLagoinha) => {
-            this.devocionais = response.objects;
+            this.devocionais = this.removeStyles(response.objects);
         };
 
         this.request(params, success);
+    }
+
+    private removeStyles(content: IObjectLagoinha[]): IObjectLagoinha[] {
+        return content.map(l => {
+            l.page.text = l.page.text.replace(/style="[a-zA-Z0-9:;&\.\s\(\)\-\,]*"/gi, '');
+            return l;
+        });
     }
 
     private listEstudo(): void {
@@ -64,7 +71,7 @@ export class LagoinhaProvider {
         };
 
         const success = (response: IResponseLagoinha) => {
-            this.estudoGC = response.objects;
+            this.estudoGC = this.removeStyles(response.objects);
         };
 
         this.request(params, success);

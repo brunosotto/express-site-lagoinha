@@ -16,11 +16,12 @@ window.onload = () => {
         'https://media.giphy.com/media/iHDkK61FCXnck/giphy.gif',
         'https://media.giphy.com/media/4RZgG6wU5BQkM/giphy.gif',
     ];
-
+    
+    
     const divAppend = $('<div>')
         .addClass('appended')
         .append(
-            $('<img>').attr('src', 'https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://www.lagoinhabraganca.com/wp-content/uploads/2019/12/Lagoinha_BragancaPta.png'),
+            $('<img>').addClass('logo').attr('src', 'https://static.wixstatic.com/media/7e2a71_46af000ff66b453f8259853edadff4a7~mv2.jpg/v1/fill/w_291,h_223,al_c,q_80,usm_0.66_1.00_0.01/legacy.webp'),
             $('<img>').addClass('gif').attr('src', gifs[Math.floor(Math.random() * gifs.length)]),
             $('<h1>').text('Mande sua selfie'),
             $('<h2>').text('Tire agora mesmo uma selfie em seu Instagram e marque o Legacy Jovens Promissão (@legacypromissao) e sua foto aparecerá aqui em instantes')
@@ -29,13 +30,17 @@ window.onload = () => {
 
     setTimeout(() => {
         init();
-    }, 2000);
+    }, 3500);
 }
 
 function init() {
+    while($('.v1Nh3').length > 8){
+        $('.v1Nh3').last().remove();
+    }
+    
     $('html, body').animate({
         scrollTop: $(document).height()
-    }, 40000, 'linear');
+    }, 25000, 'linear');
 
     $(window).scroll(() => {
         if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {

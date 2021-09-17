@@ -2,7 +2,7 @@ import { Express } from 'express';
 import { Request, Response, Router } from 'express';
 import { LagoinhaProvider } from 'src/providers/lagoinha.provider';
 import { YouTubeProvider } from 'src/providers/youtube.provider';
-
+import moment from 'moment';
 export class SitemapRouter {
 
     public router: Router;
@@ -26,6 +26,7 @@ export class SitemapRouter {
             const lastpublish = this.youTube.lastPublishedAt();
             const lastpublishDev = this.proDvGc.lastPublishedAtDev();
             const lastpublishGc = this.proDvGc.lastPublishedAtGc();
+
             res.setHeader('content-type', 'text/xml');
             res.render('sitemap', {
                 devocionais,
@@ -33,6 +34,7 @@ export class SitemapRouter {
                 lastpublish,
                 lastpublishDev,
                 lastpublishGc,
+                moment
             });
         });
     }
