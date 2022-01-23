@@ -57,6 +57,8 @@ export class LagoinhaProvider {
     private removeStyles(content: IObjectLagoinha[]): IObjectLagoinha[] {
         return content.map(l => {
             l.page.text = l.page.text.replace(/style="[a-zA-Z0-9:;&\.\s\(\)\-\,]*"/gi, '');
+            l.page.text = l.page.text.replace(/<\/font[^>]*>/gi, '');
+            l.page.text = l.page.text.replace(/<font[^>]*>/gi, '');
             return l;
         });
     }

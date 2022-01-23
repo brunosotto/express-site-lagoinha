@@ -53,7 +53,7 @@ export class EstudoGcRouter {
             description: gc.page.summary,
             img: gc.page.thumbnail,
             url: `${SiteConf.URL}/estudo-gc/${gc.id}/${gc.slug}`,
-            site_name: SiteConf.SITE_NAME
+            site_name: SiteConf.SITE_NAME,
         };
     }
 

@@ -1090,6 +1090,10 @@ ul .no-padding .no-margin {
 
 /* ********************** Cards Devocinal/GC Item ********************* */
 
+.conteudo-texto {
+    font-size: 18px;
+}
+
 .conteudo-texto .text p {
     color: #f6f6f6 !important;
     font: caption;
