@@ -31,7 +31,7 @@ export class YouTubeProvider {
     }
 
     private async initialize(): Promise<void> {
-        if (USING_MOCK_DB) {
+        if (USING_MOCK_DB && USING_MOCK_DB === 'true') {
             this.channels = await this.readMock();
             return;
         }
@@ -48,7 +48,7 @@ export class YouTubeProvider {
     }
 
     private listChannels(): void {
-        this.loadingChannels;
+        this.loadingChannels = [];
 
         const params = {
             part: 'snippet',
