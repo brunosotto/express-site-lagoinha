@@ -1,17 +1,17 @@
 import cookieParser from 'cookie-parser';
-import express from 'express';
-import { Request, Response, NextFunction } from 'express';
+import cors from 'cors';
+import { config as dotenvConfig } from 'dotenv';
+import express, { Express, NextFunction, Request, Response } from 'express';
+import { createServer, Server } from 'http';
+import { INTERNAL_SERVER_ERROR, NOT_FOUND, OK } from 'http-status-codes';
 import logger from 'morgan';
 import path from 'path';
-import { BaseRouter } from './routes/base.router';
-import { createServer, Server } from 'http';
-import { NOT_FOUND, INTERNAL_SERVER_ERROR, OK } from 'http-status-codes';
-import { wLogger } from './shared/logger';
-import { Express } from 'express';
-import cors from 'cors';
-import { YouTubeProvider } from './providers/youtube.provider';
 import { LagoinhaProvider } from './providers/lagoinha.provider';
+import { YouTubeProvider } from './providers/youtube.provider';
+import { BaseRouter } from './routes/base.router';
+import { wLogger } from './shared/logger';
 
+dotenvConfig({ path: process.env.ENV_KEYS_FILE });
 export class AppServer {
     public static readonly PORT: number = 8080;
     public app: Express;

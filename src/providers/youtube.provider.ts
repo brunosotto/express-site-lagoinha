@@ -8,12 +8,10 @@ import { IParamsRequestYT } from './../models/params-request-yt.model';
 import { IChannel } from './../models/channel.model';
 import { IPlaylist } from './../models/playlist.model';
 
-
 // Constantes
 const USING_MOCK_DB = (process.env.USE_MOCK_DB || '').toLowerCase();
 const TIMEOUT_REQ_LAGOINHA = 8 * 60 * 60 * 1000; // 8 horas
 const DB_FILE_PATH = 'src/providers/youtube.mock.json';
-const API_KEY = 'AIzaSyCqTDq1Envdq1czGv6CcCNu09LhHwSfB7k';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 const RECENT_MAX_RESULTS = 6;
 const PLAYLIST_MAX_RESULTS = 12;
@@ -127,7 +125,8 @@ export class YouTubeProvider {
     }
 
     private requestYT(path: string, params: IParamsRequestYT, success: (response: any) => void): any {
-        const paramsStr = qs.stringify({ ...params, key: API_KEY });
+        const key = process.env.YOUTUBE_API_KEY;
+        const paramsStr = qs.stringify({ ...params, key });
         const url = `${BASE_URL}/${path}?${paramsStr}`;
         get(url, (res) => {
             const { statusCode } = res;
