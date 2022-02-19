@@ -1,6 +1,10 @@
 {
   "name": "express-site-lagoinha",
   "version": "0.0.1",
+  "description": "Lagoinha",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {},
   "scripts": {
     "build": "node ./util/build.js",
     "deploy": "./util/deploy.sh",
@@ -31,7 +35,7 @@
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.1",
-    "@types/dotenv": "6.1.1",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "4.17.0",
     "@types/find": "0.2.1",
     "@types/jasmine": "3.3.13",

@@ -8,6 +8,7 @@ module.exports = {
       env: {
         PORT: 8093,
         NODE_ENV: "production",
+        ENV_KEYS_FILE: "/root/projects/.keys/.site-lagoinha.keys",
       }
     }
   ]
