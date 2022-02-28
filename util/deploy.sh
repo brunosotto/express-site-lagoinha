@@ -1,19 +1,25 @@
 #!/bin/bash
 
 # parâmetros
-DEPLOY_BASE_PATH="/root/projects/"
-ENV="production"
-PORT="8092"
-PACKAGE_NAME="express-site-lagoinha"
-DEPLOY_PATH="$DEPLOY_BASE_PATH/$ENV/$PACKAGE_NAME/"
-PM2_NAME="$PACKAGE_NAME-$ENV-$PORT"
+source ./util/baseParam.sh
+
+# tar
+tar -czvf dist.tar.gz ./dist
+
+# copy
+scp dist.tar.gz root@clicaaki.com:$TGZ_FILE
+
+# unpack
+ssh root@clicaaki.com "tar -xzvf $TGZ_FILE -C $ENV_PATH"
+
+# exclui TGZ lá
+ssh root@clicaaki.com "rm $TGZ_FILE"
 
 # exclui lá
 ssh root@clicaaki.com "rm $DEPLOY_PATH -R"
-echo 'excluído remoto'
 
-# copy
-scp -r ./dist root@clicaaki.com:$DEPLOY_PATH
+# move a pasta lá
+ssh root@clicaaki.com "mv $ENV_PATH/dist $DEPLOY_PATH"
 echo 'cópia finalizada'
 
 # exibe os dados

@@ -11,3 +11,5 @@ node_modules/
 
 # compiled output
 /dist
+
+dist.tar.gz
