@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # parâmetros
+DEST_SERVER="achouclicou.com"
 DEPLOY_BASE_PATH="/root/projects/"
 ENV="production"
 PORT="8092"

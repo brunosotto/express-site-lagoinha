@@ -7,31 +7,31 @@ source ./util/baseParam.sh
 tar -czvf dist.tar.gz ./dist
 
 # copy
-scp dist.tar.gz root@clicaaki.com:$TGZ_FILE
+scp dist.tar.gz root@$DEST_SERVER:$TGZ_FILE
 
 # unpack
-ssh root@clicaaki.com "tar -xzvf $TGZ_FILE -C $ENV_PATH"
+ssh root@$DEST_SERVER "tar -xzvf $TGZ_FILE -C $ENV_PATH"
 
 # exclui TGZ lá
-ssh root@clicaaki.com "rm $TGZ_FILE"
+ssh root@$DEST_SERVER "rm $TGZ_FILE"
 
 # exclui lá
-ssh root@clicaaki.com "rm $DEPLOY_PATH -R"
+ssh root@$DEST_SERVER "rm $DEPLOY_PATH -R"
 
 # move a pasta lá
-ssh root@clicaaki.com "mv $ENV_PATH/dist $DEPLOY_PATH"
+ssh root@$DEST_SERVER "mv $ENV_PATH/dist $DEPLOY_PATH"
 echo 'cópia finalizada'
 
 # exibe os dados
 echo "PACKAGE_NAME:==$PACKAGE_NAME:=="
 
 echo "----------------------- LS -----------------------"
-ssh root@clicaaki.com "ls $DEPLOY_PATH"
+ssh root@$DEST_SERVER "ls $DEPLOY_PATH"
 echo "----------------------- LS -----------------------"
 
 # deleta o projeto no pm2 e recria
-ssh root@clicaaki.com "pm2 delete $PM2_NAME"
-ssh root@clicaaki.com "cd $DEPLOY_PATH && pm2 start pm2-ecosystem.config.js"
-ssh root@clicaaki.com "pm2 save"
+ssh root@$DEST_SERVER "pm2 delete $PM2_NAME"
+ssh root@$DEST_SERVER "cd $DEPLOY_PATH && pm2 start pm2-ecosystem.config.js"
+ssh root@$DEST_SERVER "pm2 save"
 
 echo "Terminou"
