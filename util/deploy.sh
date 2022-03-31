@@ -30,7 +30,6 @@ ssh root@$DEST_SERVER "ls $DEPLOY_PATH"
 echo "----------------------- LS -----------------------"
 
 # deleta o projeto no pm2 e recria
-ssh root@$DEST_SERVER "pm2 delete $PM2_NAME"
 ssh root@$DEST_SERVER "cd $DEPLOY_PATH && pm2 start pm2-ecosystem.config.js"
 ssh root@$DEST_SERVER "pm2 save"
 
